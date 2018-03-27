@@ -1,0 +1,56 @@
+﻿//ATM HALO Integration
+
+#include "MOB_CTI\ATM_airdrop\dialog.hpp"
+
+//R3F Logistics Integration
+
+#include "MOB_CTI\R3F_LOG\desc_include.h"
+
+//View Distance script
+#include "MOB_CTI\CHVD\dialog.hpp"
+
+// Respawn
+respawn = "BASE";
+respawnDelay = 30;
+respawnVehicleDelay = 30;
+respawnDialog = 1;
+respawnTemplates[] = {"MenuPosition"};
+respawnOnStart = 0;
+aikills = 1;
+enableTeamSwitch = 1;
+
+// BIS Revive System
+reviveMode = 1;
+reviveUnconciousStateMode = 0;
+reviveRequiredItems = 2;
+reviveDelay = 6;	
+reviveRequiredItemsFakConsumed = 1;
+reviveMedicSpeedMultiplier = 2;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 120;
+
+//BeCTI Build Menus Integration
+
+#include "MOB_CTI\resources\Styles.hpp"
+#include "MOB_CTI\resources\Resources.hpp"
+#include "MOB_CTI\resources\Dialogs.hpp"
+#include "MOB_CTI\resources\Titles.hpp"
+#include "MOB_CTI\resources\Params.hpp"
+#include "MOB_CTI\resources\Notifications.hpp"
+
+//////////////////////////////////////////////////////////////////
+
+class CfgFunctions
+{
+	#include "MOB_CTI\CHVD\CfgFunctions.hpp"
+};
+
+class CfgSounds
+{
+   sounds[] = {Vent,Vent2,Para};
+
+	class Vent {name="Vent";sound[]={MOB_CTI\ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={MOB_CTI\ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
+	class Para {name="Para";sound[]={MOB_CTI\ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+
+};
