@@ -1,5 +1,9 @@
 //Land_i_House_Small_03_V1_F
+<<<<<<< HEAD
 private _h=_this;
+=======
+private _house=_this;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _bed1=createSimpleObject["Land_CampingTable_F",[0,0,0]];
 private _bed2=createSimpleObject["Land_CampingTable_F",[0,0,0]];
@@ -30,6 +34,7 @@ private _sink=createSimpleObject["Land_Sink_F",[0,0,0]];
 private _sofa=createSimpleObject["Land_ArmChair_01_F",[0,0,0]];
 private _sTable=createSimpleObject["Land_RattanTable_01_F",[0,0,0]];
 
+<<<<<<< HEAD
 _chair1 attachTo[_h,[3,-5.3,0.3]];_chair1 setDir -20; 
 _chair2 attachTo[_h,[3.8,-5.3,0.3]];_chair2 setDir 5; 
 _chair3 attachTo[_h,[4.5,-5.3,0.3]];_chair3 setDir 30; 
@@ -60,3 +65,35 @@ _pcCase attachTo[_h,[1.4,1.2,.555]];_pcCase setDir 180;
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
+=======
+_chair1 attachTo[_house,[3,-5.3,0.3]];_chair1 setDir -20; 
+_chair2 attachTo[_house,[3.8,-5.3,0.3]];_chair2 setDir 5; 
+_chair3 attachTo[_house,[4.5,-5.3,0.3]];_chair3 setDir 30; 
+_desk1 attachTo[_house,[5.1,1.627,0.61]];_desk1 setDir 90; 
+_desk2 attachTo[_house,[5.1,-2.229,0.61]];_desk2 setDir 90; 
+_rack1 attachTo[_house,[2.3,1.5,1.08]];
+_dTable attachTo[_house,[3.8,-6,0.61]]; 
+_plant attachTo[_house,[-3.8,-1.9,1.893]];_plant setDir(random 259); 
+_rack2 attachTo[_house,[-2,-2.15,1.08]];_rack2 setDir 180;
+_sink attachTo[_house,[5.1,-0.26,0.9]];_sink setDir 90; 
+_microW attachTo[_house,[5.1,-2,1.11]];_microW setDir(random 30)+70;
+_fridge attachTo[_house,[5.05,-3.44,.815]];_fridge setDir 90;
+_sofa attachTo[_house,[-5,-1.8,0.79]]; 
+_sTable attachTo[_house,[-3.8,-1.9,0.7]];
+_bed1 attachTo[_house,[-5.07,3.9,0.35]];_bed1 setDir 90;
+_blanket1 attachTo[_house,[-5.07,3.9,0.77]];
+_bed2 attachTo[_house,[-4.35,3.9,0.35]];_bed2 setDir 90;
+_blanket2 attachTo[_house,[-4.35,3.9,0.77]];
+_pillow1 attachTo[_house,[-4.35,4.6,0.8]];
+_pillow2 attachTo[_house,[-5.15,4.6,.8]];
+_desk3 attachTo[_house,[.5,1.15,0.72]];_desk3 setDir 180;
+_pcScreen attachTo[_house,[.7,1,1.38]];_pcScreen setDir 180;
+_pcKey attachTo[_house,[.8,1.35,1.125]];_pcKey setDir 175;
+_pcMouse attachTo[_house,[.45,1.4,1.15]];_pcMouse setDir 185;
+_chair4 attachTo[_house,[.75,1.4,.3]];
+_pcCase attachTo[_house,[1.4,1.2,.555]];_pcCase setDir 180;
+
+sleep 1;
+
+_house enableSimulationGlobal false;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

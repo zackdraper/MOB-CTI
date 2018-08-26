@@ -28,7 +28,11 @@
 	// Random time before new forecast
 	// true: forecast happens bewteen mintime and maxtime
 	// false: forecast happens at mintime
+<<<<<<< HEAD
 	_random = true;
+=======
+	_random = false;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	// Min time seconds (real time) before a new weather forecast
 	_mintime = 600;

@@ -110,7 +110,11 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 	} else {
 		_var = _classname call BIS_fnc_vehicleRoles;
 
+<<<<<<< HEAD
 		//hint format ["%1",_var];
+=======
+		hint format ["%1",_var];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		_showArray = [true, false, false, false];
 
@@ -118,10 +122,15 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 			_showArray set [1,true];
 		};
 
+<<<<<<< HEAD
 		if (count _var > 2) then {
 			if (count ((_var select 2) select 1) > 1) then {
 				_showArray set [2,true];
 			};
+=======
+		if (count ((_var select 2) select 1) > 1) then {
+			_showArray set [2,true];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		};
 
 		_roles = _var apply {_x select 0};
@@ -138,7 +147,46 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110104) ctrlShow true;  //--- Lock
 	};
 	
+<<<<<<< HEAD
 	//(_classname) call CTI_UI_Purchase_UpdateCost;
+=======
+	(_classname) call CTI_UI_Purchase_UpdateCost;
+};
+
+CTI_UI_Purchase_UpdateCost = {
+	_classname = _this;
+	
+	_cost = 0;
+
+	_faction = player getVariable "CTI_PLAYER_FACTION";
+	
+	if (_classname != "") then {
+		_var = missionNamespace getVariable _classname;
+		_cost = _var select 2;
+		if !(_classname isKindOf "Man") then { //--- Add the vehicle crew cost if applicable
+			_crew = switch (true) do { case (_classname isKindOf "Tank"): {"Crew"}; case (_classname isKindOf "Air"): {"Pilot"}; default {"Soldier"}};
+			_crew = missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, _crew];
+			
+			//--- Ultimately if we're dealing with a sub we may want to use divers unless that our current soldiers are free-diving champions
+			if (_req_classname isKindOf "Ship") then {
+				if (getText(configFile >> "CfgVehicles" >> _req_classname >> "simulation") == "submarinex") then { _crew = missionNamespace getVariable format["CTI_%1_Diver", CTI_P_SideJoined] };
+			};
+			
+			_var_crew_classname = missionNamespace getVariable _crew;
+			if !(isNil '_var_crew_classname') then {
+				_veh_infos = call CTI_UI_Purchase_GetVehicleInfo;
+				for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select 2) } };
+				
+				if (_veh_infos select 3) then { //--- Turrets
+					{ if (count _x == 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var select CTI_UNIT_TURRETS);
+				};
+			};
+		};
+	};
+	
+	uiNamespace setVariable ["cti_dialog_ui_purchasemenu_unitcost", _cost];
+	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110014) ctrlSetStructuredText (parseText format["<t align='left'>Cost: <t color='#F56363'>$%1</t></t>", _cost]);
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };
 
 CTI_UI_Purchase_HideVehicleIcons = {
@@ -223,6 +271,7 @@ CTI_UI_Purchase_GetVehicleInfo = {
 	if (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock") then {_returned set [4, true]};
 	
 	_returned
+<<<<<<< HEAD
 };
 
 CTI_UI_Purchase_UpdateCost = {
@@ -247,4 +296,6 @@ CTI_UI_Purchase_UpdateCost = {
 		_cost = "COST: 0 FUEL: 0  AMMO: 0"; 
 	};
 	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110014) ctrlSetStructuredText (parseText _cost);
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };

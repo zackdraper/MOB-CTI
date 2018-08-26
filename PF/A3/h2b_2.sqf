@@ -1,5 +1,9 @@
 //Land_i_Shop_01_V1_F	-	Electronics Store
+<<<<<<< HEAD
 private _h=_this;
+=======
+private _house=_this;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _bed=createSimpleObject["Land_WoodenBed_01_F",[0,0,0]];
 private _bucket=createSimpleObject["Land_Bucket_F",[0,0,0]];
@@ -46,6 +50,7 @@ private _sofa=createSimpleObject["Land_Sofa_01_F",[0,0,0]];
 private _table=createSimpleObject["Land_TableBig_01_F",[0,0,0]];
 private _trash=createSimpleObject["Land_WheelieBin_01_F",[0,0,0]];
 
+<<<<<<< HEAD
 _desk1 attachTo[_h,[1.7,2.275,.68]];_desk1 setDir 270;
 _desk2 attachTo[_h,[1.7,.96,.68]];_desk2 setDir 270;
 _cashier attachTo[_h,[0,4,.27]];_cashier setDir 90;
@@ -95,3 +100,54 @@ _sofa attachTo[_h,[-3.3,3.4,4.64]];_sofa setDir 90;
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
+=======
+_desk1 attachTo[_house,[1.7,2.275,.68]];_desk1 setDir 270;
+_desk2 attachTo[_house,[1.7,.96,.68]];_desk2 setDir 270;
+_cashier attachTo[_house,[0,4,.27]];_cashier setDir 90;
+_bucket attachTo[_house,[0.25,3,.43]];_bucket setDir 180;
+_cell1 attachTo[_house,[2.02,.9,1.8]];_cell1 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell2 attachTo[_house,[2.02,1.2,1.8]];_cell2 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell3 attachTo[_house,[2.02,1.5,1.8]];_cell3 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell4 attachTo[_house,[2.02,1.8,1.8]];_cell4 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell5 attachTo[_house,[2.02,2.1,1.8]];_cell5 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell6 attachTo[_house,[2.02,2.4,1.8]];_cell6 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell7 attachTo[_house,[2.02,2.4,1.45]];_cell7 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell8 attachTo[_house,[2.02,2.1,1.45]];_cell8 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell9 attachTo[_house,[2.02,1.8,1.45]];_cell9 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell10 attachTo[_house,[2.02,1.5,1.45]];_cell10 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell11 attachTo[_house,[2.02,1.2,1.45]];_cell11 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_cell12 attachTo[_house,[2.02,.9,1.45]];_cell12 setVectorDirAndUp[[0,0,-1],[-45,-1,0]];
+_desk3 attachTo[_house,[-3.48,1,.68]];_desk3 setDir 90;
+_desk4 attachTo[_house,[-3.48,2.31,.68]];_desk4 setDir 90;
+_desk5 attachTo[_house,[-3.48,3.61,.68]];_desk5 setDir 90;
+_desk6 attachTo[_house,[-3.48,-0.3,.68]];_desk6 setDir 90;
+_laptop1 attachTo[_house,[-3.48,-0.3,1.24]];_laptop1 setDir 90;
+_laptop2 attachTo[_house,[-3.48,0.4,1.24]];_laptop2 setDir 90;
+_laptop3 attachTo[_house,[-3.48,1.1,1.24]];_laptop3 setDir 90;
+_laptop4 attachTo[_house,[-3.48,1.8,1.106]];_laptop4 setDir 90;
+_laptop5 attachTo[_house,[-3.48,2.5,1.106]];_laptop5 setDir 90;
+_laptop6 attachTo[_house,[-3.48,3.2,1.106]];_laptop6 setDir 90;
+_sign1 attachTo[_house,[-2.5,-2.4,1.39]];
+_sign2 attachTo[_house,[-2.5,-2.4,2.39]];
+_sign3 attachTo[_house,[-0.43,-2.4,1.39]];
+_shelf attachTo[_house,[-1,-1.95,.26]];_shelf setDir 90;
+_cell13 attachTo[_house,[-1,-1.7,1.524]];
+_cell14 attachTo[_house,[-0.9,-1.74,1.524]];
+_cell15 attachTo[_house,[-0.3,-1.74,1.524]];
+_cell16 attachTo[_house,[-0.5,-1.75,1.167]];
+_cell17 attachTo[_house,[-0.7,-1.75,1.167]];
+_cell18 attachTo[_house,[-1.2,-1.75,1.167]];
+_trash attachTo[_house,[3.6,6.65,.8]];_trash setdir 270;
+_bed attachTo[_house,[-2.7,1,4.6]];_bed setDir 270;
+_chair1 attachTo[_house,[1.6,1.6,4.13]];
+_chair2 attachTo[_house,[1.6,-.195,4.13]];_chair2 setDir 180;
+_chair3 attachTo[_house,[1.27,.7,4.13]];_chair3 setDir 270;
+_table attachTo[_house,[1.6,.7,4.58]];_table setDir 90;
+_fridge attachTo[_house,[1.6,4.25,4.64]];_fridge setDir 90;
+_sofa attachTo[_house,[-3.3,3.4,4.64]];_sofa setDir 90;
+{_x setObjectTextureGlobal[0,"#(argb,8,8,3)color(0,0,0,0,co)"]}count[_cell1,_cell2,_cell3,_cell4,_cell5,_cell6,_cell7,_cell8,_cell9,_cell10,_cell11,_cell12,_cell13,_cell14,_cell15,_cell16,_cell17,_cell18,_laptop1,_laptop2,_laptop3,_laptop4,_laptop5,_laptop6];
+
+sleep 1;
+
+_house enableSimulationGlobal false;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

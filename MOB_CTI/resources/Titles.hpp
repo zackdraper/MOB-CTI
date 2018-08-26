@@ -18,9 +18,13 @@ class RscTitles {
      		idd = 6667;
      		movingEnable = false;
 		onLoad = "uiNamespace setvariable ['GUI_OVERLAY',(_this select 0)];";
+<<<<<<< HEAD
       	  	controls[]= { BGPicture,LabelManpower,LabelAmmo,LabelFuel,LabelCap,PictureManpowerShadow,PictureAmmoShadow, 
 			PictureFuelShadow,PictureCapShadow,PictureManpower,PictureAmmo,PictureFuel,PictureCap, PictureIntelShadow, 
 			PictureIntel, CentralShadow, CentralLabel, CaptureFrame_OPFOR, CaptureFrame_BLUFOR, CaptureFrame, LabelPoint};
+=======
+      	  	controls[]= { BGPicture,LabelManpower,LabelAmmo,LabelFuel,LabelCap,PictureManpowerShadow,PictureAmmoShadow, PictureFuelShadow,PictureCapShadow,PictureManpower,PictureAmmo,PictureFuel,PictureCap, PictureIntelShadow, PictureIntel, CentralShadow, CentralLabel};
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	  	class BGPicture {
 			idc = -1;
 			style = ST_PICTURE;
@@ -159,6 +163,7 @@ class RscTitles {
 			colorText[] = {0.8, 0.8, 0.8, 1};
 	  	};
 
+<<<<<<< HEAD
 	 	class CaptureFrameStandard {
 			type =  CT_STATIC;
 			font = FontM;
@@ -196,6 +201,8 @@ class RscTitles {
 			y = 0.358 * safezoneH + safezoneY;
 			h = 0.011 * safezoneH;
 		};
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	  	class LabelPoint : GenericLabel69 {
 	  		idc = 205;
@@ -208,6 +215,10 @@ class RscTitles {
 			h = 0.03 * safezoneH;
 			colorText[] = {0.7, 0, 0, 1};
 	  	};
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	};
 
 };

@@ -1,5 +1,9 @@
 //Land_i_house_Small_02_V1_F
+<<<<<<< HEAD
 private _h=_this;
+=======
+private _house=_this;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _flag1=createVehicle["Banner_01_F",[0,0,0],[],0,"can_collide"];_flag1 enableSimulationGlobal false;
 private _bed1=createSimpleObject["Land_CampingTable_F",[0,0,0]];
@@ -22,6 +26,7 @@ private _sink=createSimpleObject["Land_Sink_F",[0,0,0]];
 private _table=createSimpleObject["Land_TablePlastic_01_F",[0,0,0]];
 private _trash=createSimpleObject["Land_WheelieBin_01_F",[0,0,0]];
 
+<<<<<<< HEAD
 _trash attachTo[_h,[-3.3,2.4,0.9]];_trash setDir 180;
 _sack attachTo[_h,[-2.6,2.47,0.8]];_sack setDir 270;
 _bed1 attachTo[_h,[6.55,2.4,.42]];_bed1 setDir 180;
@@ -40,6 +45,26 @@ _desk attachTo[_h,[.4,-1.115,.65]];_desk setDir 90;
 _microW attachTo[_h,[.4,-.815,1.15]];_microW setDir 110;
 _sink attachTo[_h,[-.3,-3,.8]];
 _flag1 attachTo[_h,[1.1,-1,2]];_flag1 setDir 90;
+=======
+_trash attachTo[_house,[-3.3,2.4,0.9]];_trash setDir 180;
+_sack attachTo[_house,[-2.6,2.47,0.8]];_sack setDir 270;
+_bed1 attachTo[_house,[6.55,2.4,.42]];_bed1 setDir 180;
+_blanket1 attachTo[_house,[6.55,2.4,.84]];_blanket1 setDir 90;
+_pillow1 attachTo[_house,[7.3,2.4,.88]];_pillow1 setDir 90;
+_bed2 attachTo[_house,[7.15,-2.35,.42]];_bed2 setDir 270;
+_blanket2 attachTo[_house,[7.15,-2.35,.84]];_blanket2 setDir 180;
+_pillow2 attachTo[_house,[7.15,-3.1,.88]];_pillow2 setDir 90;
+_rack attachTo[_house,[1.55,-3.1,1.15]];_rack setDir 180;
+_table attachTo[_house,[7,.35,.8]];_table setDir 270;
+_radio attachTo[_house,[7,.35,1.345]];_radio setDir 290;
+_chair1 attachTo[_house,[6.5,.35,.8]];
+_chair2 attachTo[_house,[6.85,1.35,.8]];_chair2 setDir 50;
+_fridge attachTo[_house,[.35,-2.3,.9]];_fridge setDir 90;
+_desk attachTo[_house,[.4,-1.115,.65]];_desk setDir 90;
+_microW attachTo[_house,[.4,-.815,1.15]];_microW setDir 110;
+_sink attachTo[_house,[-.3,-3,.8]];
+_flag1 attachTo[_house,[1.1,-1,2]];_flag1 setDir 90;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 _flagAltis=selectRandom["a3\data_f\flags\flag_AAF_co.paa","a3\data_f\flags\flag_Altis_co.paa","a3\data_f\flags\flag_FIA_co.paa","a3\data_f\flags\flag_AltisColonial_co.paa"];
 _flagTanoa=selectRandom["a3\data_f_exp\flags\flag_GEN_CO.paa","a3\data_f\flags\flag_SYND_CO.paa","a3\data_f\flags\flag_VIPER_CO.paa","a3\data_f\flags\flag_Tanoa_CO.paa"];
 switch(PF_WN)do{
@@ -49,6 +74,12 @@ case"Stratis":{_flag1 setObjectTextureGlobal[0,_flagAltis];};
 case"Tanoa":{_flag1 setObjectTextureGlobal[0,_flagTanoa];};
 default{_flag1 setObjectTextureGlobal[0,"a3\data_f\flags\flag_bis_co.paa"];};};
 
+<<<<<<< HEAD
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
+=======
+sleep 1;
+
+_house enableSimulationGlobal false;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

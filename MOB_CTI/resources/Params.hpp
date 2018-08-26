@@ -9,6 +9,7 @@ class params
         isGlobal=1;
     };
 
+<<<<<<< HEAD
     class load_game
     {
         title="Load Previous Session?";
@@ -235,4 +236,6 @@ class params
         isGlobal=1;
     };
 
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };

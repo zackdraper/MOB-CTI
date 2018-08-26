@@ -9,8 +9,11 @@
 //View Distance script
 #include "MOB_CTI\CHVD\dialog.hpp"
 
+<<<<<<< HEAD
 enableDebugConsole = 1;
 
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 // Respawn
 respawn = "BASE";
 respawnDelay = 30;
@@ -18,7 +21,11 @@ respawnVehicleDelay = 30;
 respawnDialog = 1;
 respawnTemplates[] = {"MenuPosition"};
 respawnOnStart = 0;
+<<<<<<< HEAD
 aikills = 0;
+=======
+aikills = 1;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 enableTeamSwitch = 1;
 
 // BIS Revive System
@@ -40,6 +47,7 @@ reviveBleedOutDelay = 120;
 #include "MOB_CTI\resources\Params.hpp"
 #include "MOB_CTI\resources\Notifications.hpp"
 
+<<<<<<< HEAD
 //Liberation Menu Integration
 
 #include "MOB_CTI\resources\Lib_standard_controls.hpp"
@@ -50,11 +58,14 @@ reviveBleedOutDelay = 120;
 #include "MOB_CTI\GOM\dialogs\GOM_dialog_parents.hpp"
 #include "MOB_CTI\GOM\dialogs\GOM_dialog_controls.hpp"
 
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 //////////////////////////////////////////////////////////////////
 
 class CfgFunctions
 {
 	#include "MOB_CTI\CHVD\CfgFunctions.hpp"
+<<<<<<< HEAD
 	#include "MOB_CTI\GOM\functions\GOM_fnc_functions.hpp"
 };
 
@@ -63,6 +74,8 @@ class CfgCommunicationMenu
 
 	#include "MOB_CTI\GOM\functions\GOM_fnc_aircraftLoadoutMenu.hpp"
 
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };
 
 class CfgSounds

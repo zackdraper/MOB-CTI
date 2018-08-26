@@ -16,16 +16,28 @@ _side = side _man;
 
 //Change faction and side
 
+<<<<<<< HEAD
 _location = _flag getVariable "CTI_LOCATION";
 
 if (side _location == _side) exitwith {};
 
 [_location,_side] remoteExec ["setSide",0];
+=======
+_location = nearestLocation [getpos _flag,""];
+
+if (side _location == _side) exitwith {};
+
+_location setside _side;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 _faction = _man getVariable "CTI_PLAYER_FACTION";
 
 _flag setVariable ["CTI_LOCATION_FACTION",_faction,true];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 // Change Flag
 _class = _faction call define_force_classnames;
 
@@ -35,6 +47,10 @@ _flagTexture = [_class,0,"flag"] call read_twod_array_col;
 
 _flag setVariable ["CTI_OCCUPYING_GROUPS",[],true];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 //Change Marker
 
 _markerstr = _flag getVariable ["CTI_LOCATION_MARKER",objNull];

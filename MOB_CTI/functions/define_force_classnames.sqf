@@ -36,10 +36,15 @@ _return = switch (_this) do {
 		["O_Soldier_AA_F",[150,0,10],"","men"],
 		["O_soldier_M_F",[150,0,10],"","men"],
 		["O_sniper_F",[250,0,10],"","men"],
+<<<<<<< HEAD
 		["O_spotter_F",[250,0,10],"","men"],
 		["O_medic_F",[200,0,3],"","men"],
 		["O_engineer_F",[200,0,5],"","men"],
 		["O_soldier_UAV_F",[200,0,5],"","men"],
+=======
+		["O_medic_F",[200,0,3],"","men"],
+		["O_engineer_F",[200,0,5],"","men"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Light Vehicles
 		["O_Quadbike_01_F",[25,1,0],"","light"],
@@ -61,6 +66,7 @@ _return = switch (_this) do {
 		["O_APC_Tracked_02_AA_F",[2500,30,75],"","heavy","aa"],
 		["O_MBT_02_cannon_F",[3000,40,100],"","heavy"],
 		["O_MBT_02_arty_F",[4000,30,150],"","heavy"],
+<<<<<<< HEAD
 		["O_MBT_04_command_F",[5000,40,175],"","heavy"],
 		
 		// Aircraft
@@ -72,6 +78,18 @@ _return = switch (_this) do {
 		["O_UAV_02_dynamicLoadout_F",[2000,20,200],"","air"],
 		["O_Plane_CAS_02_dynamicLoadout_F",[10000,150,200],"","air"],
 		["O_Plane_Fighter_02_F",[12000,150,200],"","air"],
+=======
+
+		// Aircraft
+		["O_Heli_Light_02_F",[3000,75,200],"","air"],
+		["O_Heli_Light_02_unarmed_F",[3000,75,0],"","air"],
+		["O_Heli_Transport_04_F",[4000,100,0],"","air"],
+		["O_Heli_Transport_04_covered_F",[4000,100,0],"","air","supply"],
+		["O_Heli_Attack_02_F",[10000,150,200],"","air"],
+		["O_UAV_02_F",[2000,20,200],"","air"],
+		["O_UAV_02_CAS_F",[2000,20,100],"","air"],
+		["O_Plane_CAS_02_F",[10000,150,200],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Naval
 		["O_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -84,6 +102,7 @@ _return = switch (_this) do {
 		["O_GMG_01_F",[100,0,25],"","static"],
 		["O_GMG_01_high_F",[100,0,25],"","static"],
 		["O_Mortar_01_F",[500,0,50],"","static"],
+<<<<<<< HEAD
 		["O_static_AA_F",[300,0,25],"","static","aa"],
 		["O_SAM_System_04_F",[400,0,50],"","static","aa"],
 		["O_static_AT_F",[300,0,25],"","static"],
@@ -93,21 +112,36 @@ _return = switch (_this) do {
 		// Base Buildings
 		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
 		["Land_Cargo_HQ_V3_F",[2000,0,0],"","lightfac"],
+=======
+		["O_static_AA_F",[300,0,25],"","static"],
+		["O_static_AT_F",[300,0,25],"","static"],
+
+		// Base Buildings
+		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
+		["Land_Dome_Small_F",[2000,0,0],"","lightfac"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_Tower_V3_F",[4000,0,0],"","airfac"],
 		["Land_Cargo_House_V3_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
 		["Land_Research_house_V1_F",[3000,0,0],"","controlcen"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["O_APC_Wheeled_02_rcws_F",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	
 		// Flag
 		["\A3\Data_F\Flags\Flag_CSAT_CO.paa",[0,0,0],"","flag"]
 		];
 			
 	};
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	case "csat_rec":{
 	
 		[
@@ -127,6 +161,7 @@ _return = switch (_this) do {
 		["O_Soldier_AA_F",[150,0,10],"","men"],
 		["O_soldier_M_F",[150,0,10],"","men"],
 		["O_sniper_F",[250,0,10],"","men"],
+<<<<<<< HEAD
 		["O_spotter_F",[250,0,10],"","men"],
 		["O_medic_F",[200,0,3],"","men"],
 		["O_engineer_F",[200,0,5],"","men"],
@@ -136,6 +171,13 @@ _return = switch (_this) do {
 		["O_Quadbike_01_F",[25,1,0],"","light"],
 		["O_LSV_02_unarmed_F",[100,5,0],"","light"],
 		["O_LSV_02_armed_F",[100,5,5],"","light"],
+=======
+		["O_medic_F",[200,0,3],"","men"],
+		["O_engineer_F",[200,0,5],"","men"],
+
+		// Light Vehicles
+		["O_Quadbike_01_F",[25,1,0],"","light"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["O_MRAP_02_F",[150,5,0],"","light"],
 		["O_MRAP_02_hmg_F",[300,5,20],"","light"],
 		["O_MRAP_02_gmg_F",[300,5,20],"","light"],
@@ -150,7 +192,11 @@ _return = switch (_this) do {
 		["O_Truck_03_medical_F",[300,5,0],"","medic"],
 
 		// Aircraft
+<<<<<<< HEAD
 		["O_Heli_Light_02_F",[3000,75,50],"","air"],
+=======
+		["O_Heli_Light_02_F",[3000,75,200],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["O_Heli_Light_02_unarmed_F",[3000,75,0],"","air"],
 		["O_Heli_Transport_04_F",[4000,100,0],"","air"],
 		["O_Heli_Transport_04_covered_F",[4000,100,0],"","air"],
@@ -159,7 +205,10 @@ _return = switch (_this) do {
 		["O_UAV_02_F",[2000,20,200],"","air"],
 		["O_UAV_02_CAS_F",[2000,20,100],"","air"],
 		["O_Plane_CAS_02_F",[10000,150,200],"","air"],
+<<<<<<< HEAD
 		["O_Plane_Fighter_02_F",[12000,150,200],"","air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Naval
 		["O_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -172,10 +221,15 @@ _return = switch (_this) do {
 		["O_GMG_01_F",[100,0,25],"","static"],
 		["O_GMG_01_high_F",[100,0,25],"","static"],
 		["O_Mortar_01_F",[500,0,50],"","static"],
+<<<<<<< HEAD
 		["O_static_AA_F",[300,0,25],"","static","aa"],
 		["O_SAM_System_04_F",[400,0,50],"","static","aa"],
 		["O_static_AT_F",[300,0,25],"","static"],
 		["Land_Cargo10_military_green_F",[500,0,0],"east_eng_crate","static"],
+=======
+		["O_static_AA_F",[300,0,25],"","static"],
+		["O_static_AT_F",[300,0,25],"","static"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Base Buildings
 		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
@@ -183,9 +237,12 @@ _return = switch (_this) do {
 		["Land_Cargo_Tower_V3_F",[4000,0,0],"","airfac"],
 		["Land_Cargo_House_V3_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["O_APC_Wheeled_02_rcws_F",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_CSAT_CO.paa",[0,0,0],"","flag"]
@@ -211,6 +268,7 @@ _return = switch (_this) do {
 		["B_Soldier_AA_F",[150,0,10],"","men"],
 		["B_soldier_M_F",[150,0,10],"","men"],
 		["B_sniper_F",[250,0,10],"","men"],
+<<<<<<< HEAD
 		["B_spotter_F",[250,0,10],"","men"],
 		["B_medic_F",[200,0,3],"","men"],
 		["B_engineer_F",[200,0,5],"","men"],
@@ -220,6 +278,13 @@ _return = switch (_this) do {
 		["B_Quadbike_01_F",[25,1,0],"","light"],
 		["B_LSV_01_unarmed_F",[100,5,0],"","light"],
 		["B_LSV_01_armed_F",[100,5,5],"","light"],
+=======
+		["B_medic_F",[200,0,3],"","men"],
+		["B_engineer_F",[200,0,5],"","men"],
+
+		// Light Vehicles
+		["B_Quadbike_01_F",[25,1,0],"","light"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["B_MRAP_01_F",[150,5,0],"","light"],
 		["B_MRAP_01_hmg_F",[300,5,20],"","light"],
 		["B_MRAP_01_gmg_F",[300,5,20],"","light"],
@@ -234,6 +299,7 @@ _return = switch (_this) do {
 		["B_Truck_01_medical_F",[300,5,0],"","medic"],
 
 		// Tanks
+<<<<<<< HEAD
 		["B_AFV_Wheeled_01_cannon_F",[1000,30,50],"","heavy"],
 		["B_AFV_Wheeled_01_up_cannon_F",[1250,30,50],"","heavy"],
 		["B_APC_Tracked_01_rcws_F",[1000,30,50],"","heavy"],
@@ -253,6 +319,21 @@ _return = switch (_this) do {
 		["B_UAV_05_F",[2000,100,100],"","air"],
 		["B_Plane_CAS_01_dynamicLoadout_F",[10000,250,200],"","air"],
 		["B_Plane_Fighter_01_F",[10000,250,200],"","air"],
+=======
+		["B_APC_Tracked_01_rcws_F",[1000,30,50],"","heavy"],
+		["B_APC_Tracked_02_AA_F",[2500,30,75],"","heavy","aa"],
+		["B_MBT_01_cannon_F",[3000,40,100],"","heavy"],
+		["B_MBT_01_arty_F",[4000,30,150],"","heavy"],
+
+		// Aircraft
+		["B_Heli_Light_01_F",[3000,75,200],"","air"],
+		["B_Heli_Light_01_armed_F",[3000,75,0],"","air"],
+		["B_Heli_Transport_01_F",[4000,100,0],"","air"],
+		["B_Heli_Attack_01_F",[10000,150,200],"","air"],
+		["B_UAV_02_F",[2000,20,200],"","air"],
+		["B_UAV_02_CAS_F",[2000,20,100],"","air"],
+		["B_Plane_CAS_01_F",[10000,150,200],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Naval
 		["B_G_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -265,6 +346,7 @@ _return = switch (_this) do {
 		["B_GMG_01_F",[100,0,25],"","static"],
 		["B_GMG_01_high_F",[100,0,25],"","static"],
 		["B_Mortar_01_F",[500,0,50],"","static"],
+<<<<<<< HEAD
 		["B_static_AA_F",[300,0,25],"","static","aa"],
 		["B_SAM_System_03_F",[400,0,50],"","static","aa"],
 		["B_static_AT_F",[300,0,25],"","static"],
@@ -368,20 +450,32 @@ _return = switch (_this) do {
 		// Base Buildings
 		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
 		["Land_Cargo_HQ_V3_F",[2000,0,0],"","lightfac"],
+=======
+		["B_static_AA_F",[300,0,25],"","static"],
+		["B_static_AT_F",[300,0,25],"","static"],
+
+		// Base Buildings
+		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
+		["Land_Dome_Small_F",[2000,0,0],"","lightfac"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_Tower_V1_F",[4000,0,0],"","airfac"],
 		["Land_Cargo_House_V1_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
 		["Land_Research_house_V1_F",[3000,0,0],"","controlcen"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["B_T_APC_Wheeled_01_cannon_F",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_nato_CO.paa",[0,0,0],"","flag"]
 		
 		];
 	};
+<<<<<<< HEAD
 		
 	case "csat_pacific":{
 	
@@ -471,6 +565,8 @@ _return = switch (_this) do {
 		];
 			
 	};
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	
 	case "aaf_gen":{
 	
@@ -508,6 +604,7 @@ _return = switch (_this) do {
 		["I_Truck_02_fuel_F",[300,5,0],"","fuel"],
 		["I_Truck_02_medical_F",[300,5,0],"","medic"],
 
+<<<<<<< HEAD
 		// Tanks
 		["I_LT_01_cannon_F",[500,30,30],"","heavy"],
 		["I_LT_01_AT_F",[500,30,30],"","heavy"],
@@ -516,12 +613,20 @@ _return = switch (_this) do {
 
 		// Aircraft
 		["I_Heli_light_03_dynamicLoadout_F",[3000,75,50],"","air"],
+=======
+		// Aircraft
+		["I_Heli_light_03_F",[3000,75,200],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["I_Heli_light_03_unarmed_F",[3000,75,0],"","air"],
 		["I_Heli_Transport_02_F",[4000,100,0],"","air"],
 		["I_UAV_02_F",[2000,20,200],"","air"],
 		["I_UAV_02_CAS_F",[2000,20,100],"","air"],
+<<<<<<< HEAD
 		["I_Plane_Fighter_03_dynamicLoadout_F",[10000,150,200],"","air"],
 		["I_Plane_Fighter_04_F",[10000,150,200],"","air"],
+=======
+		["I_Plane_Fighter_03_CAS_F",[10000,150,200],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Naval
 		["I_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -534,6 +639,7 @@ _return = switch (_this) do {
 		["I_GMG_01_F",[100,0,25],"","static"],
 		["I_GMG_01_high_F",[100,0,25],"","static"],
 		["I_Mortar_01_F",[500,0,50],"","static"],
+<<<<<<< HEAD
 		["I_static_AA_F",[300,0,25],"","static","aa"],
 		["I_static_AT_F",[300,0,25],"","static"],
 		["Land_Cargo10_military_green_F",[500,0,0],"west_eng_crate","static"],
@@ -541,14 +647,25 @@ _return = switch (_this) do {
 		// Base Buildings
 		["Land_Cargo_HQ_V1_F",[1000,0,0],"","barracks"],
 		["Land_Cargo_HQ_V1_F",[2000,0,0],"","lightfac"],
+=======
+		["I_static_AA_F",[300,0,25],"","static"],
+		["I_static_AT_F",[300,0,25],"","static"],
+
+		// Base Buildings
+		["Land_Cargo_HQ_V1_F",[1000,0,0],"","barracks"],
+		["Land_Dome_Small_F",[2000,0,0],"","lightfac"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_Tower_V1_F",[4000,0,0],"","airfac"],
 		["Land_Cargo_House_V1_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
 		["Land_Research_house_V1_F",[3000,0,0],"","controlcen"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["I_APC_Wheeled_03_cannon_F",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_AAF_CO.paa",[0,0,0],"","flag"]
@@ -606,9 +723,12 @@ _return = switch (_this) do {
 		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_House_V1_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["I_G_Van_01_transport_F",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_FIA_CO.paa",[0,0,0],"","flag"]
@@ -667,7 +787,11 @@ _return = switch (_this) do {
 
 		// Aircraft
 		["RHS_Mi8MTV3_UPK23_vvsc",[2000,75,15],"","air"],
+<<<<<<< HEAD
 		["RHS_Mi8MTV3_vvsc",[2000,75,20],"","air","supply"],
+=======
+		["RHS_Mi8MTV3_vvsc",[2000,75,20],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["RHS_Mi24P_vvsc",[8000,100,30],"","air"],
 		["RHS_Ka52_vvsc",[8000,100,30],"","air"],
 		["RHS_Su25SM_vvsc",[12000,200,30],"","air"],
@@ -678,6 +802,7 @@ _return = switch (_this) do {
 		["B_Boat_Armed_01_minigun_F",[250,5,20],"","boat"],
 
 		// Static
+<<<<<<< HEAD
 		["rhs_KORD_MSV",[100,0,5],"","static"],
 		["rhs_KORD_high_MSV",[100,0,5],"","static"],
 		["RHS_AGS30_TriPod_MSV",[100,0,5],"","static"],
@@ -685,11 +810,21 @@ _return = switch (_this) do {
 		["RHS_Igla_AA_pod_msv",[300,0,5],"","static"],
 		["rhs_Kornet_9M133_2_msv",[300,0,5],"","static"],
 		["rhs_D30_vmf",[2000,0,20],"","static"],
+=======
+		["RHS_M2StaticMG_MiniTripod_WD",[100,0,5],"","static"],
+		["RHS_M2StaticMG_WD",[100,0,5],"","static"],
+		["RHS_MK19_Tripod_WD",[100,0,5],"","static"],
+		["RHS_M252_WD",[500,0,50],"","static"],
+		["RHS_Stinger_AA_pod",[300,0,5],"","static"],
+		["RHS_TOW_Tripod_WD",[300,0,5],"","static"],
+		["RHS_M119_WD",[2000,0,20],"","static"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		// Base Buildings
 		["RU_WarfareBBarracks",[1000,0,0],"","barracks"],
 		["RU_WarfareBLightFactory",[2000,0,0],"","lightfac"],
 		["RU_WarfareBHeavyFactory",[3000,0,0],"","heavyfac"],
+<<<<<<< HEAD
 		["RU_WarfareBAircraftFactory",[4000,0,0],"","airfac"],
 		["RU_WarfareBVehicleServicePoint",[1000,0,0],"","service"],
 		["PowGen_Big",[1000,0,0],"","boatdock"],
@@ -697,6 +832,12 @@ _return = switch (_this) do {
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["rhs_prp3_msv",[0,0,20],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+		["RU_WarfareBAirFactory",[4000,0,0],"","airfac"],
+		["RU_WarfareBVehicleServicePoint",[1000,0,0],"","service"],
+		["PowGen_Big",[1000,0,0],"","boatdock"],
+		["RU_WarfareBUAVTerminal",[3000,0,0],"","controlcen"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_us_CO.paa",[0,0,0],"","flag"]
@@ -731,17 +872,26 @@ _return = switch (_this) do {
 		["rhsusf_m1025_w",[50,1,0],"","light"],
 		["rhsusf_m1025_w_m2",[75,1,5],"","light"],
 		["rhsusf_m1025_w_mk19",[75,1,5],"","light"],
+<<<<<<< HEAD
 		["CUP_B_M1167_WDL_USA",[75,1,10],"","light"],
 		["rhsusf_m998_w_2dr_halftop",[75,1,0],"","light"],
 
 		["rhsusf_m1117_w",[150,5,0],"","light"],
 		["rhsusf_m1220_usarmy_wd",[150,5,0],"","light"],
 		["rhsusf_m1220_M153_M2_usarmy_wd",[150,5,10],"","light"],
+=======
+		["rhsusf_m998_w_2dr_halftop",[75,1,0],"","light"],
+
+		["rhsusf_m1117_w",[150,5,0],"","light"],
+		["rhsusf_rg33_m2_wd",[150,5,5],"","light"],
+		["rhsusf_rg33_wd",[150,5,10],"","light"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		["rhsusf_m113_usarmy_unarmed",[350,15,0],"","light"],
 		["rhsusf_m113_usarmy",[350,15,5],"","light"],
 		["rhsusf_m113_usarmy_M240",[350,15,5],"","light"],
 		["rhsusf_m113_usarmy_MK19",[350,15,5],"","light"],
+<<<<<<< HEAD
 		["CUP_B_M163_USA",[350,15,5],"","light"],
 
 		["CUP_B_M1126_ICV_M2_Woodland",[350,10,5],"","light"],
@@ -749,6 +899,8 @@ _return = switch (_this) do {
 		["CUP_B_M1128_MGS_Woodland",[350,10,10],"","light"],
 		["CUP_B_M1129_MC_MK19_Woodland",[350,10,50],"","light"],
 		["CUP_B_M1135_ATGMV_Woodland",[350,10,10],"","light"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		["rhsusf_M1078A1P2_B_wd_fmtv_usarmy",[100,5,0],"","light"],
 		["rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy",[100,5,0],"","light"],
@@ -767,12 +919,20 @@ _return = switch (_this) do {
 		["rhsusf_M977A4_REPAIR_usarmy_wd",[300,5,0],"","repair"],
 		["rhsusf_M977A4_AMMO_usarmy_wd",[300,5,0],"","ammo"],
 		["rhsusf_M978A4_usarmy_wd",[300,5,0],"","fuel"],
+<<<<<<< HEAD
 		["rhsusf_m113_usarmy_medical",[300,15,0],"","medic"],
 		["CUP_B_M1133_MEV_Woodland",[300,10,0],"","medic"],
 
 		// Aircraft
 		["RHS_UH60M",[2000,75,15],"","air"],
 		["RHS_CH_47F",[3000,100,15],"","air","supply"],
+=======
+		["rhsusf_m113_usarmy_medical",[300,5,0],"","medic"],
+
+		// Aircraft
+		["RHS_UH60M",[2000,75,15],"","air"],
+		["RHS_CH_47F",[3000,100,15],"","air"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["RHS_AH64D_wd_GS",[8000,100,30],"","air"],
 		["RHS_AH64D_wd_AA",[8000,100,30],"","air"],
 		["RHS_A10",[12000,200,30],"","air"],
@@ -787,6 +947,7 @@ _return = switch (_this) do {
 		["RHS_M2StaticMG_WD",[100,0,5],"","static"],
 		["RHS_MK19_Tripod_WD",[100,0,5],"","static"],
 		["RHS_M252_WD",[500,0,50],"","static"],
+<<<<<<< HEAD
 		["RHS_Stinger_AA_pod_D",[300,0,5],"","static"],
 		["RHS_TOW_Tripod_WD",[300,0,5],"","static"],
 		["RHS_M119_WD",[2000,0,20],"","static"],
@@ -883,6 +1044,9 @@ _return = switch (_this) do {
 		["RHS_MK19_Tripod_WD",[100,0,5],"","static"],
 		["RHS_M252_WD",[500,0,50],"","static"],
 		["RHS_Stinger_AA_pod_D",[300,0,5],"","static"],
+=======
+		["RHS_Stinger_AA_pod",[300,0,5],"","static"],
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["RHS_TOW_Tripod_WD",[300,0,5],"","static"],
 		["RHS_M119_WD",[2000,0,20],"","static"],
 
@@ -894,9 +1058,12 @@ _return = switch (_this) do {
 		["USMC_WarfareBVehicleServicePoint",[1000,0,0],"","service"],
 		["PowGen_Big",[1000,0,0],"","boatdock"],
 		["USMC_WarfareBUAVTerminal",[3000,0,0],"","controlcen"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["rhsusf_m113_usarmy_unarmed",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_us_CO.paa",[0,0,0],"","flag"]
@@ -949,9 +1116,12 @@ _return = switch (_this) do {
 		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_House_V1_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["rhsgref_BRDM2_HQ_ins",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_FIA_CO.paa",[0,0,0],"","flag"]
@@ -1063,7 +1233,10 @@ _return = switch (_this) do {
 		// Tanks
 		["CUP_I_AAV_RACS",[2000,30,75],"","heavy"],
 		["CUP_I_M163_RACS",[2000,30,75],"","heavy","aa"],
+<<<<<<< HEAD
 		["CUP_I_M60A3_RACS",[3000,30,100],"","heavy"],
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		["CUP_I_T72_RACS",[4000,40,100],"","heavy"],
 
 		// Support
@@ -1097,10 +1270,13 @@ _return = switch (_this) do {
 		["RU_WarfareBVehicleServicePoint",[1000,0,0],"","service"],
 		["PowGen_Big",[1000,0,0],"","boatdock"],
 		["RU_WarfareBUAVTerminal",[3000,0,0],"","controlcen"],
+<<<<<<< HEAD
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["CUP_I_AAV_RACS",[0,0,0],"","mhq"],
 		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
 		
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		// Flag
 		["\po_main\data\fac\cfgfactionclasses_racs_ca.paa",[0,0,0],"","flag"]

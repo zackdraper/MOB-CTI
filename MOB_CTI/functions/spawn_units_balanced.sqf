@@ -61,7 +61,10 @@ switch (_forcetype) do {
 
 				_leader = _grp createUnit [(_slclass select 0), _pos, [], 0, "NONE"];
 				[_leader] join _grp;
+<<<<<<< HEAD
 				sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 				for [{_c=(_slcost select 0)}, {_c < _lgsqd}, {_c=_c+(_selunit select 0)}] do {
 							
@@ -71,7 +74,11 @@ switch (_forcetype) do {
 
 					_unit = _grp createUnit [(_selunit select 1), _pos, [], 0, "NONE"];
 					[_unit] join _grp;
+<<<<<<< HEAD
 					sleep 1;
+=======
+						
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 				};
 			};		
 
@@ -88,7 +95,11 @@ switch (_forcetype) do {
 
 				_leader = _grp createUnit [(_slclass select 0), _pos, [], 0, "NONE"];
 				[_leader] join _grp;
+<<<<<<< HEAD
 				sleep 1;
+=======
+
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 				for [{_c=(_slcost select 0)}, {_c < _smsqd}, {_c=_c+(_selunit select 0)}] do {
 							
 					_num = floor random [0,2,_mencount];
@@ -97,7 +108,10 @@ switch (_forcetype) do {
 
 					_unit = _grp createUnit [(_selunit select 1), _pos, [], 0, "NONE"];
 					[_unit] join _grp;
+<<<<<<< HEAD
 					sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 				};
 			};
@@ -117,7 +131,10 @@ switch (_forcetype) do {
 
 				_leader = _grp createUnit [(_slclass select 0), _pos, [], 0, "NONE"];
 				[_leader] join _grp;
+<<<<<<< HEAD
 				sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 				for [{_c=(_slcost select 0)}, {_c < _smsqd}, {_c=_c+(_selunit select 0)}] do {
 							
@@ -127,8 +144,13 @@ switch (_forcetype) do {
 
 					_unit = _grp createUnit [(_selunit select 1), _pos, [], 0, "NONE"];
 					[_unit] join _grp;
+<<<<<<< HEAD
 					sleep 1;
 				};	
+=======
+
+				};
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 			};
 
 		};
@@ -162,7 +184,11 @@ switch (_forcetype) do {
 
 			_sel = _class_x_cost select _num;	
 
+<<<<<<< HEAD
 			_pos = [_pos, 0, 150, 7, 0, -1, 0] call BIS_fnc_findSafePos;
+=======
+			_pos = [_pos, 0, 150, 3, 0, -1, 0] call BIS_fnc_findSafePos;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 			_return = [_pos, 180, (_sel select 1), _side] call BIS_fnc_spawnvehicle;
 
@@ -193,7 +219,10 @@ switch (_forcetype) do {
 
 			_leader = _grp createUnit [(_slclass select 0), _pos, [], 0, "NONE"];
 			[_leader] join _grp;
+<<<<<<< HEAD
 			sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 			for [{_c=(_slcost select 0)}, {_c < _smsqd}, {_c=_c+(_selunit select 0)}] do {
 							
@@ -203,7 +232,11 @@ switch (_forcetype) do {
 
 				_unit = _grp createUnit [(_selunit select 1), _pos, [], 0, "NONE"];
 				[_unit] join _grp;
+<<<<<<< HEAD
 				sleep 1;
+=======
+
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 			};
 		};
 	};
@@ -266,7 +299,10 @@ switch (_forcetype) do {
 
 			_leader = _grp createUnit [(_slclass select 0), _pos, [], 0, "NONE"];
 			[_leader] join _grp;
+<<<<<<< HEAD
 			sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 			for [{_c=(_slcost select 0)}, {_c < _smsqd}, {_c=_c+(_selunit select 0)}] do {
 							
@@ -276,7 +312,10 @@ switch (_forcetype) do {
 
 				_unit = _grp createUnit [(_selunit select 1), _pos, [], 0, "NONE"];
 				[_unit] join _grp;
+<<<<<<< HEAD
 				sleep 1;
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 			};
 		};

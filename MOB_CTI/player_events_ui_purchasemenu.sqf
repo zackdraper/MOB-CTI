@@ -6,7 +6,11 @@ switch (_action) do {
 		_faction = player getVariable "CTI_PLAYER_FACTION";
 		_mhq = player getVariable "CTI_PLAYER_MHQ";	
 		_factories = _mhq getVariable "CTI_FACTORIES";
+<<<<<<< HEAD
 		_commander = player getVariable "CTI_COMMANDER";
+=======
+		_commander = missionNamespace getVariable format ["CTI_%1_COMMANDER",_faction];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		if(count _factories < 1)exitwith{hint "No Factories are available. Build one!";closedialog 0;};
 
@@ -29,6 +33,7 @@ switch (_action) do {
 		
 		(_factory_type) call CTI_UI_Purchase_LoadFactories;
 		
+<<<<<<< HEAD
 		if (_factory_type != "Service Depot" || !(_commander)) then {((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlShow false};
 		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.535), SafeZoneY + (SafeZoneH * 0.825), SafeZoneW * 0.275, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlCommit 0;
 		
@@ -40,6 +45,18 @@ switch (_action) do {
 			{
 				_header_ai = if (isPlayer leader _x) then {""} else {"[AI]"};
 				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110008) lbAdd format ["%3 (%2) %1", _header_ai, name leader _x, GroupID _x];
+=======
+		if (_factory_type != "Service Depot" || !(player == _commander)) then {((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlShow false};
+		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.535), SafeZoneY + (SafeZoneH * 0.825), SafeZoneW * 0.275, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 100016) ctrlCommit 0;
+		
+		_groups = [group player];
+		if (player == _commander) then {
+			//_groups = if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" == 1) then {(CTI_P_SideJoined) call CTI_CO_FNC_GetSideGroups} else {(CTI_P_SideJoined) call CTI_CO_FNC_GetSidePlayerGroups};
+			_groups = [group player]; // place holder
+			{
+				_header_ai = if (isPlayer leader _x) then {""} else {"[AI]"};
+				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110008) lbAdd format ["(%2) %1", _header_ai, name leader _x];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 				if (leader _x == player) then {((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110008) lbSetCurSel _forEachIndex};
 			} forEach (_groups);
 		} else {
@@ -53,6 +70,7 @@ switch (_action) do {
 		//execVM "MOB_CTI\player_ui_purchasemenu.sqf";
 	};
 	case "onUnitsLBSelChanged": {
+<<<<<<< HEAD
 		hint "unit selected";
 		_selected = _this select 1;
 		_widgets = missionNamespace getVariable "CTI_CURRENT_WIDGETS";
@@ -64,6 +82,16 @@ switch (_action) do {
 		_classname call CTI_UI_Purchase_UpdateVehicleIcons;
 		
 		_selected call CTI_UI_Purchase_UpdateCost;
+=======
+		//hint "unit selected";
+		_changedTo = _this select 1;
+		
+		_var = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbData [_changedTo, 0];
+
+		//hint format ["%1",_var];
+
+		_var call CTI_UI_Purchase_UpdateVehicleIcons;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	};
 	case "onGroupLBSelChanged": {
 		//hint "group selected";
@@ -77,7 +105,11 @@ switch (_action) do {
 
 		_factories = uiNamespace getVariable "cti_dialog_ui_purchasemenu_factories";		
 		_factory = _factories select _changedTo;
+<<<<<<< HEAD
 		//hint format ["%1 : %2",_factories,_changedTo];
+=======
+		hint format ["%1 : %2",_factories,_changedTo];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		if (alive _factory) then {
 			[_factory, 2, .175] call CTI_UI_Purchase_CenterMap;
@@ -124,19 +156,31 @@ switch (_action) do {
 		};
 	};
 	case "onVehicleIconClicked": {
+<<<<<<< HEAD
 		//hint "vehicle icon selected";
+=======
+		hint "vehicle icon selected";
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		_role = _this select 1;
 		_idc = _this select 2;
 		
 		_var = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbData [lnbCurSelRow 111007, 0];
+<<<<<<< HEAD
 		//hint format ["%1",_var];
+=======
+		hint format ["%1",_var];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		
 		_toggle = if (uiNamespace getVariable format ["cti_dialog_ui_purchasemenu_vehicon_%1", _role]) then {false} else {true};
 		uiNamespace setVariable [format ["cti_dialog_ui_purchasemenu_vehicon_%1", _role], _toggle];
 		
 		_color = if (_toggle) then {[0.258823529, 0.713725490, 1, 1]} else {[0.2, 0.2, 0.2, 1]};
 		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl _idc) ctrlSetTextColor _color;
+<<<<<<< HEAD
 		//_selected call CTI_UI_Purchase_UpdateCost;
+=======
+		(_classname) call CTI_UI_Purchase_UpdateCost;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	};
 	case "onVehicleLockClicked": {
 		_toggle = if (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock") then {false} else {true};
@@ -160,7 +204,11 @@ switch (_action) do {
 		_classname = _info select 1;
 		//_classname = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbData [_selected, 0];
 
+<<<<<<< HEAD
 		//diag_log format ["%1",_info];
+=======
+		diag_log format ["%1",_info];
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		_display = _info select 0;
 		_m_cost = _info select 2;
@@ -176,8 +224,11 @@ switch (_action) do {
 			
 			_selected_group = (uiNamespace getVariable "cti_dialog_ui_purchasemenu_teams") select (lbCurSel ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110008)); //todo Change that by combo value
 			
+<<<<<<< HEAD
 			hint format ["%1",_selected_group];
 			
+=======
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 			_isEmpty = false;
 			_veh_info = if (_classname isKindOf "Man") then { [] } else { call CTI_UI_Purchase_GetVehicleInfo };
 			if (count _veh_info > 0) then {
@@ -195,7 +246,11 @@ switch (_action) do {
 						if (_proc_purchase) then {
 							_picture = if (_picture != "") then {format["<img image='%1' size='2.5'/><br /><br />", _picture]} else {""};
 							hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br />%2<t>A <t color='#ccffaf'>%1</t> is being built</t>", _display, _picture];
+<<<<<<< HEAD
 							[_classname, uiNamespace getVariable "cti_dialog_ui_purchasemenu_factory", _selected_group, _veh_info, _cost, _display] spawn CTI_CL_FNC_PurchaseUnit;
+=======
+							[_classname, uiNamespace getVariable "cti_dialog_ui_purchasemenu_factory", _selected_group, _veh_info, _cost] spawn CTI_CL_FNC_PurchaseUnit;
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 							[_mhq,_cost] call subtract_funds;
 						};
 					} else {
@@ -241,6 +296,39 @@ switch (_action) do {
 			_classname = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110013) lbData _selected;
 			_rounded_seed = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110013) lbValue _selected;
 			
+<<<<<<< HEAD
+=======
+			// player sidechat format ["trying to remove %1 %2", _classname, _rounded_seed];
+			_is_present = false;
+			_req_can_alter = true;
+			_req_factory = objNull;
+			_req_team = grpNull;
+			_seed = -1;
+			_index = -1;
+			{
+				if (round(_x select 0) == _rounded_seed && _x select 1 == _classname) exitWith {
+					_is_present = true;
+					_seed = _x select 0;
+					_req_factory = _x select 3;
+					_req_team = _x select 4;
+					_req_can_alter = _x select 5;
+					_index = _forEachIndex;
+				};
+			} forEach CTI_P_PurchaseRequests;
+			
+			if (_is_present) then {
+				//--- Yes it's here, but can we alter it ?
+				if (_req_can_alter) then {
+					CTI_P_PurchaseRequests set [_index, "!nil!"];
+					CTI_P_PurchaseRequests = CTI_P_PurchaseRequests - ["!nil!"];
+					
+					//--- Notify the server thread that our request has been canceled.
+					["SERVER", "Request_PurchaseCancel", [_seed, _classname, _req_factory, _req_team, group player]] call CTI_CO_FNC_NetSend;
+				} else {
+					hint "commander assigned units may not be removed";
+				};
+			};
+>>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 		};
 	};
 	case "onUnload": {
