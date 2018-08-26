@@ -1,9 +1,5 @@
 //Land_i_Stone_Shed_V1_F
-<<<<<<< HEAD
 private _h=_this;
-=======
-private _house=_this;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _basket=createSimpleObject["Land_Basket_F",[0,0,0]];
 private _bed=createSimpleObject["Land_CampingTable_F",[0,0,0]];
@@ -18,7 +14,6 @@ private _pillow=createSimpleObject[_pillow,[0,0,0]];
 private _sacks=createSimpleObject["Land_Sacks_goods_F",[0,0,0]];
 private _table=createSimpleObject["Land_WoodenTable_small_F",[0,0,0]];
 
-<<<<<<< HEAD
 _table attachTo[_h,[.5,3.8,0.68]];_table setDir 90;
 _chairW1 attachTo[_h,[1.04,3.8,0.25]];_chairW1 setDir 90;
 _chairW2 attachTo[_h,[-.2,3.8,0.25]];_chairW2 setDir(random 40)+270;
@@ -29,18 +24,6 @@ _chair attachTo[_h,[1.3,-.423,0.74]];_chair setDir 90;_chair setVectorUp[.1,1,.5
 _flag1 attachTo[_h,[0.78,-.648,1.8]];
 _sacks attachTo[_h,[-3.34,1.7,.7]];_sacks setDir 90;
 _basket attachTo[_h,[-0,4,1.445]];_basket setDir(random 359);
-=======
-_table attachTo[_house,[.5,3.8,0.68]];_table setDir 90;
-_chairW1 attachTo[_house,[1.04,3.8,0.25]];_chairW1 setDir 90;
-_chairW2 attachTo[_house,[-.2,3.8,0.25]];_chairW2 setDir(random 40)+270;
-_bed attachTo[_house,[0,-.2,0.3]];
-_pillow attachTo[_house,[-.75,-.2,0.765]];
-_blanket attachTo[_house,[0,-.2,0.72]];_blanket setDir 270;
-_chair attachTo[_house,[1.3,-.423,0.74]];_chair setDir 90;_chair setVectorUp[.1,1,.5];
-_flag1 attachTo[_house,[0.78,-.648,1.8]];
-_sacks attachTo[_house,[-3.34,1.7,.7]];_sacks setDir 90;
-_basket attachTo[_house,[-0,4,1.445]];_basket setDir(random 359);
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 _flagAltis=selectRandom["a3\data_f\flags\flag_AAF_co.paa","a3\data_f\flags\flag_Altis_co.paa","a3\data_f\flags\flag_FIA_co.paa","a3\data_f\flags\flag_AltisColonial_co.paa"];
 _flagTanoa=selectRandom["a3\data_f_exp\flags\flag_GEN_CO.paa","a3\data_f\flags\flag_SYND_CO.paa","a3\data_f\flags\flag_VIPER_CO.paa","a3\data_f\flags\flag_Tanoa_CO.paa"];
 switch(PF_WN)do{
@@ -52,28 +35,15 @@ default{_flag1 setObjectTextureGlobal[0,"a3\data_f\flags\flag_bis_co.paa"];};};
 
 if(dayTime>18 || dayTime<5)then{
 	sleep 5;
-<<<<<<< HEAD
 	private _guyHome=_h nearEntities["Man",6];
 	if(count _guyHome>0)then{
 	private _fire1=createVehicle["FirePlace_burning_F",[0,0,0],[],0,"can_collide"];
 	_fire1 attachTo[_h,[.5,1.5,.3]];_fire1 setDir(random 359);
-=======
-	private _guyHome=_house nearEntities["Man",6];
-	if(count _guyHome>0)then{
-	private _fire1=createVehicle["FirePlace_burning_F",[0,0,0],[],0,"can_collide"];
-	_fire1 attachTo[_house,[.5,1.5,.3]];_fire1 setDir(random 359);
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	sleep .5;
 	detach _fire1;
 	};
 };
 
-<<<<<<< HEAD
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
-=======
-sleep 1;
-
-_house enableSimulationGlobal false;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

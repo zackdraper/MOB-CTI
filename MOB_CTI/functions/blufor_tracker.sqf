@@ -21,12 +21,8 @@ _grps_mkrs=[];
 	_mkr = createMarkerLocal [format["%1",_x],_pos];
 	_mkr setMarkerShapeLocal "ICON";
 	_mkr setMarkerTypeLocal "b_inf";
-<<<<<<< HEAD
 	//_mkr setMarkerTextLocal groupId _x;
 	_mkr setMarkerTextLocal roleDescription leader _x;
-=======
-	_mkr setMarkerTextLocal groupId _x;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	_grps_mkrs pushBack [_x,_mkr];
 

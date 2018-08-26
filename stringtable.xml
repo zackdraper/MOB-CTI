@@ -35,10 +35,7 @@
 		</Key>
 	</Package>
 </Project>
-<<<<<<< HEAD
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 <Project name="CH View Distance">
     <Package name="Main">
         <Key ID="STR_chvd_title">
@@ -186,7 +183,6 @@
 			<French>Terrain Grid</French>
         </Key>		
     </package>
-<<<<<<< HEAD
 </Project>
 
 <Project name="Liberation">
@@ -328,6 +324,4 @@
 				<German>Das ausgewählte Gruppenmitglied ist nicht nahe genug an einer FOB oder an einem mobilen Spawn.</German>
 	   </Key>
     </package>
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 </Project>

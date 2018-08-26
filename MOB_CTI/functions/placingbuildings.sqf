@@ -176,10 +176,6 @@ if !(CTI_VAR_StructureCanceled) then {
 	};
 };
 
-<<<<<<< HEAD
 CTI_KILL_CAMERA = True;
 
 if (true) exitWith {};
-=======
-CTI_KILL_CAMERA = True;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

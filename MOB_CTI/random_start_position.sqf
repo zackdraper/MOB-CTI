@@ -6,16 +6,12 @@
 	
 */
 //////////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
 private ["_l1","_l2","_mhq2","_faction2","_side2","_second"];
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 _mhq = _this select 0;
 _faction = _this select 1;
 _side = _this select 2;
 
-<<<<<<< HEAD
 _load_game = "load_game" call BIS_fnc_getParamValue;
 
 if (_load_game == 1) exitwith {
@@ -58,16 +54,6 @@ _markerstr setMarkerColorLocal "ColorRed";
 if (count _spawnpos < 3) then {_spawnpos append [0]};
 
 //Side #1
-=======
-_size = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
-//_radius = sqrt(2*((_size/2)^2));
-_radius = _size*0.4;
-_center = [_size/2,_size/2];
-
-_spawnpos = [_center, 0, _radius, 10, 0, 20, 0] call BIS_fnc_findSafePos;
-
-_mhq setPos _spawnpos;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 _mname = switch (_side) do {
 	case west: {"respawn_west"};
@@ -76,7 +62,6 @@ _mname = switch (_side) do {
 	case civilian: {"respawn_civilian"};
 };
 
-<<<<<<< HEAD
 _markerstr_res1 = createMarker [_mname,_spawnpos];
 _markerstr_res1 setMarkerShape "ICON";
 _markerstr_res1 setMarkerType "Empty";
@@ -155,20 +140,6 @@ if (_second) then {
 		_veh = (_this select 3) createVehicle _safepos;
 
 	};
-=======
-_markerstr = createMarker [_mname,_spawnpos];
-_markerstr setMarkerShape "ICON";
-_markerstr setMarkerType "Empty";
-
-[_faction,_spawnpos] spawn {
-	{
-		_fac = _x getVariable "CTI_PLAYER_FACTION";
-		if (_fac == _this select 0) then {
-			_spawnpos = [_this select 1, 5, 20, 10, 0, 0.5, 0] call BIS_fnc_findSafePos;
-			[_x,_spawnpos] remoteExec ["setPos",_x];
-		};
-	} forEach playableUnits;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };
 
 if(true)exitwith{};

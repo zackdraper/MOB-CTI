@@ -16,7 +16,6 @@ _dir = _this select 2;
 _b = createVehicle [_var select 1, _pos, [], 0, "None"];
 _b setdir _dir;
 
-<<<<<<< HEAD
 _init = _var select 5;
 
 _buildings = _mhq getVariable ["CTI_DEFENCES",nil];
@@ -58,8 +57,6 @@ if (CTI_P_DefensesAutoManning) then {
 
 };
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 CTI_P_LastDefenseBuilt = _b;
 
 if(true)exitwith{};

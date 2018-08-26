@@ -13,11 +13,7 @@ call compile preprocessFileLineNumbers "MOB_CTI\ATM_airdrop\functions.sqf";
 
 		_position = GetPos player;
 		_z = _position select 2;
-<<<<<<< HEAD
 		Altitude = 2000;
-=======
-		Altitude = 500;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	hint Localize "STR_ATM_hinton";
 	openMap true;
@@ -41,11 +37,7 @@ _ctrl = _dialog displayCtrl 2903;
 {
 	_index = _ctrl lbAdd _x;
 } forEach ["Fr Keyboard","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","US Keyboard","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-<<<<<<< HEAD
 lbSetCurSel [2903, 24];
-=======
-lbSetCurSel [2903, 0];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 ATM_Jump_mapclick = false;
 onMapSingleClick "ATM_Jump_clickpos = _pos; ATM_Jump_mapclick = true; onMapSingleClick ''; true;";

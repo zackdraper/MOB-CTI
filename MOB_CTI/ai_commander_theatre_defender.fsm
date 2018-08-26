@@ -5,7 +5,6 @@ item0[] = {"Init",0,250,-57.527557,-113.790657,32.472443,-63.790665,0.000000,"In
 item1[] = {"Cycle",4,218,-57.357605,6.991013,32.642395,56.991104,0.000000,"Cycle"};
 item2[] = {"AI",4,218,-59.466827,267.461761,40.533173,317.461792,1.000000,"AI"};
 item3[] = {"Phase_I_Commande",2,250,-61.266571,161.554993,38.733429,211.554993,0.000000,"Phase I" \n "Commander"};
-<<<<<<< HEAD
 item4[] = {"Phase_II_Respawn",2,250,-59.466827,367.461792,40.533173,417.461670,0.000000,"Phase II" \n "Respawning"};
 item5[] = {"Respawning",8,218,-209.466827,367.461792,-109.466827,417.461670,0.000000,"Respawning"};
 item6[] = {"Skip",2,250,-459.466827,367.461792,-359.466827,417.461670,0.000000,"Skip"};
@@ -71,77 +70,6 @@ link36[] = {27,14};
 link37[] = {28,27};
 globals[] = {0.000000,0,0,0,0,640,480,1,77,6316128,1,-529.424133,905.811707,1402.497681,-138.209488,694,745,1};
 window[] = {0,-1,-1,-1,-1,1009,64,1652,93,1,712};
-=======
-item4[] = {"End_FSM",1,250,-354.739777,163.186676,-254.739777,213.186676,0.000000,"End FSM"};
-item5[] = {"Human",8,218,-204.739777,163.186676,-104.739777,213.186676,0.000000,"Human"};
-item6[] = {"Phase_II_Respawn",2,250,-59.466827,367.461792,40.533173,417.461670,0.000000,"Phase II" \n "Respawning"};
-item7[] = {"Respawning",8,218,-209.466827,367.461792,-109.466827,417.461670,0.000000,"Respawning"};
-item8[] = {"Skip",2,250,-459.466827,367.461792,-359.466827,417.461670,0.000000,"Skip"};
-item9[] = {"",7,210,-413.466827,33.839767,-405.466827,41.839767,0.000000,""};
-item10[] = {"Alive",4,218,-52.912048,449.347321,37.087952,499.347321,1.000000,"Alive"};
-item11[] = {"Phase_III_Build",2,250,-49.758545,707.181213,40.241470,757.181213,0.000000,"Phase III" \n "Build"};
-item12[] = {"Barracks____Com",4,218,-384.863525,613.545959,-294.863617,663.545959,9.000000,"Barracks" \n " & Com"};
-item13[] = {"Build__Next_Buil",2,250,-597.658691,808.191406,-507.658630,858.191406,0.000000,"Build " \n "Next Building"};
-item14[] = {"Build_Inf",4,218,-386.732208,704.079712,-296.732208,754.079651,8.000000,"Build Inf"};
-item15[] = {"Build_Infantry_",2,250,-443.081482,926.953735,-353.081451,976.953735,0.000000,"Build Infantry" \n " Platoons"};
-item16[] = {"_",8,218,551.116272,383.431702,641.116272,433.431702,0.000000,""};
-item17[] = {"Phase_V_Tax_Communal",2,250,396.107544,6.890404,486.107544,56.890396,0.000000,"Phase V" \n "Tax Communal " \n "Funds"};
-item18[] = {"_",8,218,-377.050507,1202.381958,-287.050507,1252.381958,0.000000,""};
-item19[] = {"Phase_IV_Command",2,250,291.398438,1201.882935,381.398438,1251.882935,0.000000,"Phase IV" \n "Command"};
-item20[] = {"Light___Service",4,218,-338.493439,785.741760,-248.493530,835.741699,7.000000,"Light &" \n "Service"};
-item21[] = {"_",8,218,109.335869,798.070190,199.335876,848.070190,0.000000,""};
-item22[] = {"Build_Light",4,218,-246.262421,855.130127,-156.262421,905.130066,6.000000,"Build Light"};
-item23[] = {"Build__Light_Veh",2,250,-309.753448,1021.978821,-219.753448,1071.978882,0.000000,"Build " \n "Light Vehs"};
-item24[] = {"Heavy",4,218,-141.527771,928.971680,-51.527771,978.971680,5.000000,"Heavy"};
-item25[] = {"Build_Heavy",4,218,-22.283783,952.512146,67.716217,1002.511902,4.000000,"Build Heavy"};
-item26[] = {"Build__Heavy_Veh",2,250,-129.596741,1057.279663,-39.596741,1107.279785,0.000000,"Build " \n "Heavy Vehs"};
-item27[] = {"Attack_Towns",4,218,290.780792,845.676514,380.780670,895.676514,3.000000,"Attack Towns"};
-item28[] = {"Patrol_Point",4,218,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
-item29[] = {"Task__Complete",2,4346,472.628418,629.201294,562.628418,679.201294,0.000000,"Task " \n "Complete"};
-item30[] = {"_",8,218,574.065918,845.143188,664.065918,895.143188,0.000000,""};
-link0[] = {0,1};
-link1[] = {1,3};
-link2[] = {2,6};
-link3[] = {3,2};
-link4[] = {3,5};
-link5[] = {5,4};
-link6[] = {6,7};
-link7[] = {6,10};
-link8[] = {7,8};
-link9[] = {8,9};
-link10[] = {9,1};
-link11[] = {10,11};
-link12[] = {11,12};
-link13[] = {11,14};
-link14[] = {11,20};
-link15[] = {11,21};
-link16[] = {11,22};
-link17[] = {11,24};
-link18[] = {11,25};
-link19[] = {12,13};
-link20[] = {13,18};
-link21[] = {14,15};
-link22[] = {15,18};
-link23[] = {16,17};
-link24[] = {17,1};
-link25[] = {18,19};
-link26[] = {19,27};
-link27[] = {19,28};
-link28[] = {19,30};
-link29[] = {20,13};
-link30[] = {21,19};
-link31[] = {22,23};
-link32[] = {23,18};
-link33[] = {24,13};
-link34[] = {25,26};
-link35[] = {26,18};
-link36[] = {27,29};
-link37[] = {28,29};
-link38[] = {29,16};
-link39[] = {30,29};
-globals[] = {0.000000,0,0,0,0,640,480,1,77,6316128,1,-215.910339,726.384094,1248.222412,571.912781,1038,745,1};
-window[] = {0,-1,-1,-1,-1,1015,25,1782,99,1,1056};
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -154,7 +82,6 @@ class FSM
                         name = "Init";
                         itemno = 0;
                         init = /*%FSM<STATEINIT""">*/"_com = _this select 0;" \n
-<<<<<<< HEAD
                          "_units_com = _this select 1;" \n
                          "_force_type = _this select 2;" \n
                          "_faction = _com getVariable ""CTI_PLAYER_FACTION"";" \n
@@ -169,17 +96,6 @@ class FSM
                          "_ai_units = _ai_units - [""""];" \n
                          "" \n
                          "_grps = _units_com apply {group _x};" \n
-=======
-                         "_units = _this select 1;" \n
-                         "_force_type = _this select 2;" \n
-                         "_faction = _com getVariable ""CTI_PLAYER_FACTION"";" \n
-                         "" \n
-                         "_units = _units - [_com];" \n
-                         "" \n
-                         "_side = side _com;" \n
-                         "" \n
-                         "_grps = _units apply {group _x};" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
                          "_ai_grps = _ai_grps - [""""];" \n
                          "" \n
@@ -220,11 +136,8 @@ class FSM
                          "" \n
                          "_ncycle = time;" \n
                          "" \n
-<<<<<<< HEAD
                          "_curr_id = -1;" \n
                          "" \n
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -237,7 +150,6 @@ class FSM
                                         to="Phase_I_Commande";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time > _ncycle"/*%FSM</CONDITION""">*/;
-<<<<<<< HEAD
                                         action=/*%FSM<ACTION""">*/"call compile _units_hard_save; " \n
                                          "" \n
                                          "_grps = _units_com apply {group _x};" \n
@@ -250,17 +162,6 @@ class FSM
                                          "_curr_id = _curr_id + 1;" \n
                                          "" \n
                                          "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
-=======
-                                        action=/*%FSM<ACTION""">*/"_grps = _units apply {group _x};" \n
-                                         "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
-                                         "_ai_grps = _ai_grps - [""""];" \n
-                                         "" \n
-                                         "" \n
-                                         "//need looping list of groups to command and also account for players disconnecting" \n
-                                         "if (count _command_ai_grps != count _ai_grps) then {" \n
-                                         "	_command_ai_grps = _ai_grps;" \n
-                                         "};"/*%FSM</ACTION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -274,13 +175,7 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"" \n
                          "_ok = false;" \n
                          "" \n
-<<<<<<< HEAD
                          "if !(isPlayer _com) then { _ok = true };" \n
-=======
-                         "if !(isNull _com) then {" \n
-                         "	if !(isPlayer leader _com) then { _ok = true };" \n
-                         "};" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "" \n
                          "_ncycle = time + 10;" \n
                          "" \n
@@ -301,32 +196,6 @@ class FSM
                                          ""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-<<<<<<< HEAD
-=======
-                                /*%FSM<LINK "Human">*/
-                                class Human
-                                {
-                                        itemno = 5;
-                                        priority = 0.000000;
-                                        to="End_FSM";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "End_FSM">*/
-                class End_FSM
-                {
-                        name = "End_FSM";
-                        itemno = 4;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         };
                 };
                 /*%FSM</STATE>*/
@@ -334,11 +203,7 @@ class FSM
                 class Phase_II_Respawn
                 {
                         name = "Phase_II_Respawn";
-<<<<<<< HEAD
                         itemno = 4;
-=======
-                        itemno = 6;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -346,30 +211,18 @@ class FSM
                                 /*%FSM<LINK "Alive">*/
                                 class Alive
                                 {
-<<<<<<< HEAD
                                         itemno = 8;
                                         priority = 1.000000;
                                         to="Phase_III_Build";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(alive _com) and !(isPlayer _com);"/*%FSM</CONDITION""">*/;
-=======
-                                        itemno = 10;
-                                        priority = 1.000000;
-                                        to="Phase_III_Build";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"alive _com;"/*%FSM</CONDITION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "Respawning">*/
                                 class Respawning
                                 {
-<<<<<<< HEAD
                                         itemno = 5;
-=======
-                                        itemno = 7;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Skip";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -384,11 +237,7 @@ class FSM
                 class Skip
                 {
                         name = "Skip";
-<<<<<<< HEAD
                         itemno = 6;
-=======
-                        itemno = 8;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -401,7 +250,6 @@ class FSM
                                         to="Phase_I_Commande";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time > _ncycle"/*%FSM</CONDITION""">*/;
-<<<<<<< HEAD
                                         action=/*%FSM<ACTION""">*/"call compile _units_hard_save; " \n
                                          "" \n
                                          "_grps = _units_com apply {group _x};" \n
@@ -414,17 +262,6 @@ class FSM
                                          "_curr_id = _curr_id + 1;" \n
                                          "" \n
                                          "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
-=======
-                                        action=/*%FSM<ACTION""">*/"_grps = _units apply {group _x};" \n
-                                         "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
-                                         "_ai_grps = _ai_grps - [""""];" \n
-                                         "" \n
-                                         "" \n
-                                         "//need looping list of groups to command and also account for players disconnecting" \n
-                                         "if (count _command_ai_grps != count _ai_grps) then {" \n
-                                         "	_command_ai_grps = _ai_grps;" \n
-                                         "};"/*%FSM</ACTION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -434,11 +271,7 @@ class FSM
                 class Phase_III_Build
                 {
                         name = "Phase_III_Build";
-<<<<<<< HEAD
                         itemno = 9;
-=======
-                        itemno = 11;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"_mhq = _com getVariable ""CTI_PLAYER_MHQ"";" \n
                          "_taxable_funds = _mhq getVariable ""CTI_FUNDS"";" \n
                          "player sidechat format [""MHQ : %1"",_mhq];" \n
@@ -479,11 +312,7 @@ class FSM
                          "_barracks = [];" \n
                          "_cnt_q = 0;" \n
                          "_num = _factory_types find ""Barracks"";" \n
-<<<<<<< HEAD
                          "if (_num >= 0) then {" \n
-=======
-                         "if (_num > 0) then {" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "	_barracks = _factories select _num;" \n
                          "	{_cnt_q = _cnt_q + (count (_x getVariable [""CTI_FACTORY_QUEUE"",[]]))} forEach [_barracks];" \n
                          "};" \n
@@ -507,11 +336,7 @@ class FSM
                          "_lightfac = [];" \n
                          "_cnt_lgt_q = 0;" \n
                          "_num = _factory_types find ""Light Factory"";" \n
-<<<<<<< HEAD
                          "if (_num >= 0) then {" \n
-=======
-                         "if (_num > 0) then {" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "	_lightfac = _factories select _num;" \n
                          "	{_cnt_lgt_q = _cnt_lgt_q + (count (_x getVariable [""CTI_FACTORY_QUEUE"",[]]))} forEach [_lightfac];" \n
                          "};" \n
@@ -533,11 +358,7 @@ class FSM
                          "_heavyfac = [];" \n
                          "_cnt_hvy_q = 0;" \n
                          "_num = _factory_types find ""Heavy Factory"";" \n
-<<<<<<< HEAD
                          "if (_num >= 0) then {" \n
-=======
-                         "if (_num > 0) then {" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "	_heavyfac = _factories select _num;" \n
                          "	{_cnt_hvy_q = _cnt_hvy_q + (count (_x getVariable [""CTI_FACTORY_QUEUE"",[]]))} forEach [_heavyfac];" \n
                          "};" \n
@@ -550,11 +371,7 @@ class FSM
                                 /*%FSM<LINK "Barracks____Com">*/
                                 class Barracks____Com
                                 {
-<<<<<<< HEAD
                                         itemno = 10;
-=======
-                                        itemno = 12;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 9.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -565,11 +382,7 @@ class FSM
                                 /*%FSM<LINK "Build_Inf">*/
                                 class Build_Inf
                                 {
-<<<<<<< HEAD
                                         itemno = 12;
-=======
-                                        itemno = 14;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 8.000000;
                                         to="Build_Infantry_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -580,11 +393,7 @@ class FSM
                                 /*%FSM<LINK "Light___Service">*/
                                 class Light___Service
                                 {
-<<<<<<< HEAD
                                         itemno = 18;
-=======
-                                        itemno = 20;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 7.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -595,11 +404,7 @@ class FSM
                                 /*%FSM<LINK "Build_Light">*/
                                 class Build_Light
                                 {
-<<<<<<< HEAD
                                         itemno = 20;
-=======
-                                        itemno = 22;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 6.000000;
                                         to="Build__Light_Veh";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -610,11 +415,7 @@ class FSM
                                 /*%FSM<LINK "Heavy">*/
                                 class Heavy
                                 {
-<<<<<<< HEAD
                                         itemno = 22;
-=======
-                                        itemno = 24;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 5.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -625,11 +426,7 @@ class FSM
                                 /*%FSM<LINK "Build_Heavy">*/
                                 class Build_Heavy
                                 {
-<<<<<<< HEAD
                                         itemno = 23;
-=======
-                                        itemno = 25;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 4.000000;
                                         to="Build__Heavy_Veh";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -640,11 +437,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 19;
-=======
-                                        itemno = 21;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -659,11 +452,7 @@ class FSM
                 class Build__Next_Buil
                 {
                         name = "Build__Next_Buil";
-<<<<<<< HEAD
                         itemno = 11;
-=======
-                        itemno = 13;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"_dir = random 360;" \n
                          "" \n
                          "_pos = [getpos _com, 1, CTI_BASE_CONSTRUCTION_RANGE, 3, 0, 20, 0] call BIS_fnc_findSafePos;" \n
@@ -691,11 +480,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 16;
-=======
-                                        itemno = 18;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -710,11 +495,7 @@ class FSM
                 class Build_Infantry_
                 {
                         name = "Build_Infantry_";
-<<<<<<< HEAD
                         itemno = 13;
-=======
-                        itemno = 15;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"player sideChat ""Building Infantry"";" \n
                          "" \n
                          "_fmax = _mhq getVariable ""CTI_FUEL_MAX"";" \n
@@ -723,7 +504,6 @@ class FSM
                          "" \n
                          "_affordable_inf_list = _affordable_inf_list - [""""];" \n
                          "" \n
-<<<<<<< HEAD
                          "if (count _affordable_inf_list > 0) then { " \n
                          "	_rand_sel = selectRandom _affordable_inf_list;" \n
                          "	_grp = selectRandom _ai_grps;" \n
@@ -741,24 +521,6 @@ class FSM
                          "	};" \n
                          "};" \n
                          "	//player sideChat format [""%1"",_cnt_inf];" \n
-=======
-                         "_rand_sel = selectRandom _affordable_inf_list;" \n
-                         "_grp = selectRandom _ai_grps;" \n
-                         "player sideChat format [""%1"",_ai_grps];" \n
-                         "" \n
-                         "_factory = _factories select (_factory_types find ""Barracks"");" \n
-                         "//player sideChat format [""%1"",_factory];" \n
-                         "" \n
-                         "_classname = _rand_sel select 1;" \n
-                         "//player sideChat format [""%1"",_classname];" \n
-                         "" \n
-                         "if (count _affordable_inf_list > 0) then {" \n
-                         "	[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
-                         "	[_classname,_factory,_grp,[]] spawn CTI_CL_FNC_PurchaseUnit;" \n
-                         "};" \n
-                         "" \n
-                         "//player sideChat format [""%1"",_cnt_inf];" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -767,11 +529,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 16;
-=======
-                                        itemno = 18;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -786,11 +544,7 @@ class FSM
                 class Phase_V_Tax_Communal
                 {
                         name = "Phase_V_Tax_Communal";
-<<<<<<< HEAD
                         itemno = 15;
-=======
-                        itemno = 17;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"_funds = _mhq getVariable ""CTI_FUNDS"";" \n
                          "_min_currency = 0;" \n
                          "_cash = _funds select 0;" \n
@@ -832,7 +586,6 @@ class FSM
                                         to="Phase_I_Commande";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time > _ncycle"/*%FSM</CONDITION""">*/;
-<<<<<<< HEAD
                                         action=/*%FSM<ACTION""">*/"call compile _units_hard_save; " \n
                                          "" \n
                                          "_grps = _units_com apply {group _x};" \n
@@ -845,17 +598,6 @@ class FSM
                                          "_curr_id = _curr_id + 1;" \n
                                          "" \n
                                          "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
-=======
-                                        action=/*%FSM<ACTION""">*/"_grps = _units apply {group _x};" \n
-                                         "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
-                                         "_ai_grps = _ai_grps - [""""];" \n
-                                         "" \n
-                                         "" \n
-                                         "//need looping list of groups to command and also account for players disconnecting" \n
-                                         "if (count _command_ai_grps != count _ai_grps) then {" \n
-                                         "	_command_ai_grps = _ai_grps;" \n
-                                         "};"/*%FSM</ACTION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -865,7 +607,6 @@ class FSM
                 class Phase_IV_Command
                 {
                         name = "Phase_IV_Command";
-<<<<<<< HEAD
                         itemno = 17;
                         init = /*%FSM<STATEINIT""">*/"_enemy_locations = MOB_CTI_Locations_AllMajorCities apply {if ([side (_x select 0),side _com] call BIS_fnc_sideIsEnemy) then {_x} else {""""}};" \n
                          "_enemy_locations = _enemy_locations - [""""];" \n
@@ -880,19 +621,6 @@ class FSM
                          "player sidechat format [""%1 : _grps"",_current_unit];	" \n
                          "player sidechat format [""%1 : _ai_units"",_ai_units];	" \n
                          "player sidechat format [""%1 : _grps"",_units_com apply {group _x}];	" \n
-=======
-                        itemno = 19;
-                        init = /*%FSM<STATEINIT""">*/"_enemy_locations = MOB_CTI_Locations_AllMajorCities apply {if ([side (_x select 0),side _com] call BIS_fnc_sideIsEnemy) then {_x} else {""""}};" \n
-                         "_enemy_locations = _enemy_locations - [""""];" \n
-                         "" \n
-                         "_current_grp = _command_ai_grps select 0;" \n
-                         "" \n
-                         "_command_ai_grps set [0,-99];" \n
-                         "_command_ai_grps = _command_ai_grps - [-99];" \n
-                         "_command_ai_grps = _command_ai_grps + [_current_grp];" \n
-                         "" \n
-                         "player sidechat format [""%1 : _grps"",_command_ai_grps];	" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "" \n
                          "_current_tasking = _current_grp getvariable [""CTI_TASK"",""none""];" \n
                          "" \n
@@ -903,19 +631,11 @@ class FSM
                                 /*%FSM<LINK "Attack_Towns">*/
                                 class Attack_Towns
                                 {
-<<<<<<< HEAD
                                         itemno = 25;
                                         priority = 3.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(count _enemy_locations > 0) && (_current_tasking == ""none"") && (alive _current_unit)"/*%FSM</CONDITION""">*/;
-=======
-                                        itemno = 27;
-                                        priority = 3.000000;
-                                        to="Task__Complete";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(count _enemy_locations > 0) && (_current_tasking == ""none"")"/*%FSM</CONDITION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         action=/*%FSM<ACTION""">*/"_distances = _enemy_locations apply {[(getpos (_x select 0)) distance (getpos leader _current_grp),(_x select 0)]};" \n
                                          "_distances sort true;" \n
                                          "_nearloc = (_distances select 0) select 1;" \n
@@ -932,19 +652,11 @@ class FSM
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK_LOC"",_nearloc];" \n
                                          "" \n
-<<<<<<< HEAD
                                          "_mark = createMarker [format [""%1"",_current_grp ], getpos _nearloc];" \n
                                          "_mark setMarkerShapeLocal ""ICON"";" \n
                                          "_mark setMarkerTypeLocal ""hd_dot"";" \n
                                          "_mark setMarkerColorLocal ""ColorYellow"";" \n
                                          "_mark setMarkerTextLocal format [""%1"",_current_grp ];" \n
-=======
-                                         "_mark = createMarker [format [""%1"",_nearloc], getpos _nearloc];" \n
-                                         "_mark setMarkerShape ""ICON"";" \n
-                                         "_mark setMarkerType ""hd_dot"";" \n
-                                         "_mark setMarkerColor ""ColorYellow"";" \n
-                                         "_mark setMarkerText format [""%1"",_current_grp ];" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK"",""attack_town""];" \n
                                          "" \n
@@ -954,19 +666,11 @@ class FSM
                                 /*%FSM<LINK "Patrol_Point">*/
                                 class Patrol_Point
                                 {
-<<<<<<< HEAD
                                         itemno = 26;
                                         priority = 1.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(_current_tasking == ""none"") && (alive _current_unit)"/*%FSM</CONDITION""">*/;
-=======
-                                        itemno = 28;
-                                        priority = 1.000000;
-                                        to="Task__Complete";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_current_tasking == ""none"""/*%FSM</CONDITION""">*/;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         action=/*%FSM<ACTION""">*/"_rpos = [nil, [""water""]] call BIS_fnc_randomPos;	" \n
                                          "player sidechat format [""%1 : patrol point"",_rpos];			" \n
                                          "" \n
@@ -976,19 +680,11 @@ class FSM
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK_LOC"",_rpos];" \n
                                          "" \n
-<<<<<<< HEAD
                                          "_mark = createMarkerLocal [format [""%1"",_rpos], _rpos];" \n
                                          "_mark setMarkerShapeLocal ""ICON"";" \n
                                          "_mark setMarkerTypeLocal ""hd_dot"";" \n
                                          "_mark setMarkerColorLocal ""ColorYellow"";" \n
                                          "_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
-=======
-                                         "_mark = createMarker [format [""%1"",_rpos], _rpos];" \n
-                                         "_mark setMarkerShape ""ICON"";" \n
-                                         "_mark setMarkerType ""hd_dot"";" \n
-                                         "_mark setMarkerColor ""ColorYellow"";" \n
-                                         "_mark setMarkerText format [""%1"",_current_grp];" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK"",""patrol_point""];" \n
                                          "" \n
@@ -998,11 +694,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 28;
-=======
-                                        itemno = 30;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1017,11 +709,7 @@ class FSM
                 class Build__Light_Veh
                 {
                         name = "Build__Light_Veh";
-<<<<<<< HEAD
                         itemno = 21;
-=======
-                        itemno = 23;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"//player sidechat format [""light grps: %1"",_light_grps];" \n
                          "//player sideChat ""Building Light"";" \n
                          "" \n
@@ -1031,7 +719,6 @@ class FSM
                          "" \n
                          "_affordable_lgt_list = _affordable_lgt_list - [""""];" \n
                          "" \n
-<<<<<<< HEAD
                          "if (count _affordable_lgt_list > 0) then { " \n
                          "	_rand_sel = selectRandom _affordable_lgt_list;" \n
                          "	_grp = selectRandom _light_grps;" \n
@@ -1047,21 +734,6 @@ class FSM
                          "		[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
                          "		[_classname,_factory,_grp,[true,true,true,false,true],[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] spawn CTI_CL_FNC_PurchaseUnit;" \n
                          "	};" \n
-=======
-                         "_rand_sel = selectRandom _affordable_lgt_list;" \n
-                         "_grp = selectRandom _light_grps;" \n
-                         "//player sideChat format [""%1"",_light_grps];" \n
-                         "" \n
-                         "_factory = _factories select (_factory_types find ""Light Factory"");" \n
-                         "//player sideChat format [""%1"",_factory];" \n
-                         "" \n
-                         "_classname = _rand_sel select 1;" \n
-                         "//player sideChat format [""%1"",_classname];" \n
-                         "" \n
-                         "if (count _affordable_lgt_list > 0) then {" \n
-                         "	[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
-                         "	[_classname,_factory,_grp,[true,true,true,false,true],[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] spawn CTI_CL_FNC_PurchaseUnit;" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -1069,11 +741,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 16;
-=======
-                                        itemno = 18;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1088,11 +756,7 @@ class FSM
                 class Build__Heavy_Veh
                 {
                         name = "Build__Heavy_Veh";
-<<<<<<< HEAD
                         itemno = 24;
-=======
-                        itemno = 26;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"//player sidechat format [""heavy grps: %1"",_heavy_grps];" \n
                          "player sideChat ""Building Heavy"";" \n
                          "" \n
@@ -1102,7 +766,6 @@ class FSM
                          "" \n
                          "_affordable_hvy_list = _affordable_hvy_list - [""""];" \n
                          "" \n
-<<<<<<< HEAD
                          "if (count _affordable_hvy_list > 0) then { " \n
                          "	_rand_sel = selectRandom _affordable_hvy_list;" \n
                          "	_grp = selectRandom _heavy_grps;" \n
@@ -1118,21 +781,6 @@ class FSM
                          "		[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
                          "		[_classname,_factory,_grp,[true,true,true,false,true],[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] spawn CTI_CL_FNC_PurchaseUnit;" \n
                          "	};" \n
-=======
-                         "_rand_sel = selectRandom _affordable_hvy_list;" \n
-                         "_grp = selectRandom _heavy_grps;" \n
-                         "//player sideChat format [""%1"",_heavy_grps];" \n
-                         "" \n
-                         "_factory = _factories select (_factory_types find ""Heavy Factory"");" \n
-                         "//player sideChat format [""%1"",_factory];" \n
-                         "" \n
-                         "_classname = _rand_sel select 1;" \n
-                         "//player sideChat format [""%1"",_classname];" \n
-                         "" \n
-                         "if (count _affordable_hvy_list > 0) then {" \n
-                         "	[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
-                         "	[_classname,_factory,_grp,[true,true,true,false,true],[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] spawn CTI_CL_FNC_PurchaseUnit;" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -1140,11 +788,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 16;
-=======
-                                        itemno = 18;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1159,11 +803,7 @@ class FSM
                 class Task__Complete
                 {
                         name = "Task__Complete";
-<<<<<<< HEAD
                         itemno = 27;
-=======
-                        itemno = 29;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                         init = /*%FSM<STATEINIT""">*/"" \n
                          "_current_tasking_location = _current_grp getvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
                          "//_current_group_location = _current_grp getvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
@@ -1172,7 +812,6 @@ class FSM
                          "" \n
                          "	case ""attack_town"": {" \n
                          "" \n
-<<<<<<< HEAD
                          "		if  (((getpos _current_tasking_location) distance2d (getpos (leader _current_grp)) < 5) then {" \n
                          "" \n
                          "			if ( [side _current_tasking_location, side _current_grp] call BIS_fnc_sideIsFriendly) then {" \n
@@ -1183,17 +822,6 @@ class FSM
                          "				_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
                          "				//_current_grp setvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
                          "			};" \n
-=======
-                         "		if (_current_tasking_location distance2d (leader _current_grp) < 50) then {" \n
-                         "			" \n
-                         " 			while {(count (waypoints _group)) > 0} do {" \n
-                         "  				deleteWaypoint ((waypoints _group) select 0);" \n
-                         " 			};" \n
-                         "" \n
-                         "			_current_grp setvariable [""CTI_TASK"",""none""];" \n
-                         "			_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
-                         "			//_current_grp setvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "	" \n
                          "		};		" \n
                          "" \n
@@ -1201,11 +829,7 @@ class FSM
                          "" \n
                          "	case ""patrol_point"": {" \n
                          "" \n
-<<<<<<< HEAD
                          "		if  (((getpos _current_tasking_location) distance2d (getpos (leader _current_grp)) < 150)) then {" \n
-=======
-                         "		if ((_current_tasking_location distance2d (leader _current_grp) < 150)) then {" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "			" \n
                          " 			while {(count (waypoints _group)) > 0} do {" \n
                          "  				deleteWaypoint ((waypoints _group) select 0);" \n
@@ -1221,11 +845,7 @@ class FSM
                          "" \n
                          "	default {" \n
                          "" \n
-<<<<<<< HEAD
                          "		if (((getpos _current_tasking_location) distance2d (getpos (leader _current_grp)) < 250) then {" \n
-=======
-                         "		if (_current_tasking_location distance2d (leader _current_grp) < 250) then {" \n
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                          "			" \n
                          " 			while {(count (waypoints _group)) > 0} do {" \n
                          "  				deleteWaypoint ((waypoints _group) select 0);" \n
@@ -1248,11 +868,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-<<<<<<< HEAD
                                         itemno = 14;
-=======
-                                        itemno = 16;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
                                         priority = 0.000000;
                                         to="Phase_V_Tax_Communal";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1267,10 +883,6 @@ class FSM
         initState="Init";
         finalStates[] =
         {
-<<<<<<< HEAD
-=======
-                "End_FSM",
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
         };
 };
 /*%FSM</COMPILE>*/

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-//PF Furniture in buildings
-
-execVM"PF\init.sqf";
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 directory = "MOB_CTI\";
 
 //CTI Setup Settings ////////////////////////////////////////////////////////////////////////////////
@@ -42,14 +35,11 @@ location_trigger_condition = compileFinal preprocessFile "MOB_CTI\functions\loca
 spawn_units_balanced = compileFinal preprocessFile "MOB_CTI\functions\spawn_units_balanced.sqf";
 define_force_classnames = compileFinal preprocessFile "MOB_CTI\functions\define_force_classnames.sqf";
 blufor_tracker = compileFinal preprocessFile "MOB_CTI\functions\blufor_tracker.sqf";
-<<<<<<< HEAD
 starting_gear = compileFinal preprocessFile "MOB_CTI\functions\starting_gear.sqf";
 make_mhq = compileFinal preprocessFile "MOB_CTI\functions\make_mhq.sqf";
 define_cti_locations = compileFinal preprocessFile "MOB_CTI\functions\define_cti_locations.sqf";
 remove_static_uav = compileFinal preprocessFile "MOB_CTI\functions\remove_static_uav.sqf";
 building_marker_type = compileFinal preprocessFile "MOB_CTI\functions\building_marker_type.sqf";
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 subtract_funds = compileFinal preprocessFile "MOB_CTI\functions\subtract_funds.sqf";
 capture_nearby_location = compileFinal preprocessFile "MOB_CTI\functions\capture_nearby_location.sqf";
@@ -58,7 +48,6 @@ ai_respawn = compileFinal preprocessFile "MOB_CTI\functions\ai_respawn.sqf";
 issafezone = compileFinal preprocessFile "MOB_CTI\functions\issafezone.sqf";
 reduce_fuel = compileFinal preprocessFile "MOB_CTI\functions\reduce_fuel.sqf";
 
-<<<<<<< HEAD
 F_swapInventory = compileFinal preprocessFile "MOB_CTI\functions\F_swapInventory.sqf";
 F_getUnitPositionId = compileFinal preprocessFile "MOB_CTI\functions\F_getUnitPositionId.sqf";
 F_getNearestCTIBuild = compileFinal preprocessFile "MOB_CTI\functions\F_getNearestCTIBuild.sqf";
@@ -75,10 +64,6 @@ call compile preprocessFile "MOB_CTI\functions\functions_ui_keyhandlers.sqf";
 /////////////////////////////////////////////////////////////////////////////////// Define Variables
 
 
-=======
-call compile preprocessFile "MOB_CTI\functions\functions_ui_keyhandlers.sqf";
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 CTI_P_WallsAutoAlign = False;
 CTI_P_DefensesAutoManning = False;
 CTI_BASE_CONSTRUCTION_RANGE = 200;
@@ -88,12 +73,6 @@ CTI_BASE_WORKERS_PRICE = 300;
 CTI_PLAYERS_GROUPSIZE = 10;
 CTI_FACTORY_SLEEP = 10;
 
-<<<<<<< HEAD
-=======
-/////////////////////////////////////////////////////////////////////////////////// Define Variables
-
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 /////////////////////////////////////////////////////////////////////////////////// Modular Script Calls
 
@@ -110,7 +89,6 @@ execVM (directory+"R3F_LOG\init.sqf");
 
 _nul = execVM (directory+"functions\functions_ui_purchasemenu.sqf");
 
-<<<<<<< HEAD
 // Weather Fast Time integration
 [] execVM (directory+"real_weather.sqf");
 
@@ -120,22 +98,11 @@ _nul = execVM (directory+"functions\functions_ui_purchasemenu.sqf");
 
 
 //////////////////////////////////////////////////////////////////////////////////////   Load Parameters
-=======
-// Weather/Fast Time integration
-[] execVM (directory+"real_weather.sqf");
-
-
-//////////////////////////////////////////////////////////////////////////////////////   End State
-
-//MHQs are destroyed
-//[MHQ] spawn compile preprocessFile (directory+"end_trigger.sqf");
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 _hc = 0;
 _hc = "headlessClient" call BIS_fnc_getParamValue;
 if (isNil "_hc") then {_hc = 0};
 
-<<<<<<< HEAD
 _fac1destroyer = "faction1_destroyer" call BIS_fnc_getParamValue;
 if (isNil "_fac1destroyer") then {_fac1destroyer = 0};
 
@@ -237,13 +204,10 @@ missionNamespace setVariable [format ["CTI_%1_COMMANDER",_faction2_type], (_fac2
 //Help Briefing
 0 = [] execVM "MOB_CTI\briefing.sqf";
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 //////////////////////////////////////////////////////////////////////////////////// Server Side Scripts
 
 if (isServer and (isNil "ServerStart")) then {
 
-<<<<<<< HEAD
 	//spawn units as their faction type
 
 	MHQ1_veh = [MHQ1,_faction1_type,(_fac1startpos == 1)] call make_mhq;
@@ -255,8 +219,6 @@ if (isServer and (isNil "ServerStart")) then {
 	{[[_x],capture_nearby_location] remoteExec ["spawn",_x,True]} forEach _fac1_units;
 	{[[_x],capture_nearby_location] remoteExec ["spawn",_x,True]} forEach _fac2_units;
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	createCenter independent;
 	west setFriend [independent, 0];
 	independent setFriend [west, 0];
@@ -264,7 +226,6 @@ if (isServer and (isNil "ServerStart")) then {
 	independent setFriend [east, 0];
 
 	// MHQ
-<<<<<<< HEAD
 	_mhq1_init = [MHQ1,_faction1_type,west,MHQ1_veh,"base","factionarsenal"];
 	if (_faction1_halo == 1) then {_mhq1_init append ["halo"]};
 
@@ -297,23 +258,11 @@ if (isServer and (isNil "ServerStart")) then {
 			[MHQ2,_faction2_type,rus_barracks,rus_airfac,east] execVM (directory+"init_starting_base.sqf");
 		};
 	};
-=======
-	nul = [MHQ,"rhs_usarmy_wood",west,"base","factionarsenal","halo"] execVM "MOB_CTI\player_mhq_init.sqf";
-	nul = [MHQ2,"cup_racs_desert",resistance,"base","factionarsenal"] execVM "MOB_CTI\player_mhq_init.sqf";
-
-// Global Economy
-	["occupation",[[10000,200,0],100],"rhs_usarmy_wood",west,[10,1],MHQ] execVM (directory+"economy.sqf");
-	["occupation",[[50000,2500,0],250],"cup_racs_desert",resistance,[10,1],MHQ2] execVM (directory+"economy.sqf");
-
-//Initial Spawn Locations for Invader Factions
-	[MHQ2,"cup_racs_desert",resistance] execVM (directory+"random_start_position.sqf");
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 //Take over for HC if not connected 
 
 	if (_hc == 0) then {
 		//Local Island Resistance
-<<<<<<< HEAD
 		[resistance,_resistance_type,MOB_CTI_Locations_AllMajorCities] execVM (directory+"island_spawner.sqf");	
 	
 		//Start up theatre AI commanders
@@ -340,11 +289,6 @@ if (isServer and (isNil "ServerStart")) then {
 			};
 			default{};
 		};
-=======
-		[resistance,"cup_racs_desert",[10000,5000,3000,2000],"AA"] execVM (directory+"island_spawner.sqf");
-		//Start up theatre AI commanders
-		["cup_racs_desert","mechanized","AA"] execVM (directory+"ai_commander_theatre_defender.sqf");
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		[["Default",["HC","Server Taking Over HC Duties"]],BIS_fnc_showNotification] remoteExec ["call"];
 
@@ -352,7 +296,6 @@ if (isServer and (isNil "ServerStart")) then {
 		[["Default",["HC","Server Passing Baton to HC"]],BIS_fnc_showNotification] remoteExec ["call"];
 	};
 
-<<<<<<< HEAD
 	//MHQs are destroyed
 	[MHQ1_veh,MHQ2_veh] spawn compile preprocessFile (directory+"end_trigger.sqf");
 	
@@ -397,10 +340,6 @@ if (isServer and (isNil "ServerStart")) then {
 	ServerStart = True;
 	publicVariable "ServerStart";
 
-=======
-	ServerStart = True;
-	publicVariable "ServerStart";
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };
 
 //////////////////////////////////////////////////////////////////////////////////// Headless Client Scripts
@@ -410,7 +349,6 @@ if (!(isServer or hasinterface) and (_hc == 1) and (isNil "ServerStart")) then {
 	HC_active = True;
 	publicVariable "HC_active";
 
-<<<<<<< HEAD
 	//Local Island Resistance
 	[resistance,_resistance_type,MOB_CTI_Locations_AllMajorCities] execVM (directory+"island_spawner.sqf");	
 	
@@ -441,16 +379,6 @@ if (!(isServer or hasinterface) and (_hc == 1) and (isNil "ServerStart")) then {
 
 
 	[["Default",["HC","Headless Client Active"]],BIS_fnc_showNotification] remoteExec ["call"];
-=======
-	[["Default",["HC","Headless Client Active"]],BIS_fnc_showNotification] remoteExec ["call"];
-
-	//Local Island Resistance
-	[resistance,"cup_racs_desert",[10000,5000,3000,2000],"AA"] execVM (directory+"island_spawner.sqf");
-
-	//Start up theatre AI commanders
-	["cup_racs_desert"] execVM (directory+"ai_commander_theatre_defender.sqf");
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 };
 
 //////////////////////////////////////////////////////////////////////////////////// Client Side Scripts
@@ -458,18 +386,14 @@ if (!(isServer or hasinterface) and (_hc == 1) and (isNil "ServerStart")) then {
 if (hasinterface) then {
 
 	waitUntil {!(isNull player)};
-<<<<<<< HEAD
 	waitUntil {!isNull findDisplay 46};
 
 	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call special_actions"];
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	showWaypoints false;
 
 //Establish Faction Type
 
-<<<<<<< HEAD
 	_faction = "";
 	if (player in _fac1_units) then {
 		_faction = _faction1_type;
@@ -482,9 +406,6 @@ if (hasinterface) then {
 	[_faction,player] call starting_gear;
 	[player, [player, "Var_SavedInventory"]] call BIS_fnc_saveInventory;
 
-=======
-	_faction = player getVariable "CTI_PLAYER_FACTION";
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	_class = _faction call define_force_classnames;
 
 	[] spawn compile preprocessFile (directory+"player_ui_overlay.sqf");
@@ -509,7 +430,6 @@ if (hasinterface) then {
 	player addEventHandler ["Respawn", {
 		_unit = _this select 0;
 		_killed = _this select 1;
-<<<<<<< HEAD
 		
 		//_name = vehicleVarName _killed;
 		
@@ -536,60 +456,24 @@ if (hasinterface) then {
 		//[_unit, _name] remoteExec [setVehicleVarName,0];
 	}];
 
-=======
-
-		//Purchase Menu
-		_unit addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,true,true,"","_target == _this"];
-		
-		//Loadout
-		hint format ["%1",missionNamespace getvariable "Var_SavedInventory"];
-
-		[_unit, [_unit, "Var_SavedInventory"]] call BIS_fnc_loadInventory;
-		[_unit, [_unit, "Var_SavedInventory"]] call BIS_fnc_saveInventory;
-
-		//if (leader _grp == player) then {
-		//	[_new_unit,_grp] remoteExec ["setLeader",groupOwner _grp];
-		//};
-		
-		//Respawn Control
-		[_unit] spawn capture_nearby_location;
-	}];
-
-
-//Zone Capture
-
-	[player] spawn capture_nearby_location;
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 //Orderly Parajump
 	[0] execVM "MOB_CTI\functions\para_eject.sqf";
 
 //Purchase Menu
-<<<<<<< HEAD
 	player addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,false,true,"","_target == _this"];
 
 //Squad Manager
 	player addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\squad_manager.sqf",[],99,false,true,"","vehicle _target == vehicle _this"];
 
 //BLUFOR Tracker
-=======
-
-	player addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,true,true,"","_target == _this"];
-
-//BLUFOR Tracker
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	[player] spawn blufor_tracker;
 
 //Loadout on respawn
 	player spawn save_loadout;
 
 };
-<<<<<<< HEAD
 
 
 
 //////////////////////////////////////////////////////////////////////////////////////   End State
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

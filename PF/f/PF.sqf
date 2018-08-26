@@ -1,9 +1,5 @@
 if(!isServer)exitWith{};
-<<<<<<< HEAD
 private["_towns","_town","_townName","_townPos","_townX","_townY","_townDir","_tArea"];
-=======
-private["_towns","_townTypes","_town","_townName","_townPos","_townX","_townY","_townType","_townDir","_tArea"];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 PF_WN=worldName;
 PF_Houses=[
 //Altis, Malden, Stratis
@@ -20,12 +16,9 @@ PF_Houses=[
 "Land_i_House_Small_02_V2_F",
 "Land_i_House_Small_02_V3_F",
 "Land_i_House_Small_03_V1_F",
-<<<<<<< HEAD
 "Land_Slum_House01_F",
 "Land_Slum_House02_F",
 "Land_Slum_House03_F",
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 "Land_i_Stone_Shed_V1_F",
 "Land_i_Stone_Shed_V2_F",
 "Land_i_Stone_Shed_V3_F",
@@ -43,10 +36,7 @@ PF_Houses=[
 "Land_Barn_01_brown_F",
 "Land_Barn_01_grey_F",
 "Land_i_Addon_02_V1_F",
-<<<<<<< HEAD
 "Land_i_Addon_03_V1_F",
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 "Land_CarService_F",
 "Land_FuelStation_02_workshop_F",
 "Land_i_Garage_V1_F",
@@ -89,7 +79,6 @@ PF_Houses=[
 
 //Tanoa
 "Land_House_Big_01_F",
-<<<<<<< HEAD
 "Land_House_Small_02_F",
 "Land_House_Small_03_F",
 "Land_Shed_02_F",
@@ -140,49 +129,14 @@ _townDir=getNumber(_town>>"angle");
 
 	if(count(nearestObjects[_townPos,PF_Houses,_tArea])>0)then{
 	if(PF_Dbug)then{
-=======
-"Land_House_Small_06_F"];
-
-{if(!(_x in allMapMarkers))then{PF_Blacklist=PF_Blacklist-[_x];};}forEach PF_Blacklist;
-
-_towns=configFile>>"CfgWorlds">>PF_WN>>"Names";
-_townTypes=[
-	//A3
-	"Airport","CityCenter","Hill","NameCity","NameCityCapital","NameLocal","NameMarine","NameVillage","VegetationBroadleaf","VegetationVineyard","Viewpoint",
-	//CUP
-	"FlatArea","FlatAreaCity","FlatAreaCitySmall","NameCity","NameCityCapital","NameLocal","NameVillage","StrongpointArea","VegatationFir"];
-
-for"_x"from 0 to(count _towns-1)do{
-_town=_towns select _x;
-
-_townName=getText(_town>>"name");
-_townPos=getArray(_town>>"position");
-_townX=getNumber(_town>>"radiusA");
-_townY=getNumber(_town>>"radiusB");
-_townType=getText(_town>>"type");
-_townDir=getNumber(_town>>"angle");
-
-	if(_townType in _townTypes)then{
-	_tArea=0;
-	if(_townX>_townY)then{_tArea=_townX;_tArea}else{_tArea=_townY;_tArea};
-		
-	
-	if(count(nearestObjects[_townPos,PF_Houses,_tArea])>0)then{
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	private _m=createMarker[format["m--%1",_townPos],_townPos];
 	_m setMarkerShape"RECTANGLE";
 	_m setMarkerBrush"SolidBorder";
 	_m setMarkerSize[_tArea,_tArea];
-<<<<<<< HEAD
 	_m setMarkerAlpha 0.4;
 	_m setMarkerColor"ColorCiv";
 	_m setMarkerDir _townDir;
 	PF_Mkrs pushBack _m;};
-=======
-	_m setMarkerAlpha 0.4;if(!PF_Dbug)then{_m setMarkerAlpha 0;};
-	_m setMarkerColor"ColorCiv";
-	_m setMarkerDir _townDir;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	
 	_t=createTrigger["EmptyDetector",_townPos,false];
 	_t setTriggerArea[_tArea,_tArea,_townDir,true,99];
@@ -197,23 +151,15 @@ sleep .02;
 
 	//TRIGGER ACTIVATION
 	"if(PF_Dbug)then{systemChat'Trigger Activated';};
-<<<<<<< HEAD
 	private _tPos=getPosASL thisTrigger;
 	
 	private _nearH=nearestObjects[_tPos,PF_Houses,((triggerArea thisTrigger)select 0)+40,true];
 	if(PF_Dbug)then{systemChat format['%1 houses found',count _nearH];{if(getMarkerPos _x distance _tPos<=5)then{_x setMarkerAlpha 1;};}forEach PF_Mkrs;};
-=======
-	private _tPos=getPosATL thisTrigger;
-	
-	private _nearH=nearestObjects[_tPos,PF_Houses,((triggerArea thisTrigger)select 0)+40,true];
-	if(PF_Dbug)then{systemChat format['%1 houses found',count _nearH];};
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		{if(PF_Chance>floor random 100)then{
 		if((isObjectHidden _x)||(damage _x>0.5))exitWith{};
 
 		_isBL=false;
-<<<<<<< HEAD
 		if(!(PF_Blacklist isEqualTo[])||{(PF_Blacklist isEqualTo[''])})then{_h=_x;{_isBL=_h inArea _x;if(_isBL)exitWith{_nearH=_nearH-[_H];};}count PF_Blacklist;};
 		if(_isBL)exitWith{};
 		_hPads=_x nearObjects['Land_HelipadEmpty_F',2];
@@ -227,24 +173,10 @@ sleep .02;
 	//TRIGGER DEACTIVATION
 	"private _tPos=getPosASL thisTrigger;
 	if(PF_Dbug)then{systemChat'Trigger Deactivated';{if(getMarkerPos _x distance _tPos<=5)then{_x setMarkerAlpha 0.4;};}forEach PF_Mkrs;};
-=======
-		if(!(PF_Blacklist isEqualTo[])||{(PF_Blacklist isEqualTo[''])})then{_house=_x;{_isBL=_house inArea _x;if(_isBL)exitWith{};}count PF_Blacklist;};
-		if(_isBL)exitWith{};
-		_hPads=_x nearObjects['Land_HelipadEmpty_F',2];
-		if(count _hPads>0)exitWith{};
-		private _tempH=createVehicle['Land_HelipadEmpty_F',getPosATL _x,[],0,'can_collide'];
-		_tempH setDir(getDir _x);
-		[_tempH,_x]call PF_spawn;};
-		}forEach _nearH;",
-
-	//TRIGGER DEACTIVATION
-	"if(PF_Dbug)then{systemChat'Trigger Deactivated';};
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	{	_isBL2=false;
 		if(!(PF_Blacklist isEqualTo[])||{(PF_Blacklist isEqualTo[''])})then{_furn=_x;{_isBL2=_furn inArea _x;if(_isBL2)exitWith{};}count PF_Blacklist;};
 		if(_isBL2)exitWith{};
 		
-<<<<<<< HEAD
 		if(typeOf _x in['FirePlace_burning_F','Land_FirePlace_F','MetalBarrel_burning_F'])then{deleteVehicle _x;};
 		if((typeOf _x isEqualTo'Land_HelipadEmpty_F')&&{(_x getVariable'PF')})then{{deleteVehicle _x}count attachedObjects _x;deleteVehicle _x;};
 
@@ -253,23 +185,9 @@ sleep .02;
 	};
 };
 
-=======
-		if(typeOf _x in['Land_HelipadEmpty_F','Fireplace_burning_F','MetalBarrel_burning_F'])then{
-			if(!simulationEnabled _x)then{{deleteVehicle _x}count attachedObjects _x;};deleteVehicle _x;};
-
-	}forEach nearestObjects[getPosATL thisTrigger,['Land_HelipadEmpty_F','Fireplace_burning_F','MetalBarrel_burning_F'],((triggerArea thisTrigger)select 0)+40,true];"];};
-	};
-};
-
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 addMissionEventHandler["buildingChanged",{
 private _b=_this select 1;
 if(!(typeOf _b in["House_F","HouseBase","House_EP1"]))exitWith{};
 if(count(_b buildingPos -1)<2)exitWith{};
 private _pad=(_b nearObjects["Land_HelipadEmpty_F",2])select 0;
-<<<<<<< HEAD
 if(_pad getVariable'PF')then{{deleteVehicle _x}forEach attachedObjects _pad;deleteVehicle _pad;};}];
-=======
-if(!simulationEnabled _pad)then{{deleteVehicle _x}forEach attachedObjects _pad;deleteVehicle _pad;};}];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

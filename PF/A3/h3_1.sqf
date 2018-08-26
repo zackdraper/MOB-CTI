@@ -1,9 +1,5 @@
 //Land_CarService_F
-<<<<<<< HEAD
 private _h=_this;
-=======
-private _house=_this;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _desk=createSimpleObject["Land_TableDesk_F",[0,0,0]];
 private _pcChair=createSimpleObject["Land_OfficeChair_01_F",[0,0,0]];
@@ -32,7 +28,6 @@ private _bucket2=createSimpleObject["Land_PlasticBucket_01_open_F",[0,0,0]];
 private _plant=createSimpleObject["Land_FlowerPot_01_Flower_F",[0,0,0]];
 private _spray=createSimpleObject["Land_DisinfectantSpray_F",[0,0,0]];
 
-<<<<<<< HEAD
 _trash attachTo[_h,[4.6,8.1,1]];_trash setDir 180;
 _sign attachTo[_h,[3.9,-2.1,2]];
 _car attachTo[_h,[-2.73,3.5,2]];
@@ -69,55 +64,11 @@ if(dayTime>18 || dayTime<5)then{
 	if(count _guyHome>0)then{
 	private _light=createVehicle["#lightpoint",[0,0,0],[],0,"can_collide"];
 	_light attachTo[_h,[-2.5,2.5,3.5]];
-=======
-_trash attachTo[_house,[4.6,8.1,1]];_trash setDir 180;
-_sign attachTo[_house,[3.9,-2.1,2]];
-_car attachTo[_house,[-2.73,3.5,2]];
-_toolBox1 attachTo[_house,[-5.1,8,1]];_toolBox1 setDir 180;
-_toolBox2 attachTo[_house,[-5,6.8,1]];_toolBox2 setDir 180;
-_glove1 attachTo[_house,[-2.5,5.15,1.71]];_glove1 setDir 180;
-_glove1 setVectorUp[0,0.002,0.01];
-_tape1 attachTo[_house,[-2.65,5.2,1.73]];
-_tape1 setVectorUp[0,0.002,0.01];
-_tape2 attachTo[_house,[-2.33,1.7,2.19]];_tape2 setDir 90;
-_tape2 setVectorUp[-0.07,0.02,-0.5];
-_desk attachTo[_house,[0.94,1.7,0.92]];
-_pcChair attachTo[_house,[0.6,3,1.18]];_pcChair setDir 320;
-_tires attachTo[_house,[-5.05,-1.4,0.82]];
-_crates attachTo[_house,[1.3,7.82,1.26]];
-_canister attachTo[_house,[-5.1,5.85,0.84]];
-_drill attachTo[_house,[-5.15,7.2,1.38]];_drill setVectorUp[0,-1,0];
-_screwDriver1 attachTo[_house,[-4.9,6.5,1.38]];_screwDriver1 setDir 40;
-_screwDriver2 attachTo[_house,[-5,6.6,1.38]];
-_file attachTo[_house,[-5,6.9,1.38]];_file setDir 280;
-_spray attachTo[_house,[-2.33,1.9,2.31]];_spray setDir 50;
-_grinder attachTo[_house,[-5.1,8,1.546]];_grinder setDir 295;
-_bucket1 attachTo[_house,[-5.1,0,0.72]];_bucket1 setDir 295;
-_bucket2 attachTo[_house,[-5.18,0.37,0.72]];
-_chairM1 attachTo[_house,[4.67,-0.5,1]];_chairM1 setDir 95;
-_chairM2 attachTo[_house,[4.6,0.5,1]];_chairM2 setDir 88;
-_plant attachTo[_house,[4.6,-1.4,1.34]];
-_weldTank attachTo[_house,[-0.4,-1.5,1]];_weldTank setDir 120;
-_weldCart attachTo[_house,[-2.5,7,1.12]];_weldCart setDir 120;
-
-if(dayTime>18 || dayTime<5)then{
-	sleep 5;
-	private _guyHome=_house nearEntities["Man",6];
-	if(count _guyHome>0)then{
-	private _light=createVehicle["#lightpoint",[0,0,0],[],0,"can_collide"];
-	_light attachTo[_house,[-2.5,2.5,3.5]];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	_light setLightColor[1,1,1];  
 	_light setLightAmbient[.3,.3,.3];  
 	_light setLightBrightness 0.1;};
 	};
 
-<<<<<<< HEAD
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
-=======
-sleep 1;
-
-_house enableSimulationGlobal false;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

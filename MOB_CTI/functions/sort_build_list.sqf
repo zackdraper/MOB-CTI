@@ -15,10 +15,7 @@ _airfaccost = [_faction,1,"airfac"] call read_twod_array_col;
 _servicecost = [_faction,1,"service"] call read_twod_array_col;
 _boatdockcost = [_faction,1,"boatdock"] call read_twod_array_col;
 _controlcencost = [_faction,1,"controlcen"] call read_twod_array_col;
-<<<<<<< HEAD
 _supplypointcost = [_faction,1,"supplypoint"] call read_twod_array_col;
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 _barracksclass = [_faction,0,"barracks"] call read_twod_array_col;
 _lightfacclass = [_faction,0,"lightfac"] call read_twod_array_col;
@@ -27,10 +24,7 @@ _airfacclass = [_faction,0,"airfac"] call read_twod_array_col;
 _serviceclass = [_faction,0,"service"] call read_twod_array_col;
 _boatdockclass = [_faction,0,"boatdock"] call read_twod_array_col;
 _controlcenclass = [_faction,0,"controlcen"] call read_twod_array_col;
-<<<<<<< HEAD
 _supplypointclass = [_faction,0,"supplypoint"] call read_twod_array_col;
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 _buildlist = [];
 
@@ -48,12 +42,9 @@ if (count _boatdockclass > 0) then {_buildlist append [["Boat Dock",_boatdockcla
 
 if (count _controlcenclass > 0) then {_buildlist append [["Command Center",_controlcenclass select 0,(_controlcencost select 0) select 0]]};
 
-<<<<<<< HEAD
 if (count _supplypointclass > 0) then {_buildlist append [["Supply Point",_supplypointclass select 0,(_supplypointcost select 0) select 0]]};
 
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 //hint format ["%1",_buildlist];
 
 _buildlist

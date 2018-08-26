@@ -37,10 +37,6 @@
 
 #define BORDERSIZE	0.01
 
-<<<<<<< HEAD
 #define MAP_IDC 10023
 
 #define FontM             "puristaMedium"
-=======
-#define MAP_IDC 10023
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff

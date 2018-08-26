@@ -7,18 +7,14 @@
 */
 //////////////////////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
 _mhq = player getvariable "CTI_PLAYER_MHQ";
 _money = 0;		
 _ammo = 0;
 
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 while {true} do {
 
 	waituntil{!(isNull (uiNamespace getVariable [ "BIS_fnc_arsenal_cam", objNull ]))};
 
-<<<<<<< HEAD
 	_weapons_start = weapons player;
 	_magazines_start = magazines player;
 	_backpack_start = backpack player;
@@ -61,18 +57,6 @@ while {true} do {
 	};
 
 	//waituntil{(isNull (uiNamespace getVariable [ "BIS_fnc_arsenal_cam", objNull ]))};
-=======
-	//player sideChat "player in arsenal";
-
-	waituntil{(isNull (uiNamespace getVariable [ "BIS_fnc_arsenal_cam", objNull ]))};
-
-	[player, [player, "Var_SavedInventory"]] call BIS_fnc_saveInventory;
-
-	//player sideChat "loadout saved";
-
-	["Arsenal_SaveLoadout"] call bis_fnc_showNotification;
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 };
 

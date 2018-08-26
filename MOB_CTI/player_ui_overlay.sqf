@@ -5,7 +5,6 @@ private [ "_display","_uiticks","_layer","_overlayshown", "_sectorcontrols", "_a
 _faction = player getVariable "CTI_PLAYER_FACTION";
 _mhq = player getVariable "CTI_PLAYER_MHQ";
 
-<<<<<<< HEAD
 _locations = player getVariable "MOB_CTI_Locations_AllMajorCities";
 
 _side = side player;
@@ -16,10 +15,6 @@ _overlayshown = false;
 
 _sectorcontrols = [201,202,203,244,205];
 
-=======
-_overlayshown = false;
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 _uiticks = 0;
 
 //waitUntil { !isNil "synchro_done" };
@@ -34,24 +29,17 @@ while { true } do {
 		
 		_uiticks = 0;
 	};
-<<<<<<< HEAD
 	
 	if ( ( !alive player || dialog ) && !_overlayshown) then {
 		cutRsc["blank", "PLAIN", 0];
 		_overlayshown = false;
 	};
-=======
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	//if ( ( !alive player || dialog ) && _overlayshown ) then {
 	//	cutRsc["blank", "PLAIN", 0];
 	//	_overlayshown = false;
 	//	player sidechat "overlay killed";
 	//};
 	if ( _overlayshown ) then {
-<<<<<<< HEAD
-=======
-		
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		if ( _uiticks % 5 == 0 ) then {
 			//_display = findDisplay 6666;
@@ -70,7 +58,6 @@ while { true } do {
 		};
 
 		if ( _uiticks % 25 == 0 ) then {
-<<<<<<< HEAD
 		
 			_nearloc = _locations apply {[(getpos player) distance2D getpos (_x select 0),(_x select 0)]};
 			_nearloc sort true;
@@ -108,9 +95,6 @@ while { true } do {
 				{ ( (uiNamespace getVariable 'GUI_OVERLAY') displayCtrl (_x) ) ctrlShow false; } foreach  _sectorcontrols;
 				//(_display displayCtrl (205)) ctrlSetText "";
 			};
-=======
-
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 		};
 

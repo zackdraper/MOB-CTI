@@ -30,11 +30,7 @@ for [{_i=0}, {_i < (count _staticclass)}, {_i=_i+1}] do {
 
 	_c = _staticclass select _i;
 
-<<<<<<< HEAD
 	_d = gettext (configfile >> "CfgVehicles" >> _c >> "displayName");
-=======
-	_d = (configfile >> "CfgVehicles" >> _c >> "displayName") call BIS_fnc_getCfgData;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 	_e = _staticcost select _i;
 	

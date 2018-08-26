@@ -1,18 +1,10 @@
 //Land_i_House_Big_02_V1_F
-<<<<<<< HEAD
 private _h=_this;
-=======
-private _house=_this;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 
 private _ball=createSimpleObject["Land_Baseball_01_F",[0,0,0]];
 private _bed=createSimpleObject["Land_WoodenBed_01_F",[0,0,0]];
 private _boombox=createSimpleObject["Land_PortableSpeakers_01_F",[0,0,0]];
 private _box=createSimpleObject["Land_PaperBox_01_small_open_brown_F",[0,0,0]];
-<<<<<<< HEAD
-=======
-private _cabinet=createSimpleObject["Land_OfficeCabinet_01_F",[0,0,0]];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 private _chair1=createSimpleObject["Land_CampingChair_V1_F",[0,0,0]];
 private _chair2=createSimpleObject["Land_CampingChair_V1_F",[0,0,0]];
 private _chairW1=createSimpleObject["Land_ChairWood_F",[0,0,0]];
@@ -45,7 +37,6 @@ private _xboxCam=createSimpleObject["Land_GamignSet_01_camera_F",[0,0,0]];
 private _xboxC1=createSimpleObject["Land_GamingSet_01_controller_F",[0,0,0]];
 private _xboxC2=createSimpleObject["Land_GamingSet_01_controller_F",[0,0,0]];
 
-<<<<<<< HEAD
 _trash attachTo[_h,[1.75,-1.05,.73]];_trash setDir 250;
 _rack attachTo[_h,[2.36,-1.81,0.72]];_rack setDir 90;
 _sack attachTo[_h,[0,-3.7,4]];_sack setDir 90;
@@ -87,60 +78,11 @@ if(dayTime>18 || dayTime<5)then{
 	if(count _guyHome>0)then{
 	private _light1=createVehicle["#lightpoint",[0,0,0],[],0,"can_collide"];
 	_light1 attachTo[_h,[-3.5,-0.1,4.3]];
-=======
-_trash attachTo[_house,[1.75,-1.05,.73]];_trash setDir 250;
-_rack attachTo[_house,[2.36,-1.81,0.72]];_rack setDir 90;
-_sack attachTo[_house,[0,-3.7,4]];_sack setDir 90;
-_bed attachTo[_house,[2,.8,4.07]];_bed setDir 180;
-_sofa1 attachTo[_house,[4,.38,4.1]];_sofa1 setDir 330;
-_shelf attachTo[_house,[0.2,0,4.39]];_shelf setDir 180;
-_mCase attachTo[_house,[2,2.1,3.765]];_mCase setDir 90;
-_sTable attachTo[_house,[3.2,4.6,4.012]];_sTable setDir 90;
-_pot attachTo[_house,[3.2,4.6,4.529]];_pot setDir(random 359);
-_desk1 attachTo[_house,[-3.3,0,3.78]];
-_TV attachTo[_house,[-3.3,-0.1,4.5]];_TV setDir 180;
-_xbox attachTo[_house,[-2.9,.22,4.22]];_xbox setDir 160;
-_xboxCam attachTo[_house,[-2.9,.3,4.285]];_xboxCam setDir 160;
-_HDMI attachTo[_house,[-2.85,-0.1,4.189]];_HDMI setDir(random 359);
-_boombox attachTo[_house,[-3.3,.05,4.22]];_boombox setDir 90;
-_cord attachTo[_house,[-2.85,-0.1,3.7]];_cord setDir 90;
-_xboxC1 attachTo[_house,[-3.6,.22,4.22]];_xboxC1 setDir(random 30)+180;
-_xboxC2 attachTo[_house,[-3.2,2.4,4.138]];_xboxC2 setDir(random 90)+130;
-_chair1 attachTo[_house,[-3.3,2.5,4.12]];
-_chair2 attachTo[_house,[-4.05,2.3,4.12]];_chair2 setDir 340;
-_fridge attachTo[_house,[-3.43,0,0.76]];_fridge setDir 180;
-_desk2 attachTo[_house,[-4.15,0.6,0.545]];_desk2 setDir 270;
-_desk3 attachTo[_house,[-4.15,2.36,0.545]];_desk3 setDir 270;
-_microW attachTo[_house,[-4.1,1.2,1.045]];_microW setDir 270;
-_sink attachTo[_house,[-4.135,4.3,0.8]];_sink setDir 90;
-_sTable1 attachTo[_house,[4.25,.45,0.76]];
-_sofa2 attachTo[_house,[0.95,.15,0.74]];
-_chairW1 attachTo[_house,[3.75,.4,0.245]];_chairW1 setDir 270;
-_chairW2 attachTo[_house,[4.2,1,0.245]];
-_luggage attachTo[_house,[-4.08,3.2,4.22]];
-_trophy attachTo[_house,[2.2,-1.67,1.445]];_trophy setDir 70;
-_glove attachTo[_house,[2.25,-1.87,1.35]];_glove setDir 230;
-_ball attachTo[_house,[2.25,-1.85,1.354]];_ball setDir(random 359);
-_box attachTo[_house,[-3.85,-1.3,3.825]];_box setDir(random 359);
-
-if(dayTime>18 || dayTime<5)then{
-	sleep 5;
-	private _guyHome=_house nearEntities["Man",6];
-	if(count _guyHome>0)then{
-	private _light1=createVehicle["#lightpoint",[0,0,0],[],0,"can_collide"];
-	_light1 attachTo[_house,[-3.5,-0.1,4.3]];
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
 	_light1 setLightColor[1,1,1];   
 	_light1 setLightAmbient[.01,.01,.01];   
 	_light1 setLightBrightness 0.04;};
 	};
 
-<<<<<<< HEAD
 if(PF_Optimize)then{
 sleep .2;
 {_x hideObjectGlobal true}forEach attachedObjects _H;};
-=======
-sleep 1;
-
-_house enableSimulationGlobal false;
->>>>>>> 07f0a89e0c6448f803f3e8d796a0852406ba09ff
