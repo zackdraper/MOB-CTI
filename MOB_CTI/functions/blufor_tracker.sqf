@@ -1,61 +1,60 @@
-private ["_player","_side","_grps","_grps_mkrs"];
+private ["_player"];
 
 _player = _this select 0;
 
-_side = side _player;
-
-_grps = [];
-{	
-	if (side _x == _side) then {
-		_grps pushBack _x;
-	};
-	
-} forEach allGroups;
-
-//diag_log ["BLUFOR TRACKER:",_grps];
-
-_grps_mkrs=[];
-{
-	_ldr = leader _x;
-	_pos = getpos _ldr;
-	_mkr = createMarkerLocal [format["%1",_x],_pos];
-	_mkr setMarkerShapeLocal "ICON";
-	_mkr setMarkerTypeLocal "b_inf";
-	//_mkr setMarkerTextLocal groupId _x;
-	_mkr setMarkerTextLocal roleDescription leader _x;
-
-	_grps_mkrs pushBack [_x,_mkr];
-
-} forEach _grps;
-
-//diag_log ["BLUFOR TRACKER:",_grps_mkrs];
-
-while {true} do {
-
+_get_player_side_groups = {
+	params ["_player"];
+	private _player_side = side _player;
+	private _player_side_groups = [];
 	{
-
-		_mkr = _x select 1;
-		_grp = _x select 0;
-
-		_veh = vehicle leader _grp;
-
-		_mkrtype = switch (true) do {
-			case (_veh isKindOf "Plane"):{"b_plane"};
-			case (_veh isKindOf "Helicopter"):{"b_air"};	
-			case (_veh isKindOf "Tank"):{"b_armor"};
-			case (_veh isKindOf "Car"):{"b_recon"};
-			case (_veh isKindOf "Truck"):{"b_motor_inf"};
-			case (_veh isKindOf "Tracked_APC"):{"b_mech_inf"};
-			default {"b_inf"};
+		if (side _x == _player_side) then {
+			_player_side_groups pushBack _x;
 		};
+	} forEach allGroups;
+	_player_side_groups;
+};
 
-		_mkr setMarkerTypeLocal _mkrtype;
-		_mkr setMarkerPos getpos leader _grp;
+_get_group_markers = {
+	params ["_groups"];
+	private _group_markers=[];
+	{
+		private _leader = leader _x;
+		private _position = getpos _leader;
+		private _marker = createMarkerLocal [format["%1", _x], _position];
+		_marker setMarkerShapeLocal "ICON";
+		_marker setMarkerTypeLocal "b_inf";
+		_marker setMarkerTextLocal roleDescription _leader;
+		_group_markers pushBack [_x, _marker];
+	} forEach _groups;
+	_group_markers;
+};
 
-	} forEach _grps_mkrs;
+_update_group_marker = {
+	params["_group", "_marker"];
+	private _leader_vehicle = vehicle leader _group;
+	private _marker_type = switch (true) do {
+		case (_leader_vehicle isKindOf "Plane"): {"b_plane"};
+		case (_leader_vehicle isKindOf "Helicopter"): {"b_air"};
+		case (_leader_vehicle isKindOf "Tank"): {"b_armor"};
+		case (_leader_vehicle isKindOf "Car"): {"b_recon"};
+		case (_leader_vehicle isKindOf "Truck"): {"b_motor_inf"};
+		case (_leader_vehicle isKindOf "Tracked_APC"): {"b_mech_inf"};
+		default {"b_inf"};
+	};
+	_marker_type;
+};
 
+_player_side_groups = [_player] call _get_player_side_groups;
+_player_side_group_markers = [_player_side_groups] call _get_group_markers;
+while {true} do {
+	{
+		_group = _x select 0;
+		_marker = _x select 1;
+		_marker_type = [_group, _marker] call _update_group_marker;
+		_marker setMarkerTypeLocal _marker_type;
+		_marker setMarkerPosLocal getpos leader _group;
+	} forEach _player_side_group_markers;
 	sleep 5;
-
 };
 
 if(true)exitwith{};
