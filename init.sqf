@@ -237,8 +237,8 @@ if (isServer and (isNil "ServerStart")) then {
 	nul = _mhq2_init execVM "MOB_CTI\player_mhq_init.sqf";
 
 // Global Economy
-	[_faction1_econ,[[_faction1_startfunds,_faction1_startammo,0],_faction1_maxfuel],_faction1_type,west,[10,1],MHQ1,MOB_CTI_Locations_AllMajorCities] execVM (directory+"economy.sqf");
-	[_faction2_econ,[[_faction2_startfunds,_faction2_startammo,0],_faction2_maxfuel],_faction2_type,east,[10,1],MHQ2,MOB_CTI_Locations_AllMajorCities] execVM (directory+"economy.sqf");
+	[_faction1_econ,[[_faction1_startfunds,_faction1_startammo,0],_faction1_maxfuel],_faction1_type,west,[20,5],MHQ1,MOB_CTI_Locations_AllMajorCities] execVM (directory+"economy.sqf");
+	[_faction2_econ,[[_faction2_startfunds,_faction2_startammo,0],_faction2_maxfuel],_faction2_type,east,[20,5],MHQ2,MOB_CTI_Locations_AllMajorCities] execVM (directory+"economy.sqf");
 
 //Initial Spawn Locations for Invader Factions
 	if ((_fac1startpos == 0) && (_fac2startpos == 0)) then {
@@ -297,7 +297,7 @@ if (isServer and (isNil "ServerStart")) then {
 	};
 
 	//MHQs are destroyed
-	[MHQ1_veh,MHQ2_veh] spawn compile preprocessFile (directory+"end_trigger.sqf");
+	[MHQ1,MHQ2] spawn compile preprocessFile (directory+"end_trigger.sqf");
 	
 	{
 		_x addMPEventHandler ["MPRespawn", {

@@ -5,7 +5,8 @@ switch (_action) do {
 	case "onLoad": {
 		//execVM "MOB_CTI\player_ui_buildmenu.sqf";
 		_mhq = player getVariable "CTI_PLAYER_MHQ";
-		if (isNil 'CTI_ConstructionCamera') then {[_mhq, CTI_BASE_CONSTRUCTION_RANGE, 50] call CTI_CL_FNC_CreateCamera};
+		_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+		if (isNil 'CTI_ConstructionCamera') then {[_mhq_veh, CTI_BASE_CONSTRUCTION_RANGE, 50] call CTI_CL_FNC_CreateCamera};
 
 		if (CTI_P_WallsAutoAlign) then { ctrlSetText [100003, "Auto-Align Walls: On"] } else { ctrlSetText [100003, "Auto-Align Walls: Off"] };
 		if (CTI_P_DefensesAutoManning) then { ctrlSetText [100011, "Defenses Auto-Manning: On"] } else { ctrlSetText [100011, "Defenses Auto-Manning: Off"] };
@@ -38,11 +39,12 @@ switch (_action) do {
 			_selected = (player getVariable "CTI_STRUCTURES") select _selected;
 
 			_mhq = player getVariable "CTI_PLAYER_MHQ";
-			_funds = _mhq getVariable "CTI_FUNDS";	
+			_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+			_funds = _mhq getVariable "CTI_FUNDS";
 
 			if (_funds select 0 >= _selected select 2) then { //--- Check if we have enough funds to go in the construction mode.
 				CTI_VAR_StructurePlaced = false;
-				[_selected, (player getVariable "CTI_MHQ"), CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingBuilding;
+				[_selected, _mhq_veh, CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingBuilding;
 				CTI_KILL_CAMERA = False;
 				closeDialog 0;
 			} else {

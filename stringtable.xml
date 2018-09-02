@@ -36,6 +36,20 @@
 	</Package>
 </Project>
 
+<Project name="MOB _CTI">
+	<Package name="MOBCTI">
+		<Key ID="STR_AMMO_COST">
+			<Original>Cost of Loadout</Original>
+		</Key>
+		<Key ID="STR_AMMO">
+			<Original>Ammo:</Original>
+		</Key>
+		<Key ID="STR_MONEY">
+			<Original>Money:</Original>
+		</Key>
+	</Package>
+</Project>
+
 <Project name="CH View Distance">
     <Package name="Main">
         <Key ID="STR_chvd_title">
@@ -322,6 +336,6 @@
 				<Original>The selected squad member isn't close enough from a FOB or mobile spawn.</Original>
 				<French>Le membre de l'escouade sélectionné n'est pas assez proche d'une FOB ou d'un spawn mobile.</French>
 				<German>Das ausgewählte Gruppenmitglied ist nicht nahe genug an einer FOB oder an einem mobilen Spawn.</German>
-	   </Key>
+	   	</Key>
     </package>
 </Project>

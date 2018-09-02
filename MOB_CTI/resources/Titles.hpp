@@ -11,6 +11,99 @@ class RscTitles {
 		controls[]={};
 	};
 
+	class loadoutoverlay {
+
+		name = "loadoutoverlay";
+      	duration = 999999;
+     	idd = 6668;
+     	movingEnable = false;
+		onLoad = "uiNamespace setvariable ['LOADOUT_OVERLAY',(_this select 0)];";
+		controlsBackground[] = {CTI_Background,CTI_Background_Header,CTI_Menu_Title};
+      	controls[]= { LabelManpower,LabelAmmo,PictureManpower,PictureAmmo};
+
+		class CTI_Background : RscText {
+			x = safezoneX + safezoneW * 0.25;
+			y = safezoneY + safezoneH * 0.005;
+			w = safezoneW * 0.515;
+			h = safezoneH * 0.1;
+			colorBackground[] = {0, 0, 0, 0.7};
+			moving = 1;
+		};
+		class CTI_Background_Header : CTI_Background {
+			x = safezoneX + safezoneW * 0.25;
+			y = safezoneY + safezoneH * 0.005;
+			w = safezoneW * 0.515;
+			h = safezoneH * 0.05; //0.06 stock
+			colorBackground[] = {0, 0, 0, 0.4};
+		};
+		
+		class CTI_Menu_Title : RscText {
+			style = ST_LEFT;
+			x = safezoneX + safezoneW * 0.27;
+			y = safezoneY + safezoneH * 0.01;
+			w = safezoneW * 0.495;
+			h = safezoneH * 0.037;
+
+			text = $STR_AMMO_COST;
+			colorText[] = {0.258823529, 0.713725490, 1, 1};
+
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+
+	  	class GenericPicture68 {
+	  		idc = -1;
+			type =  CT_STATIC;
+			style = ST_PICTURE;
+			colorText[] = {0.9,0.9,0.9,1};
+			colorBackground[] = COLOR_NOALPHA;
+			font = "PuristaMedium";
+			sizeEx = 0.5;
+			x = 0.985 * safezoneW + safezoneX;
+			w = 0.012 * safezoneW;
+			h = 0.0213333333 * safezoneH;
+	  	};
+
+	  	class GenericLabel68 {
+			idc = -1;
+			type =  CT_STATIC;
+			style = ST_RIGHT;
+			colorBackground[] = COLOR_NOALPHA;
+			font = "PuristaMedium";
+			sizeEx = 0.022 * safezoneH;
+			x = 0.905 * safezoneW + safezoneX;
+			w = 0.08 * safezoneW;
+			y = 0.5225 * safezoneH + safezoneY;
+			h = 0.04 * safezoneH;
+			text = "";
+			shadow = 2;
+	  	};
+	  	class PictureManpower : GenericPicture68 {
+			x = 0.47 * safezoneW + safezoneX
+			y = 0.015 * safezoneH + safezoneY;
+			text = "MOB_CTI\resources\Pictures\ui_manpo.paa";
+	  	};
+	  	class LabelManpower : GenericLabel68 {
+	  		idc = 901;
+			text = "";
+			x = 0.4 * safezoneW + safezoneX
+			y = 0.05 * safezoneH + safezoneY;
+			colorText[] = {0, 0.75, 0, 1};
+	 	};
+	  	class PictureAmmo : GenericPicture68 {
+			x = 0.67 * safezoneW + safezoneX
+			y = 0.015 * safezoneH + safezoneY;
+			text = "MOB_CTI\resources\Pictures\ui_ammo.paa";
+	  	};
+	 	class LabelAmmo : GenericLabel68 {
+	  		idc = 902;
+			text = "";
+			x = 0.6 * safezoneW + safezoneX
+			y = 0.05 * safezoneH + safezoneY;
+			colorText[] = {0.75, 0, 0, 1};
+	  	};
+
+	};
+
 	class statusoverlay {
 
 		name = "statusoverlay";

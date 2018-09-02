@@ -39,8 +39,8 @@ class params
     class faction1_type
     {
         title="Class Type";
-        texts[]={"NATO","NATO (Pacific)","United States Army (Wood) [RHS+CUP]","United States Marine Corp (Wood) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]",};
-        values[]={0,1,2,3,4};
+        texts[]={"NATO","NATO (Pacific)","FIA","United States Army (Wood) [RHS+CUP]","United States Marine Corp (Wood) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]",};
+        values[]={0,1,2,3,4,5};
         default=0;
         isGlobal=1;
     };

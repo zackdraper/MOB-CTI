@@ -58,4 +58,28 @@ class CfgNotifications
 		priority = 0;
 		difficulty[] = {};
 	};
+
+	class BuildingDestroyed
+	{
+		title = "Building Destroyed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		iconText = "";
+		description = "%1 has been destroyed";
+		color[] = {1,1,1,1}; 
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+
+	class MHQDestroyed
+	{
+		title = "MHQ Destroyed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		iconText = "";
+		description = "Your MHQ has been destroyed";
+		color[] = {1,1,1,1}; 
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
 };

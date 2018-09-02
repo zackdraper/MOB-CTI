@@ -273,14 +273,14 @@ _return = switch (_this) do {
 		// Base Buildings
 		["Land_Cargo_HQ_V3_F",[1000,0,0],"","barracks"],
 		["Land_Cargo_HQ_V3_F",[2000,0,0],"","lightfac"],
-		["Land_Bunker_F",[3000,0,0],"","heavyfac"],
+		["Land_Cargo_HQ_V3_F",[3000,0,0],"","heavyfac"],
 		["Land_Cargo_Tower_V1_F",[4000,0,0],"","airfac"],
 		["Land_Cargo_House_V1_F",[1000,0,0],"","service"],
 		["Land_Lighthouse_Small_F",[1000,0,0],"","boatdock"],
 		["Land_Research_house_V1_F",[3000,0,0],"","controlcen"],
 		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
 		["B_APC_Wheeled_01_cannon_F",[0,0,0],"","mhq"],
-		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+		["B_Slingload_01_Cargo_F",[0,0,0],"","mhq_air"],
 		
 		// Flag
 		["\A3\Data_F\Flags\Flag_nato_CO.paa",[0,0,0],"","flag"]

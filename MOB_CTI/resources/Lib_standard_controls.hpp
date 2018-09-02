@@ -12,7 +12,7 @@ class StdText {
 
 class StdHeader : StdText {
   	style = ST_CENTER;
-    sizeEx = 0.03 * safezoneH;
+    	sizeEx = 0.03 * safezoneH;
 	colorBackground[] = COLOR_LIGHTGRAY;
 };
 
@@ -63,7 +63,7 @@ class StdListBox {
 	style = 0 + 0x10;
 	font = FontM;
 	sizeEx = 0.018 * safezoneH;
-    rowHeight = 0.018 * safezoneH * 1.25;
+    	rowHeight = 0.018 * safezoneH * 1.25;
 	color[] = COLOR_LIGHTGRAY;
 	colorText[] = COLOR_WHITE;
 	colorScrollbar[] = COLOR_BRIGHTGREEN;

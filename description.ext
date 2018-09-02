@@ -52,6 +52,11 @@ reviveBleedOutDelay = 120;
 
 //////////////////////////////////////////////////////////////////
 
+class CfgDebriefing 
+{
+	#include "MOB_CTI\resources\Debrief.hpp"
+};
+
 class CfgFunctions
 {
 	#include "MOB_CTI\CHVD\CfgFunctions.hpp"
