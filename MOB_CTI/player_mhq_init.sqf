@@ -31,11 +31,7 @@ _mhq getVariable ["CTI_FACTORIES", []];
 _mhq setVariable ["CTI_AREAS", [], true];
 _mhq setVariable ["CTI_FACTORIES", [], true];
 
-if (_vehicle iskindof "Static") then {
-	[_side, getposATL _mhq, "HQ"] call BIS_fnc_addRespawnPosition;
-} else {
-	[_side, _mhq, "MHQ"] call BIS_fnc_addRespawnPosition;
-};
+[_side, _vehicle, "MHQ"] call BIS_fnc_addRespawnPosition;
 
 // ----------- HALO
 if ("halo" in _this) then {

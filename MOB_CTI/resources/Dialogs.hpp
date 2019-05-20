@@ -32,7 +32,7 @@ class CTI_RscBuildMenu {
 			text = "Building Construction";
 			colorText[] = {0.258823529, 0.713725490, 1, 1};
 
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 		};
 
 		class CTI_Menu_BuildingListFrame : RscFrame {
@@ -2631,6 +2631,236 @@ class CTI_RscWorkersMenu {
 
 			text = "<<";
 			action = "closeDialog 0; createDialog 'CTI_RscCommandMenu';";
+		};
+	};
+};
+
+class CTI_RscMapCommandMenu {
+	movingEnable = 0;
+	idd = 220000;
+	onLoad = "uiNamespace setVariable ['cti_dialog_ui_mapcommandmenu', _this select 0];['onLoad'] execVM 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+	onUnload = "uiNamespace setVariable ['cti_dialog_ui_mapcommandmenu', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+
+	class controlsBackground {
+		class CTI_Background : RscText {
+			x = "SafeZoneX";
+			y = "SafeZoneY";
+			w = "SafeZoneW";
+			h = "SafeZoneH";
+			colorBackground[] = {0, 0, 0, 0.7};
+		};
+		class CTI_Background_Header : CTI_Background {
+			x = "SafeZoneX";
+			y = "SafeZoneY";
+			w = "SafeZoneW";
+			h = "SafeZoneH * 0.05";
+			colorBackground[] = {0, 0, 0, 0.4};
+		};
+		class CTI_Menu_Title : RscText {
+			style = ST_LEFT;
+			x = "SafeZoneX + (SafezoneH * 0.02)";
+			y = "SafeZoneY + (SafezoneH * 0.005)";
+			w = "SafeZoneW * 0.98";
+			h = "SafeZoneH * 0.037";
+
+			text = "Map Commanding";
+			colorText[] = {0.258823529, 0.713725490, 1, 1};
+
+			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class CTI_Menu_Map : RscMapControl {
+			idc = 220001;
+
+			x = "SafeZoneX";
+			y = "SafeZoneY + (SafezoneH * 0.05)";
+			w = "SafeZoneW";
+			h = "SafeZoneH * 0.95";
+
+			// showCountourInterval = 1;
+			onMouseButtonDown = "['onMapButtonDown', _this] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+		};
+	};
+
+	class controls {
+		class CTI_Background_List : RscText {
+			idc = 220701;
+			x = "SafeZoneX + (SafeZoneW * 0.78)";
+			y = "SafeZoneY + (SafezoneH * 0.06)";
+			w = "SafeZoneW * 0.21";
+			h = "SafeZoneH * 0.9";
+			colorBackground[] = {0, 0, 0, 0.7};
+		};
+		class CTI_Menu_UnitsListFrame : RscFrame {
+			idc = 220702;
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafezoneH * 0.095)";
+			w = "SafeZoneW * 0.2";
+			h = "SafeZoneH * 0.30";
+		};
+		class CTI_Menu_List_Background : RscText {
+			idc = 220708;
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafezoneH * 0.095)";
+			w = "SafeZoneW * 0.2";
+			h = "SafeZoneH * 0.30";
+			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		};
+		class CTI_Menu_Control_UnitsList_Label : RscText { //--- Render out.
+			idc = 220703;
+
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafezoneH * 0.06)";
+			w = "SafeZoneW * 0.19";
+			h = "SafeZoneH * 0.03";
+
+			text = "Teams :";
+			colorText[] = {0.231372549, 0.580392157, 0.929411765, 1};
+			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class CTI_Menu_Control_OrdersList_Label : CTI_Menu_Control_UnitsList_Label { //--- Render out.
+			idc = 220704;
+
+			y = "SafeZoneY + (SafezoneH * 0.405)";
+			h = "SafeZoneH * 0.03";
+
+			text = "Orders :";
+		};
+		class CTI_Menu_OrdersListFrame : CTI_Menu_UnitsListFrame {
+			idc = 220705;
+
+			y = "SafeZoneY + (SafezoneH * 0.44)";
+			h = "SafeZoneH * 0.16";
+		};
+		class CTI_Menu_Orders_Background : CTI_Menu_List_Background {
+			idc = 220709;
+
+			y = "SafeZoneY + (SafezoneH * 0.44)";
+			h = "SafeZoneH * 0.16";
+		};
+		class CTI_Menu_Control_OrdersParamList_Label : CTI_Menu_Control_UnitsList_Label { //--- Render out.
+			idc = 220706;
+
+			y = "SafeZoneY + (SafezoneH * 0.61)";
+			h = "SafeZoneH * 0.03";
+
+			text = "Order Parameters :";
+		};
+		class CTI_Menu_OrdersParamListFrame : CTI_Menu_UnitsListFrame {
+			idc = 220707;
+
+			y = "SafeZoneY + (SafezoneH * 0.645)";
+			h = "SafeZoneH * 0.2";
+		};
+		class CTI_Menu_OrdersParam_Background : CTI_Menu_List_Background {
+			idc = 220710;
+
+			y = "SafeZoneY + (SafezoneH * 0.645)";
+			h = "SafeZoneH * 0.2";
+		};
+		class CTI_Background_Intel : RscText {
+			idc = 220711;
+			x = "SafeZoneX + (SafeZoneW * 0.26)";
+			y = "SafeZoneY + (SafezoneH * 0.06)";
+			w = "SafeZoneW * 0.48";
+			h = "SafeZoneH * 0.03";
+			colorBackground[] = {0, 0, 0, 0.7};
+		};
+		class CTI_Menu_Control_UnitsList : RscListNBox {
+			idc = 220002;
+
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafezoneH * 0.095)";
+			w = "SafeZoneW * 0.2";
+			h = "SafeZoneH * 0.30";
+
+			rowHeight = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			sizeEx = "0.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {0,0,0,0};
+			itemBackground[] = {1,1,1,0.1};
+			columns[] = {0.001, 0.4};
+
+			onLBDblClick = "['onUnitListLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+			onLBSelChanged = "['onUnitListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+		};
+		class CTI_Menu_Control_OrdersList : RscListBox {
+			idc = 220009;
+
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafezoneH * 0.44)";
+			w = "SafeZoneW * 0.2";
+			h = "SafeZoneH * 0.16";
+
+			rowHeight = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			sizeEx = "0.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {0,0,0,0};
+
+			onLBSelChanged = "['onOrdersListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+			onLBDblClick = "['onOrdersListLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+		};
+		class CTI_Menu_Control_OrdersParamList : CTI_Menu_Control_OrdersList {
+			idc = 220010;
+
+			y = "SafeZoneY + (SafezoneH * 0.645)";
+			h = "SafeZoneH * 0.2";
+
+			onLBDblClick = "['onOrdersParamLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+			onLBSelChanged = "";
+		};
+
+		class CTI_Menu_Control_SetOrder : RscButton_Opac {
+			idc = 220011;
+
+			x = "SafeZoneX + (SafeZoneW * 0.785)";
+			y = "SafeZoneY + (SafeZoneH * 0.86)";
+			h = "SafeZoneH * 0.04";
+			w = "SafeZoneW * 0.2";
+
+			sizeEx = "0.85 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+			text = "Set Order";
+			action = "['onSetOrderPressed'] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+		};
+		class CTI_Menu_Control_SetMapOrder : CTI_Menu_Control_SetOrder {
+			idc = 220012;
+
+			y = "SafeZoneY + (SafeZoneH * 0.91)";
+
+			text = "Set Order (Map Click)";
+			action = "['onSetMapOrderPressed'] call compile preprocessFileLineNumbers 'MOB_CTI\player_events_ui_mapcommandmenu.sqf'";
+		};
+		class CTI_Menu_Control_IntelText : RscStructuredText {
+			idc = 220013;
+
+			x = "SafeZoneX + (SafeZoneW * 0.26)";
+			y = "SafeZoneY + (SafezoneH * 0.06)";
+			w = "SafeZoneW * 0.48";
+			h = "SafeZoneH * 0.03";
+
+			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+
+		class CTI_Control_Exit : RscButton {
+			idc = 22555;
+
+			x = "SafeZoneX + (SafeZoneW * 0.95)";
+			y = "SafeZoneY + (SafezoneH * 0.005)";
+			w = "SafeZoneW * 0.04";
+			h = "SafeZoneH * 0.04";
+
+			text = "X";
+			action = "closeDialog 0";
+		};
+		class CTI_Control_Back : CTI_Control_Exit {
+			idc = 22555;
+
+			x = "SafeZoneX + (SafeZoneW * 0.905)";
+
+			text = "<<";
+			action = "closeDialog 0; createDialog 'CTI_RscTablet_main';";
 		};
 	};
 };

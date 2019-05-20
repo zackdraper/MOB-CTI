@@ -4,8 +4,8 @@ _player = _this select 0;
 
 _get_player_side_groups = {
 	params ["_player"];
-	private _player_side = side _player;
-	private _player_side_groups = [];
+	_player_side = side _player;
+	_player_side_groups = [];
 	{
 		if (side _x == _player_side) then {
 			_player_side_groups pushBack _x;
@@ -18,9 +18,9 @@ _get_group_markers = {
 	params ["_groups"];
 	private _group_markers=[];
 	{
-		private _leader = leader _x;
-		private _position = getpos _leader;
-		private _marker = createMarkerLocal [format["%1", _x], _position];
+		_leader = leader _x;
+		_position = getpos _leader;
+		_marker = createMarkerLocal [format["%1", _x], _position];
 		_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "b_inf";
 		_marker setMarkerTextLocal roleDescription _leader;
@@ -31,8 +31,8 @@ _get_group_markers = {
 
 _update_group_marker = {
 	params["_group", "_marker"];
-	private _leader_vehicle = vehicle leader _group;
-	private _marker_type = switch (true) do {
+	_leader_vehicle = vehicle leader _group;
+	_marker_type = switch (true) do {
 		case (_leader_vehicle isKindOf "Plane"): {"b_plane"};
 		case (_leader_vehicle isKindOf "Helicopter"): {"b_air"};
 		case (_leader_vehicle isKindOf "Tank"): {"b_armor"};

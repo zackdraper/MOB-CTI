@@ -17,6 +17,7 @@ CTI_CREATEDEFENCES = compileFinal preprocessFile "MOB_CTI\functions\createdefenc
 CTI_CO_FNC_GetSideStructuresByType = compileFinal preprocessFile "MOB_CTI\functions\getsidestructuresbytype.sqf";
 CTI_CO_FNC_GetClosestTown = compileFinal preprocessFile "MOB_CTI\functions\getclosesttown.sqf";
 CTI_CL_FNC_CreateCamera = compileFinal preprocessFile "MOB_CTI\player_createcamera.sqf";
+CTI_CL_FNC_GetOrderLabel = compileFinal preprocessFile "MOB_CTI\functions\get_order_label.sqf";
 save_loadout = compileFinal preprocessFile "MOB_CTI\functions\save_loadout.sqf";
 read_twod_array_col = compileFinal preprocessFile "MOB_CTI\functions\read_twod_array_col.sqf";
 make_int_array = compileFinal preprocessFile "MOB_CTI\functions\make_int_array.sqf";
@@ -63,7 +64,6 @@ call compile preprocessFile "MOB_CTI\functions\functions_ui_keyhandlers.sqf";
 
 /////////////////////////////////////////////////////////////////////////////////// Define Variables
 
-
 CTI_P_WallsAutoAlign = False;
 CTI_P_DefensesAutoManning = False;
 CTI_BASE_CONSTRUCTION_RANGE = 200;
@@ -72,6 +72,40 @@ CTI_BASE_AREA_RANGE = 500;
 CTI_BASE_WORKERS_PRICE = 300;
 CTI_PLAYERS_GROUPSIZE = 10;
 CTI_FACTORY_SLEEP = 10;
+
+//--- Orders: ID (Unique)
+CTI_ORDER_TAKETOWNS = 0; //--- AI: Take any towns (trigger CTI_ORDER_TAKETOWN_AUTO)
+CTI_ORDER_TAKETOWN = 1; //--- AI: Take the assigned town, don't change target
+CTI_ORDER_TAKETOWN_AUTO = 2; //--- AI: Take the assigned town, change target if there's any closer
+CTI_ORDER_TAKEHOLDTOWNS = 3; //--- AI: Take and Hold any towns (trigger CTI_ORDER_TAKETOWN_AUTO)
+CTI_ORDER_TAKEHOLDTOWN = 4; //--- AI: Take and hold the assigned town, don't change target
+CTI_ORDER_TAKEHOLDTOWN_AUTO = 5; //--- AI: Take and hold the assigned town, change target if there's any closer
+CTI_ORDER_HOLDTOWNSBASES = 6; //--- AI: Determine any hold location (Can be towns/base)
+CTI_ORDER_HOLDTOWNSBASE = 7; //--- AI: Permanently hold a location (Can be towns/base)
+CTI_ORDER_SAD = 8; //--- AI: Search and destroy the enemy base
+CTI_ORDER_MOVE = 9; //--- AI: Move to a position
+
+//--- Orders: One-time orders (Doesn't count as a real order)
+CTI_ORDER_EMBARKCOMMANDVEH = 10;
+CTI_ORDER_DISEMBARKCOMMANDVEH = 11;
+CTI_ORDER_EMBARKCARGOVEH = 12;
+CTI_ORDER_DISEMBARKCARGOVEH = 13;
+
+//--- Orders: list of orders which are only called once (one-time)
+CTI_AI_ORDERS_ONETIMERS = [CTI_ORDER_EMBARKCOMMANDVEH, CTI_ORDER_DISEMBARKCOMMANDVEH, CTI_ORDER_EMBARKCARGOVEH, CTI_ORDER_DISEMBARKCARGOVEH];
+
+//--- Orders: Parameters
+CTI_AI_ORDER_HOLDTOWNSBASES_HOPS = 12; //--- Order: HOLD TOWNS BASE units may use up to x hops to patrol in town
+CTI_AI_ORDER_HOLDTOWNSBASES_PATROL_RANGE = 240; //--- Order: HOLD TOWNS BASE units may patrol up to x meters
+CTI_AI_ORDER_TAKEHOLDTOWNS_HOPS = 8; //--- Order: TAKE HOLD units may use up to x hops to patrol in town
+CTI_AI_ORDER_TAKEHOLDTOWNS_PATROL_RANGE = 225; //--- Order: TAKE HOLD units may patrol up to x meters
+CTI_AI_ORDER_TAKEHOLDTOWNS_TIME = 240; //--- Order: TAKE HOLD units may patrol x seconds in a town
+CTI_AI_ORDER_TAKEHOLDTOWNS_RANGE = 800; //--- Order: TAKE HOLD units will attempt to patrol if within that range of a town
+
+//--- Orders: Parameters (players)
+CTI_PLAYER_ORDER_TAKEHOLDTOWNS_RANGE = 800; //--- Order: TAKE HOLD units will attempt to patrol if within that range of a town
+CTI_PLAYER_ORDER_TAKEHOLDTOWNS_TIME = 200; //--- Order: TAKE HOLD units may patrol x seconds in a town
+//-----------------------------------------------------------------------------------------------------------------------//
 
 
 /////////////////////////////////////////////////////////////////////////////////// Modular Script Calls
@@ -88,6 +122,7 @@ execVM (directory+"R3F_LOG\init.sqf");
 // CTI integration
 
 _nul = execVM (directory+"functions\functions_ui_purchasemenu.sqf");
+_nul = execVM (directory+"functions\functions_ui_mapcommanding.sqf");
 
 // Weather Fast Time integration
 [] execVM (directory+"real_weather.sqf");
@@ -437,7 +472,13 @@ if (hasinterface) then {
 		_unit addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,false,true,"","_target == _this"];
 
 		//Squad Manager
-		_unit addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\squad_manager.sqf",[],99,false,true,"","_target == _this"];
+		_unit addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\player_ui_squad_manager.sqf",[],99,false,true,"","_target == _this"];
+		
+		//Command Menu
+		_commander = _unit getVariable ["CTI_COMMANDER",false];
+		if (_commander) then {
+			_unit addaction ["<t color='#FFA500'>Command Menu</t>","MOB_CTI\player_action_commandmenu.sqf",[],99,false,true,"","_target == _this"];
+		};
 		
 		//Loadout
 		//hint format ["%1",missionNamespace getvariable "Var_SavedInventory"];
@@ -446,12 +487,13 @@ if (hasinterface) then {
 		//Bad fix for respawn on carrier
 		_unit spawn {
 			_unit = _this;
-			sleep 3;
-			if (stance _unit == "UNDEFINED") then {
-				_unit setPosATL [(getpos _unit) select 0,(getpos _unit) select 1,((getposATL _unit) select 2)+25];
+			//sleep 3;
+			if (surfaceIsWater (getpos _unit)) then {
+				_unit setPosATL [(getposATL _unit) select 0,(getposATL _unit) select 1,((getposATL _unit) select 2)+25];
 			};
 		};
 		
+		[_unit] call remove_static_uav;
 		//deleteVehicle _killed;
 		//[_unit, _name] remoteExec [setVehicleVarName,0];
 	}];
@@ -463,8 +505,14 @@ if (hasinterface) then {
 	player addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,false,true,"","_target == _this"];
 
 //Squad Manager
-	player addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\squad_manager.sqf",[],99,false,true,"","vehicle _target == vehicle _this"];
+	player addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\player_ui_squad_manager.sqf",[],99,false,true,"","vehicle _target == vehicle _this"];
 
+//Command Menu	
+	_commander = player getVariable ["CTI_COMMANDER",false];
+	if (_commander) then {
+		player addaction ["<t color='#FFA500'>Command Menu</t>","MOB_CTI\player_action_commandmenu.sqf",[],99,false,true,"","_target == _this"];
+	};
+		
 //BLUFOR Tracker
 	[player] spawn blufor_tracker;
 

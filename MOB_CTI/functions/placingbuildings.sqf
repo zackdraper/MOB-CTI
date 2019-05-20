@@ -140,7 +140,7 @@ if (surfaceIsWater _pos) exitWith {hint parseText "<t size='1.3' color='#2394ef'
 _in_area = false;
 _areas = _mhq getVariable "CTI_AREAS";
 
-player sidechat format ["%1",_areas];
+//player sidechat format ["%1",_areas];
 
 if (count _areas > 0) then { 
 	{if ([_pos select 0, _pos select 1] distance [_x select 0, _x select 1] <= CTI_BASE_AREA_RANGE) exitWith {_in_area = true}} forEach _areas;
