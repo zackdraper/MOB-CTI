@@ -7,80 +7,77 @@ item2[] = {"AI",4,218,-59.466827,267.461761,40.533173,317.461792,1.000000,"AI"};
 item3[] = {"Phase_I_Commande",2,250,-61.266571,161.554993,38.733429,211.554993,0.000000,"Phase I" \n "Commander"};
 item4[] = {"Phase_II_Respawn",2,250,-59.466827,367.461792,40.533173,417.461670,0.000000,"Phase II" \n "Respawning"};
 item5[] = {"Respawning",8,218,-209.466827,367.461792,-109.466827,417.461670,0.000000,"Respawning"};
-item6[] = {"Skip",2,250,-459.466827,367.461792,-359.466827,417.461670,0.000000,"Skip"};
-item7[] = {"",7,210,-413.466827,33.839767,-405.466827,41.839767,0.000000,""};
-item8[] = {"Alive",4,218,-52.912048,449.347321,37.087952,499.347321,1.000000,"Alive"};
-item9[] = {"Phase_III_Build",2,250,-49.758545,707.181213,40.241470,757.181213,0.000000,"Phase III" \n "Build"};
-item10[] = {"Barracks____Com",4,218,-384.863525,613.545959,-294.863617,663.545959,9.000000,"Barracks" \n " & Com"};
-item11[] = {"Build__Next_Buil",2,250,-597.658691,808.191406,-507.658630,858.191406,0.000000,"Build " \n "Next Building"};
-item12[] = {"Build_Inf",4,218,-386.732208,704.079712,-296.732208,754.079651,8.000000,"Build Inf"};
-item13[] = {"Build_Infantry_",2,250,-443.081482,926.953735,-353.081451,976.953735,0.000000,"Build Infantry" \n " Platoons"};
-item14[] = {"_",8,218,551.116272,383.431702,641.116272,433.431702,0.000000,""};
-item15[] = {"Phase_V_Tax_Communal",2,250,396.107544,6.890404,486.107544,56.890396,0.000000,"Phase V" \n "Tax Communal " \n "Funds"};
-item16[] = {"_",8,218,-377.050507,1202.381958,-287.050507,1252.381958,0.000000,""};
-item17[] = {"Phase_IV_Command",2,250,291.398438,1201.882935,381.398438,1251.882935,0.000000,"Phase IV" \n "Command"};
-item18[] = {"Light___Service",4,218,-338.493439,785.741760,-248.493530,835.741699,7.000000,"Light &" \n "Service"};
-item19[] = {"__1",8,218,109.335869,798.070190,199.335876,848.070190,0.000000,""};
-item20[] = {"Build_Light",4,218,-246.262421,855.130127,-156.262421,905.130066,6.000000,"Build Light"};
-item21[] = {"Build__Light_Veh",2,250,-309.753448,1021.978821,-219.753448,1071.978882,0.000000,"Build " \n "Light Vehs"};
-item22[] = {"Heavy",4,218,-141.527771,928.971680,-51.527771,978.971680,5.000000,"Heavy"};
-item23[] = {"Build_Heavy",4,218,-22.283783,952.512146,67.716217,1002.511902,4.000000,"Build Heavy"};
-item24[] = {"Build__Heavy_Veh",2,250,-129.596741,1057.279663,-39.596741,1107.279785,0.000000,"Build " \n "Heavy Vehs"};
-item25[] = {"Attack_Towns",4,218,290.780792,845.676514,380.780670,895.676514,3.000000,"Attack Towns"};
-item26[] = {"Patrol_Point",4,218,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
-item27[] = {"Task__Complete",2,250,472.628418,629.201294,562.628418,679.201294,0.000000,"Task " \n "Complete"};
-item28[] = {"_",8,218,574.065918,845.143188,664.065918,895.143188,0.000000,""};
-item29[] = {"Reassign",4,218,846.335266,847.722534,936.335266,897.722534,9.000000,"Reassign"};
-item30[] = {"_",4,4314,94.169548,961.279053,184.169556,1011.279114,3.000000,""};
-item31[] = {"Build_Inf__Vehicle",2,250,41.282223,1076.831299,131.282242,1126.831299,0.000000,"Build Inf " \n "Vehicle\"};
-item32[] = {"Go_to_Com__Cente",4,218,291.669189,1324.630249,381.669189,1374.630249,9.000000,"Go to Com " \n "Center"};
+item6[] = {"End_",1,250,-368.391602,362.537323,-278.391541,412.537292,0.000000,"End" \n ""};
+item7[] = {"Alive",4,218,-52.912048,449.347321,37.087952,499.347321,1.000000,"Alive"};
+item8[] = {"Phase_III_Build",2,250,-49.758545,707.181213,40.241470,757.181213,0.000000,"Phase III" \n "Build"};
+item9[] = {"Barracks____Com",4,218,-384.863525,613.545959,-294.863617,663.545959,9.000000,"Barracks" \n " & Com"};
+item10[] = {"Build__Next_Buil",2,250,-597.658691,808.191406,-507.658630,858.191406,0.000000,"Build " \n "Next Building"};
+item11[] = {"Build_Inf",4,218,-386.732208,704.079712,-296.732208,754.079651,8.000000,"Build Inf"};
+item12[] = {"Build_Infantry_",2,250,-443.081482,926.953735,-353.081451,976.953735,0.000000,"Build Infantry" \n " Platoons"};
+item13[] = {"_",8,218,551.116272,383.431702,641.116272,433.431702,0.000000,""};
+item14[] = {"Phase_V_Tax_Communal",2,250,396.107544,6.890404,486.107544,56.890396,0.000000,"Phase V" \n "Tax Communal " \n "Funds"};
+item15[] = {"_",8,218,-377.050507,1202.381958,-287.050507,1252.381958,0.000000,""};
+item16[] = {"Phase_IV_Command",2,4346,291.398438,1201.882935,381.398438,1251.882935,0.000000,"Phase IV" \n "Command"};
+item17[] = {"Light___Service",4,218,-338.493439,785.741760,-248.493530,835.741699,7.000000,"Light &" \n "Service"};
+item18[] = {"_",8,218,109.335869,798.070190,199.335876,848.070190,0.000000,""};
+item19[] = {"Build_Light",4,218,-246.262421,855.130127,-156.262421,905.130066,6.000000,"Build Light"};
+item20[] = {"Build__Light_Veh",2,250,-309.753448,1021.978821,-219.753448,1071.978882,0.000000,"Build " \n "Light Vehs"};
+item21[] = {"Heavy",4,218,-141.527771,928.971680,-51.527771,978.971680,5.000000,"Heavy"};
+item22[] = {"Build_Heavy",4,218,-22.283783,952.512146,67.716217,1002.511902,4.000000,"Build Heavy"};
+item23[] = {"Build__Heavy_Veh",2,250,-129.596741,1057.279663,-39.596741,1107.279785,0.000000,"Build " \n "Heavy Vehs"};
+item24[] = {"Attack_Towns",4,218,290.780792,845.676514,380.780670,895.676514,3.000000,"Attack Towns"};
+item25[] = {"Patrol_Point",4,218,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
+item26[] = {"Task__Complete",2,250,472.628418,629.201294,562.628418,679.201294,0.000000,"Task " \n "Complete"};
+item27[] = {"_",8,218,574.065918,845.143188,664.065918,895.143188,0.000000,""};
+item28[] = {"Reassign",4,218,846.335266,847.722534,936.335266,897.722534,9.000000,"Reassign"};
+item29[] = {"Infantry_Transpo",4,218,94.169548,961.279053,184.169556,1011.279114,3.000000,"Infantry" \n "Transports"};
+item30[] = {"Build_Inf__Vehicle",2,250,41.282223,1076.831299,131.282242,1126.831299,0.000000,"Build Inf " \n "Vehicle\"};
+item31[] = {"Go_to_Com__Cente",4,218,291.669189,1324.630249,381.669189,1374.630249,9.000000,"Go to Com " \n "Center"};
 link0[] = {0,1};
 link1[] = {1,3};
 link2[] = {2,4};
 link3[] = {3,2};
 link4[] = {4,5};
-link5[] = {4,8};
+link5[] = {4,7};
 link6[] = {5,6};
-link7[] = {6,7};
-link8[] = {7,1};
-link9[] = {8,9};
-link10[] = {9,10};
-link11[] = {9,12};
-link12[] = {9,18};
-link13[] = {9,19};
-link14[] = {9,20};
-link15[] = {9,22};
-link16[] = {9,23};
-link17[] = {9,30};
-link18[] = {10,11};
-link19[] = {11,16};
-link20[] = {12,13};
-link21[] = {13,16};
-link22[] = {14,15};
-link23[] = {15,1};
-link24[] = {16,17};
-link25[] = {17,25};
-link26[] = {17,26};
-link27[] = {17,28};
-link28[] = {17,32};
-link29[] = {18,11};
-link30[] = {19,17};
-link31[] = {20,21};
-link32[] = {21,16};
-link33[] = {22,11};
-link34[] = {23,24};
-link35[] = {24,16};
-link36[] = {25,27};
-link37[] = {26,27};
-link38[] = {27,14};
-link39[] = {27,29};
-link40[] = {28,27};
-link41[] = {29,17};
-link42[] = {30,31};
-link43[] = {31,16};
-link44[] = {32,17};
-globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-504.339355,510.186768,1456.005737,369.848846,694,743,1};
-window[] = {0,-1,-1,-1,-1,1047,258,1846,133,1,712};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {8,11};
+link10[] = {8,17};
+link11[] = {8,18};
+link12[] = {8,19};
+link13[] = {8,21};
+link14[] = {8,22};
+link15[] = {8,29};
+link16[] = {9,10};
+link17[] = {10,15};
+link18[] = {11,12};
+link19[] = {12,15};
+link20[] = {13,14};
+link21[] = {14,1};
+link22[] = {15,16};
+link23[] = {16,24};
+link24[] = {16,25};
+link25[] = {16,27};
+link26[] = {16,31};
+link27[] = {17,10};
+link28[] = {18,16};
+link29[] = {19,20};
+link30[] = {20,15};
+link31[] = {21,10};
+link32[] = {22,23};
+link33[] = {23,15};
+link34[] = {24,26};
+link35[] = {25,26};
+link36[] = {26,13};
+link37[] = {26,28};
+link38[] = {27,26};
+link39[] = {28,16};
+link40[] = {29,30};
+link41[] = {30,15};
+link42[] = {31,16};
+globals[] = {0.000000,0,0,0,0,640,480,1,84,6316128,1,-48.666744,1067.312012,1505.124023,310.351410,665,869,1};
+window[] = {0,-1,-1,-1,-1,930,62,1650,16,1,683};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -192,6 +189,15 @@ class FSM
                                          "" \n
                                          "_com = leader _com_grp;" \n
                                          "" \n
+                                         "_units_com = [];" \n
+                                         "{ " \n
+                                         "	if (_x getvariable ""CTI_PLAYER_FACTION"" == _faction) then {" \n
+                                         "		_units_com pushBack _x;" \n
+                                         "	};" \n
+                                         "} forEach playableUnits; " \n
+                                         "_units_com = _units_com - [_com];" \n
+                                         "_units_pos = _units_com apply {getpos _x};" \n
+                                         "" \n
                                          "_grps = _units_com apply {group _x};" \n
                                          "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
                                          "_ai_grps = _ai_grps - [""""];" \n
@@ -251,7 +257,7 @@ class FSM
                                 /*%FSM<LINK "Alive">*/
                                 class Alive
                                 {
-                                        itemno = 8;
+                                        itemno = 7;
                                         priority = 1.000000;
                                         to="Phase_III_Build";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -264,7 +270,7 @@ class FSM
                                 {
                                         itemno = 5;
                                         priority = 0.000000;
-                                        to="Skip";
+                                        to="End_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_com sidechat ""I'm dead"";"/*%FSM</ACTION""">*/;
@@ -273,39 +279,15 @@ class FSM
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "Skip">*/
-                class Skip
+                /*%FSM<STATE "End_">*/
+                class End_
                 {
-                        name = "Skip";
+                        name = "End_";
                         itemno = 6;
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "Cycle">*/
-                                class Cycle
-                                {
-                                        itemno = 1;
-                                        priority = 0.000000;
-                                        to="Phase_I_Commande";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"time > _ncycle"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"call compile _units_hard_save; " \n
-                                         "" \n
-                                         "_com = leader _com_grp;" \n
-                                         "" \n
-                                         "_grps = _units_com apply {group _x};" \n
-                                         "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
-                                         "_ai_grps = _ai_grps - [""""];" \n
-                                         "" \n
-                                         "_ai_units = _units_com apply {if !(isPlayer _x) then {_x} else {""""}};" \n
-                                         "_ai_units = _ai_units - [""""];" \n
-                                         "" \n
-                                         "_curr_id = _curr_id + 1;" \n
-                                         "" \n
-                                         "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/
@@ -313,7 +295,7 @@ class FSM
                 class Phase_III_Build
                 {
                         name = "Phase_III_Build";
-                        itemno = 9;
+                        itemno = 8;
                         init = /*%FSM<STATEINIT""">*/"_mhq = _com getVariable ""CTI_PLAYER_MHQ"";" \n
                          "_taxable_funds = _mhq getVariable ""CTI_FUNDS"";" \n
                          "player sidechat format [""MHQ : %1"",_mhq];" \n
@@ -430,7 +412,7 @@ class FSM
                                 /*%FSM<LINK "Barracks____Com">*/
                                 class Barracks____Com
                                 {
-                                        itemno = 10;
+                                        itemno = 9;
                                         priority = 9.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -441,7 +423,7 @@ class FSM
                                 /*%FSM<LINK "Build_Inf">*/
                                 class Build_Inf
                                 {
-                                        itemno = 12;
+                                        itemno = 11;
                                         priority = 8.000000;
                                         to="Build_Infantry_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -452,7 +434,7 @@ class FSM
                                 /*%FSM<LINK "Light___Service">*/
                                 class Light___Service
                                 {
-                                        itemno = 18;
+                                        itemno = 17;
                                         priority = 7.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -463,7 +445,7 @@ class FSM
                                 /*%FSM<LINK "Build_Light">*/
                                 class Build_Light
                                 {
-                                        itemno = 20;
+                                        itemno = 19;
                                         priority = 6.000000;
                                         to="Build__Light_Veh";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -474,7 +456,7 @@ class FSM
                                 /*%FSM<LINK "Heavy">*/
                                 class Heavy
                                 {
-                                        itemno = 22;
+                                        itemno = 21;
                                         priority = 5.000000;
                                         to="Build__Next_Buil";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -485,7 +467,7 @@ class FSM
                                 /*%FSM<LINK "Build_Heavy">*/
                                 class Build_Heavy
                                 {
-                                        itemno = 23;
+                                        itemno = 22;
                                         priority = 4.000000;
                                         to="Build__Heavy_Veh";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -493,10 +475,10 @@ class FSM
                                         action=/*%FSM<ACTION""">*/"_sqd_num = 20;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "_">*/
-                                class _
+                                /*%FSM<LINK "Infantry_Transpo">*/
+                                class Infantry_Transpo
                                 {
-                                        itemno = 30;
+                                        itemno = 29;
                                         priority = 3.000000;
                                         to="Build_Inf__Vehicle";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -504,10 +486,10 @@ class FSM
                                         action=/*%FSM<ACTION""">*/"player sidechat ""Build Infantry Cargo Veh"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "__1">*/
-                                class __1
+                                /*%FSM<LINK "_">*/
+                                class _
                                 {
-                                        itemno = 19;
+                                        itemno = 18;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -522,7 +504,7 @@ class FSM
                 class Build__Next_Buil
                 {
                         name = "Build__Next_Buil";
-                        itemno = 11;
+                        itemno = 10;
                         init = /*%FSM<STATEINIT""">*/"_dir = random 360;" \n
                          "" \n
                          "_pos = [getpos _com, 1, CTI_BASE_CONSTRUCTION_RANGE, 3, 0, 20, 0] call BIS_fnc_findSafePos;" \n
@@ -550,7 +532,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 16;
+                                        itemno = 15;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -565,7 +547,7 @@ class FSM
                 class Build_Infantry_
                 {
                         name = "Build_Infantry_";
-                        itemno = 13;
+                        itemno = 12;
                         init = /*%FSM<STATEINIT""">*/"player sideChat ""Building Infantry"";" \n
                          "" \n
                          "_fmax = _mhq getVariable ""CTI_FUEL_MAX"";" \n
@@ -599,7 +581,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 16;
+                                        itemno = 15;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -614,7 +596,7 @@ class FSM
                 class Phase_V_Tax_Communal
                 {
                         name = "Phase_V_Tax_Communal";
-                        itemno = 15;
+                        itemno = 14;
                         init = /*%FSM<STATEINIT""">*/"_funds = _mhq getVariable ""CTI_FUNDS"";" \n
                          "_min_currency = 0;" \n
                          "_cash = _funds select 0;" \n
@@ -662,6 +644,15 @@ class FSM
                                          "" \n
                                          "_com = leader _com_grp;" \n
                                          "" \n
+                                         "_units_com = [];" \n
+                                         "{ " \n
+                                         "	if (_x getvariable ""CTI_PLAYER_FACTION"" == _faction) then {" \n
+                                         "		_units_com pushBack _x;" \n
+                                         "	};" \n
+                                         "} forEach playableUnits; " \n
+                                         "_units_com = _units_com - [_com];" \n
+                                         "_units_pos = _units_com apply {getpos _x};" \n
+                                         "" \n
                                          "_grps = _units_com apply {group _x};" \n
                                          "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
                                          "_ai_grps = _ai_grps - [""""];" \n
@@ -681,7 +672,7 @@ class FSM
                 class Phase_IV_Command
                 {
                         name = "Phase_IV_Command";
-                        itemno = 17;
+                        itemno = 16;
                         init = /*%FSM<STATEINIT""">*/"_enemy_locations = MOB_CTI_Locations_AllMajorCities apply {if ([side (_x select 0),side _com] call BIS_fnc_sideIsEnemy) then {_x} else {""""}};" \n
                          "_enemy_locations = _enemy_locations - [""""];" \n
                          "" \n
@@ -698,14 +689,27 @@ class FSM
                          "" \n
                          "_current_tasking = _current_grp getvariable [""CTI_TASK"",""none""];" \n
                          "" \n
-                         "player sidechat format [""%1 : _grps"",_current_tasking];"/*%FSM</STATEINIT""">*/;
+                         "player sidechat format [""%1 : _grps"",_current_tasking];" \n
+                         "" \n
+                         "//Move commander if they get stuck." \n
+                         "" \n
+                         "_cur_ldr = leader _current_grp;" \n
+                         "_past_pos = _units_pos select _curr_id;" \n
+                         "_curr_pos = getpos _cur_ldr;" \n
+                         "" \n
+                         "if ( (_past_pos distance _curr_pos) < 3) then {" \n
+                         "	_spawnpos = [_curr_pos, 10, 75, 10, 0, 5, 0] call BIS_fnc_findSafePos;" \n
+                         "	[_cur_ldr, _spawnpos] remoteExec [""setPos"", _cur_ldr];" \n
+                         "	player sidechat format [""%1 : Leader Stuck"",_cur_ldr];" \n
+                         "	_current_tasking = ""none"";" \n
+                         "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
                                 /*%FSM<LINK "Go_to_Com__Cente">*/
                                 class Go_to_Com__Cente
                                 {
-                                        itemno = 32;
+                                        itemno = 31;
                                         priority = 9.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -730,7 +734,7 @@ class FSM
                                 /*%FSM<LINK "Attack_Towns">*/
                                 class Attack_Towns
                                 {
-                                        itemno = 25;
+                                        itemno = 24;
                                         priority = 3.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -772,7 +776,7 @@ class FSM
                                 /*%FSM<LINK "Patrol_Point">*/
                                 class Patrol_Point
                                 {
-                                        itemno = 26;
+                                        itemno = 25;
                                         priority = 1.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -801,7 +805,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 28;
+                                        itemno = 27;
                                         priority = 0.000000;
                                         to="Task__Complete";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -824,7 +828,7 @@ class FSM
                 class Build__Light_Veh
                 {
                         name = "Build__Light_Veh";
-                        itemno = 21;
+                        itemno = 20;
                         init = /*%FSM<STATEINIT""">*/"//player sidechat format [""light grps: %1"",_light_grps];" \n
                          "//player sideChat ""Building Light"";" \n
                          "" \n
@@ -855,7 +859,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 16;
+                                        itemno = 15;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -870,7 +874,7 @@ class FSM
                 class Build__Heavy_Veh
                 {
                         name = "Build__Heavy_Veh";
-                        itemno = 24;
+                        itemno = 23;
                         init = /*%FSM<STATEINIT""">*/"//player sidechat format [""heavy grps: %1"",_heavy_grps];" \n
                          "player sideChat ""Building Heavy"";" \n
                          "" \n
@@ -910,7 +914,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 16;
+                                        itemno = 15;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -925,7 +929,7 @@ class FSM
                 class Task__Complete
                 {
                         name = "Task__Complete";
-                        itemno = 27;
+                        itemno = 26;
                         init = /*%FSM<STATEINIT""">*/"" \n
                          "_current_tasking_location = _current_grp getvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
                          "//_current_group_location = _current_grp getvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
@@ -989,7 +993,7 @@ class FSM
                                 /*%FSM<LINK "Reassign">*/
                                 class Reassign
                                 {
-                                        itemno = 29;
+                                        itemno = 28;
                                         priority = 9.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1000,7 +1004,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 14;
+                                        itemno = 13;
                                         priority = 0.000000;
                                         to="Phase_V_Tax_Communal";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1015,15 +1019,15 @@ class FSM
                 class Build_Inf__Vehicle
                 {
                         name = "Build_Inf__Vehicle";
-                        itemno = 31;
+                        itemno = 30;
                         init = /*%FSM<STATEINIT""">*/"_grp = _inf_grps select floor random (count _inf_grps);" \n
                          "//build cargo vehicles" \n
                          "_grp_veh_inf = (units _grp) apply {vehicle _x};" \n
                          "_lgt_veh_inf = _grp_veh_inf arrayintersect _grp_veh_inf;" \n
-                         "_lgt_veh_inf = _lgt_veh_inf apply {if (_x isKindOf ""LandVehicle"") then {""_x""} else {""""}};" \n
+                         "_lgt_veh_inf = _lgt_veh_inf apply {if (_x isKindOf ""LandVehicle"") then {_x} else {""""}};" \n
                          "_lgt_veh_inf = _lgt_veh_inf - [""""];" \n
                          "_cnt_seats = 0;" \n
-                         "{_cnt_seats = _cnt_seats + ([typeOf _x,true] call BIS_fnc_crewCount)} forEach _lgt_veh_inf;" \n
+                         "{_cnt_seats = _cnt_seats + ([typeOf _x, true] call BIS_fnc_crewCount) } forEach _lgt_veh_inf;" \n
                          "" \n
                          "player sidechat str _cnt_seats;" \n
                          "" \n
@@ -1055,7 +1059,7 @@ class FSM
                                 /*%FSM<LINK "_">*/
                                 class _
                                 {
-                                        itemno = 16;
+                                        itemno = 15;
                                         priority = 0.000000;
                                         to="Phase_IV_Command";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1070,6 +1074,7 @@ class FSM
         initState="Init";
         finalStates[] =
         {
+                "End_",
         };
 };
 /*%FSM</COMPILE>*/

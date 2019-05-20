@@ -43,7 +43,7 @@ _center = getArray (configfile >> "CfgWorlds" >> worldName >> "centerPosition");
 _cx = _center select 0;
 _cy = _center select 1;
 
-_spawnpos = [[(_size/2)-_cx,(_size/2)-_cy], 0, _radius, 10, 0, 20, 0, [[0,0,0],0], _center] call BIS_fnc_findSafePos;
+_spawnpos = [[(_size/2)-_cx,(_size/2)-_cy], 0, _radius, 10, 0, 20, 0] call BIS_fnc_findSafePos;
 _mhq setPos _spawnpos;
 
 _markerstr = createMarkerLocal ["markernametest1",_spawnpos];
