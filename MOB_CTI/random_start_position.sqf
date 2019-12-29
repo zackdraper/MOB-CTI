@@ -46,10 +46,10 @@ _cy = _center select 1;
 _spawnpos = [[(_size/2)-_cx,(_size/2)-_cy], 0, _radius, 10, 0, 20, 0] call BIS_fnc_findSafePos;
 _mhq setPos _spawnpos;
 
-_markerstr = createMarkerLocal ["markernametest1",_spawnpos];
-_markerstr setMarkerShapeLocal "ICON";
-_markerstr setMarkerTypeLocal "mil_objective";
-_markerstr setMarkerColorLocal "ColorRed";
+//_markerstr = createMarkerLocal ["markernametest1",_spawnpos];
+//_markerstr setMarkerShapeLocal "ICON";
+//_markerstr setMarkerTypeLocal "mil_objective";
+//_markerstr setMarkerColorLocal "ColorRed";
 
 if (count _spawnpos < 3) then {_spawnpos append [0]};
 

@@ -44,7 +44,7 @@ waitUntil{!isNil "MOB_CTI_Locations_AllMajorCities"};
 
 sleep 15;
 
-_handle = [_com,_units,_force_type] execFSM "MOB_CTI\ai_commander_theatre_defender.fsm";
+_handle = [_com,_units,_force_type] execFSM "MOB_CTI\ai_commander_theatre_invader.fsm";
 
 _com addEventHandler ["Respawn", {
 	_unit = _this select 0;

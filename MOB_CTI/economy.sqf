@@ -7,7 +7,7 @@
 */
 //////////////////////////////////////////////////////////////////////////////
 
-private ["_econ","_init","_faction","_side","_helo","_pilot","_grp","_fac_funds","_mhq","_resup","_locations"];
+private ["_econ","_init","_faction","_side","_helo","_pilot","_grp","_fac_funds","_mhq","_resup","_locations","_size"];
 
 _econ = _this select 0;
 _init = _this select 1;
@@ -74,6 +74,8 @@ switch (_econ) do {
 
 		_helo_class = ([_fac_arr,0,"supply"] call read_twod_array_col) select 0;
 		_pilot_class = ([_fac_arr,0,"pilot"] call read_twod_array_col) select 0;
+		
+		_size = worldSize;
 		
 		_radius = sqrt( ((_size/2)^2) );
 		_center = getArray (configfile >> "CfgWorlds" >> worldName >> "centerPosition");

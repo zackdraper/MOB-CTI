@@ -34,7 +34,6 @@ _center = _this select 1;
 _center_distance = _this select 2;
 
 
-
 CTI_VAR_StructureCanceled = false;
 CTI_VAR_StructureProhibit = false;
 CTI_P_StructureRotate = 0;
@@ -42,7 +41,14 @@ CTI_P_StructureRotateMulti = 1;
 CTI_P_PreBuilding = true;
 CTI_P_PreBuilding_SafePlace = false;
 
+_mhq = player getVariable "CTI_PLAYER_MHQ";
+_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+_side = side player;
+_faction = player getVariable "CTI_PLAYER_FACTION";
+
 _local = (_var select 1) createVehicleLocal getPos player;
+_local enableSimulation false;
+[_local, _mhq_veh] remoteExecCall ["disableCollisionWith", 0, _local];
 _direction_structure = 180 - (getdir player);
 _distance_structure = 15;
 _last_collision_update = -600;
@@ -55,11 +61,7 @@ _pos = [];
 _dir = if (!isNil 'CTI_P_StructureLastDir') then {CTI_P_StructureLastDir} else {_direction_structure};
 _helper = [];
 
-_mhq = player getVariable "CTI_PLAYER_MHQ";
-_side = side player;
-_faction = player getVariable "CTI_PLAYER_FACTION";
-
-_helperModel = 	"Sign_Arrow_Blue_F";
+_helperModel = "Sign_Arrow_Blue_F";
 if (_helperModel != "") then {
 	_helper = _helperModel createVehicleLocal getPos player;
 	_helper enableSimulation false;
@@ -72,7 +74,7 @@ while {!CTI_VAR_StructurePlaced && !CTI_VAR_StructureCanceled && alive player} d
 	if (!alive _center) exitWith {CTI_VAR_StructureCanceled = true};
 	
 	{
-		_local disableCollisionWith _x;
+		[_local, _x] remoteExecCall ["disableCollisionWith", 0, _local];
 		if (_helperModel != "") then {_helper disableCollisionWith _x};
 	} forEach (_center nearObjects CTI_BASE_CONSTRUCTION_RANGE);
 

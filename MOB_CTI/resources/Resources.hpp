@@ -504,6 +504,7 @@ class RscMapControl {
 	font = "PuristaMedium";
 	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	shadow = 0;
+	widthRailWay = 1;
 	ptsPerSquareSea = 5;
 	ptsPerSquareTxt = 3;
 	ptsPerSquareCLn = 10;

@@ -42,13 +42,18 @@ while {alive _unit} do {
 
 			//player sidechat format ["Enemy Units: %1",count _list1];
 			
-			_list1 = _list1 apply {[_side, side _x] call BIS_fnc_sideIsEnemy};
+			_elist = _list1 apply {[_side, side _x] call BIS_fnc_sideIsEnemy};
+			_flist = _list1 apply {[_side, side _x] call BIS_fnc_sideIsFriendly};
 
-			_list1 = {(_x)} count _list1;
-
-			if (_unit == player) then {player sidechat format ["Enemy Units: %1",_list1]};
+			_elist = {_x} count _elist;
+			_elist = _elist max 0.001;
 			
-			if (_list1 < 3) then {
+			_flist = {(_x)} count _flist;
+			_flist = _flist max 0.001;
+
+			if (_unit == player) then {player sidechat format ["Enemy Units: %1",_elist]};
+			
+			if ((_elist < 3) or ((_elist/_flist) < 0.1)) then {
 				if (_unit == player) then {player sidechat "CAPTURED LOCATION"};
 
 				[_flag,_unit] spawn capture_town;

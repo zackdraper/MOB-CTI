@@ -24,22 +24,17 @@ _pos = getposATL _factory;
 if (surfaceIsWater _pos) then {
 	_dir = getdir _factory;
 
-	_safepos = [(_pos select 0)-30*sin(_dir),(_pos select 1)-30*cos(_dir),(_pos select 2)];
+	_safepos = [(_pos select 0)-30*sin(_dir),(_pos select 1)-30*cos(_dir),(_pos select 2)+3];
 		
-	_poszS = (getposASL _factory) select 2;
+	//Pre-ARMA update fix
+	//_poszS = (getposASL _factory) select 2;
+	//_test = "HeliHEmpty" createVehicle _safepos;
+	//_poszS2 = (getposASL _test) select 2;
+	//deleteVehicle _test;
+	//_test = nil;
+	//_safepos = [(_pos select 0)-30*sin(_dir),(_pos select 1)-30*cos(_dir),(_poszS-_poszS2)+0.5];
 
-	_safepos = [(_pos select 0)-30*sin(_dir),(_pos select 1)-30*cos(_dir),(_pos select 2)];
-
-	_test = "HeliHEmpty" createVehicle _safepos;
-
-	_poszS2 = (getposASL _test) select 2;
-
-	deleteVehicle _test;
-	_test = nil;
-
-	_safepos = [(_pos select 0)-30*sin(_dir),(_pos select 1)-30*cos(_dir),(_poszS-_poszS2)+0.5];
-
-	//hint format ["%1 : %2",_pos,_safepos];
+	//hint format ["WATER POS: %1 : %2",_pos,_safepos];
 
 } else {
 	_safepos = [_pos, 12, 35, 5, 0, 10, 0] call BIS_fnc_findSafePos;

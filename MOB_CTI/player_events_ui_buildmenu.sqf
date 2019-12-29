@@ -6,6 +6,13 @@ switch (_action) do {
 		//execVM "MOB_CTI\player_ui_buildmenu.sqf";
 		_mhq = player getVariable "CTI_PLAYER_MHQ";
 		_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+		
+		if (surfaceIsWater getpos _mhq_veh) exitWith {
+			CTI_KILL_CAMERA = False;
+			closeDialog 0;
+			hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />You cannot build on water.";
+		};
+		
 		if (isNil 'CTI_ConstructionCamera') then {[_mhq_veh, CTI_BASE_CONSTRUCTION_RANGE, 50] call CTI_CL_FNC_CreateCamera};
 
 		if (CTI_P_WallsAutoAlign) then { ctrlSetText [100003, "Auto-Align Walls: On"] } else { ctrlSetText [100003, "Auto-Align Walls: Off"] };

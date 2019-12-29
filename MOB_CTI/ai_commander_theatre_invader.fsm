@@ -17,7 +17,7 @@ item12[] = {"Build_Infantry_",2,250,-443.081482,926.953735,-353.081451,976.95373
 item13[] = {"_",8,218,551.116272,383.431702,641.116272,433.431702,0.000000,""};
 item14[] = {"Phase_V_Tax_Communal",2,250,396.107544,6.890404,486.107544,56.890396,0.000000,"Phase V" \n "Tax Communal " \n "Funds"};
 item15[] = {"_",8,218,-377.050507,1202.381958,-287.050507,1252.381958,0.000000,""};
-item16[] = {"Phase_IV_Command",2,4346,291.398438,1201.882935,381.398438,1251.882935,0.000000,"Phase IV" \n "Command"};
+item16[] = {"Phase_IV_Command",2,250,291.398438,1201.882935,381.398438,1251.882935,0.000000,"Phase IV" \n "Command"};
 item17[] = {"Light___Service",4,218,-338.493439,785.741760,-248.493530,835.741699,7.000000,"Light &" \n "Service"};
 item18[] = {"_",8,218,109.335869,798.070190,199.335876,848.070190,0.000000,""};
 item19[] = {"Build_Light",4,218,-246.262421,855.130127,-156.262421,905.130066,6.000000,"Build Light"};
@@ -26,7 +26,7 @@ item21[] = {"Heavy",4,218,-141.527771,928.971680,-51.527771,978.971680,5.000000,
 item22[] = {"Build_Heavy",4,218,-22.283783,952.512146,67.716217,1002.511902,4.000000,"Build Heavy"};
 item23[] = {"Build__Heavy_Veh",2,250,-129.596741,1057.279663,-39.596741,1107.279785,0.000000,"Build " \n "Heavy Vehs"};
 item24[] = {"Attack_Towns",4,218,290.780792,845.676514,380.780670,895.676514,3.000000,"Attack Towns"};
-item25[] = {"Patrol_Point",4,218,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
+item25[] = {"Patrol_Point",4,4314,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
 item26[] = {"Task__Complete",2,250,472.628418,629.201294,562.628418,679.201294,0.000000,"Task " \n "Complete"};
 item27[] = {"_",8,218,574.065918,845.143188,664.065918,895.143188,0.000000,""};
 item28[] = {"Reassign",4,218,846.335266,847.722534,936.335266,897.722534,9.000000,"Reassign"};
@@ -76,8 +76,8 @@ link39[] = {28,16};
 link40[] = {29,30};
 link41[] = {30,15};
 link42[] = {31,16};
-globals[] = {0.000000,0,0,0,0,640,480,1,84,6316128,1,-48.666744,1067.312012,1505.124023,310.351410,665,869,1};
-window[] = {0,-1,-1,-1,-1,930,62,1650,16,1,683};
+globals[] = {0.000000,0,0,0,0,640,480,1,84,6316128,1,-249.286118,1343.807861,1429.500000,-294.079712,818,885,1};
+window[] = {2,-1,-1,-1,-1,939,25,1613,25,3,836};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -173,6 +173,9 @@ class FSM
                          "" \n
                          "_sqd_num = 10;" \n
                          "" \n
+                         "" \n
+                         "" \n
+                         "" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -191,12 +194,11 @@ class FSM
                                          "" \n
                                          "_units_com = [];" \n
                                          "{ " \n
-                                         "	if (_x getvariable ""CTI_PLAYER_FACTION"" == _faction) then {" \n
+                                         "	if (_x getvariable [""CTI_PLAYER_FACTION"",""""] == _faction) then {" \n
                                          "		_units_com pushBack _x;" \n
                                          "	};" \n
                                          "} forEach playableUnits; " \n
                                          "_units_com = _units_com - [_com];" \n
-                                         "_units_pos = _units_com apply {getpos _x};" \n
                                          "" \n
                                          "_grps = _units_com apply {group _x};" \n
                                          "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
@@ -205,9 +207,13 @@ class FSM
                                          "_ai_units = _units_com apply {if !(isPlayer _x) then {_x} else {""""}};" \n
                                          "_ai_units = _ai_units - [""""];" \n
                                          "" \n
+                                         "_command_ai_grps = _ai_grps;" \n
+                                         "" \n
                                          "_curr_id = _curr_id + 1;" \n
                                          "" \n
-                                         "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
+                                         "_count_ai_units = count _ai_units;" \n
+                                         "" \n
+                                         "if (_curr_id > ((_count_ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -223,7 +229,9 @@ class FSM
                          "" \n
                          "if !(isPlayer _com) then { _ok = true };" \n
                          "" \n
-                         "_ncycle = time + 10;" \n
+                         "_time_per_cycle = 10;" \n
+                         "" \n
+                         "_ncycle = time + _time_per_cycle;" \n
                          "" \n
                          "_com sideChat format [""AI Commander %1"",_ok];" \n
                          ""/*%FSM</STATEINIT""">*/;
@@ -482,7 +490,7 @@ class FSM
                                         priority = 3.000000;
                                         to="Build_Inf__Vehicle";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"((""Light Factory"" in _factory_types) && (_cnt_lgt_q < 3))"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _inf_grps > 0) && ((""Light Factory"" in _factory_types) && (_cnt_lgt_q < 3))"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"player sidechat ""Build Infantry Cargo Veh"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -646,12 +654,11 @@ class FSM
                                          "" \n
                                          "_units_com = [];" \n
                                          "{ " \n
-                                         "	if (_x getvariable ""CTI_PLAYER_FACTION"" == _faction) then {" \n
+                                         "	if (_x getvariable [""CTI_PLAYER_FACTION"",""""] == _faction) then {" \n
                                          "		_units_com pushBack _x;" \n
                                          "	};" \n
                                          "} forEach playableUnits; " \n
                                          "_units_com = _units_com - [_com];" \n
-                                         "_units_pos = _units_com apply {getpos _x};" \n
                                          "" \n
                                          "_grps = _units_com apply {group _x};" \n
                                          "_ai_grps = _grps apply {if !(isPlayer leader _x) then {_x} else {""""}};" \n
@@ -660,9 +667,13 @@ class FSM
                                          "_ai_units = _units_com apply {if !(isPlayer _x) then {_x} else {""""}};" \n
                                          "_ai_units = _ai_units - [""""];" \n
                                          "" \n
+                                         "_command_ai_grps = _ai_grps;" \n
+                                         "" \n
                                          "_curr_id = _curr_id + 1;" \n
                                          "" \n
-                                         "if (_curr_id > ((count _ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
+                                         "_count_ai_units = count _ai_units;" \n
+                                         "" \n
+                                         "if (_curr_id > ((_count_ai_units)-1)) then {_curr_id = 0};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -683,25 +694,39 @@ class FSM
                          "//_ai_units = _ai_units - [-99];" \n
                          "//_ai_units = _ai_units + [_current_unit];" \n
                          "" \n
-                         "player sidechat format [""%1 : _grps"",_current_unit];	" \n
-                         "player sidechat format [""%1 : _ai_units"",_ai_units];	" \n
-                         "player sidechat format [""%1 : _grps"",_units_com apply {group _x}];	" \n
+                         "player sidechat format [""%1 : %2 : _grps"", _current_unit, group _current_unit];	" \n
+                         "//player sidechat format [""%1 : _ai_units"",_ai_units];	" \n
+                         "//player sidechat format [""%1 : _grps"",_units_com apply {group _x}];	" \n
                          "" \n
                          "_current_tasking = _current_grp getvariable [""CTI_TASK"",""none""];" \n
                          "" \n
-                         "player sidechat format [""%1 : _grps"",_current_tasking];" \n
+                         "//player sidechat format [""%1 : _grps"", _current_tasking];" \n
                          "" \n
                          "//Move commander if they get stuck." \n
                          "" \n
-                         "_cur_ldr = leader _current_grp;" \n
-                         "_past_pos = _units_pos select _curr_id;" \n
-                         "_curr_pos = getpos _cur_ldr;" \n
+                         "_past_pos = _current_unit getVariable [""CTI_LAST_POS"", [0,0,0]];" \n
+                         "_curr_pos = getpos _current_unit;" \n
+                         "_current_unit setVariable [""CTI_LAST_POS"", _curr_pos];" \n
                          "" \n
-                         "if ( (_past_pos distance _curr_pos) < 3) then {" \n
-                         "	_spawnpos = [_curr_pos, 10, 75, 10, 0, 5, 0] call BIS_fnc_findSafePos;" \n
-                         "	[_cur_ldr, _spawnpos] remoteExec [""setPos"", _cur_ldr];" \n
-                         "	player sidechat format [""%1 : Leader Stuck"",_cur_ldr];" \n
-                         "	_current_tasking = ""none"";" \n
+                         "player sidechat format [""%1 : pos_check"", _past_pos distance _curr_pos];" \n
+                         "" \n
+                         "_mean_velocity = (_past_pos distance _curr_pos) / (_time_per_cycle * _count_ai_units);" \n
+                         "" \n
+                         "player sidechat format [""%1 : pos_check"", _mean_velocity];" \n
+                         "" \n
+                         "if ((_mean_velocity < 0.25) && (vehicle _current_unit != _current_unit)) then {" \n
+                         "" \n
+                         "		_spawnpos = [_curr_pos, 10, 75, 10, 0, 5, 0] call BIS_fnc_findSafePos;" \n
+                         "		[_current_unit, _spawnpos] remoteExec [""setPos"", _current_unit];" \n
+                         "		hint format [""%1 : Leader Stuck"", _current_unit];" \n
+                         "		while {(count (waypoints _current_grp)) > 0} do {" \n
+                         "  			deleteWaypoint ((waypoints _current_grp) select 0);" \n
+                         " 		};" \n
+                         "		_current_grp setvariable [""CTI_TASK"",""none""];" \n
+                         "		_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
+                         "		deleteMarkerLocal (format [""%1_attackmarker"",_current_grp]);" \n
+                         "		_current_tasking = ""none"";" \n
+                         "" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -759,11 +784,13 @@ class FSM
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK_LOC"",_nearloc];" \n
                                          "" \n
-                                         "_mark = createMarker [format [""%1_attackmarker"",_current_grp], getpos _flag];" \n
-                                         "_mark setMarkerShapeLocal ""ICON"";" \n
-                                         "_mark setMarkerTypeLocal ""hd_dot"";" \n
-                                         "_mark setMarkerColorLocal ""ColorYellow"";" \n
-                                         "_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "if (False) then {" \n
+                                         "	_mark = createMarkerLocal [format [""%1_attackmarker"",_current_grp], getpos _flag];" \n
+                                         "	_mark setMarkerShapeLocal ""ICON"";" \n
+                                         "	_mark setMarkerTypeLocal ""hd_dot"";" \n
+                                         "	_mark setMarkerColorLocal ""ColorYellow"";" \n
+                                         "	_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "};" \n
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK"",""attack_town""];" \n
                                          "_current_tasking = ""attack_town"";" \n
@@ -790,11 +817,13 @@ class FSM
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK_LOC"",_rpos];" \n
                                          "" \n
-                                         "_mark = createMarkerLocal [format [""%1"",_rpos], _rpos];" \n
-                                         "_mark setMarkerShapeLocal ""ICON"";" \n
-                                         "_mark setMarkerTypeLocal ""hd_dot"";" \n
-                                         "_mark setMarkerColorLocal ""ColorYellow"";" \n
-                                         "_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "if (False) then {" \n
+                                         "	_mark = createMarkerLocal [format [""%1"",_rpos], _rpos];" \n
+                                         "	_mark setMarkerShapeLocal ""ICON"";" \n
+                                         "	_mark setMarkerTypeLocal ""hd_dot"";" \n
+                                         "	_mark setMarkerColorLocal ""ColorYellow"";" \n
+                                         "	_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "};" \n
                                          "" \n
                                          "_current_grp setvariable [""CTI_TASK"",""patrol_point""];" \n
                                          "_current_tasking = ""patrol_point"";" \n
@@ -938,7 +967,7 @@ class FSM
                          "" \n
                          "	case ""attack_town"": {" \n
                          "" \n
-                         "		if  ( ( (getpos _current_tasking_location) distance2d (getpos leader _current_grp) ) < 200 ) then {" \n
+                         "		if  ( ( (_current_tasking_location) distance2d (getpos leader _current_grp) ) < 200 ) then {" \n
                          "" \n
                          "			if ( [side _current_tasking_location, side _current_grp] call BIS_fnc_sideIsFriendly ) then {" \n
                          "				while {(count (waypoints _current_grp)) > 0} do {" \n
@@ -946,7 +975,7 @@ class FSM
                          " 				};" \n
                          "				_current_grp setvariable [""CTI_TASK"",""none""];" \n
                          "				_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
-                         "				deleteMarker (format [""%1_attackmarker"",_current_grp]);" \n
+                         "				deleteMarkerLocal (format [""%1_attackmarker"",_current_grp]);" \n
                          "				//_current_grp setvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
                          "				_current_tasking = ""none"";" \n
                          "			};" \n
@@ -957,15 +986,15 @@ class FSM
                          "" \n
                          "	case ""patrol_point"": {" \n
                          "" \n
-                         "		if  ( ( (getpos _current_tasking_location) distance2d (getpos leader _current_grp) ) < 200 ) then {" \n
+                         "		if  ( ( (_current_tasking_location) distance2d (getpos leader _current_grp) ) < 200 ) then {" \n
                          "			" \n
-                         " 			while {(count (waypoints _current_grp)) > 0} do {" \n
-                         "  				deleteWaypoint ((waypoints _current_grp) select 0);" \n
-                         " 			};" \n
+                         " 					while {(count (waypoints _current_grp)) > 0} do {" \n
+                         "  					deleteWaypoint ((waypoints _current_grp) select 0);" \n
+                         " 				};	" \n
                          "" \n
                          "			_current_grp setvariable [""CTI_TASK"",""none""];" \n
-                         "			_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
-                         "			deleteMarker (format [""%1_attackmarker"",_current_grp]);" \n
+                         "			_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];	" \n
+                         "			deleteMarkerLocal (format [""%1_attackmarker"",_current_grp]);" \n
                          "			//_current_grp setvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
                          "			_current_tasking = ""none"";" \n
                          "		};" \n
@@ -979,10 +1008,10 @@ class FSM
                          "" \n
                          "		_current_grp setvariable [""CTI_TASK"",""none""];" \n
                          "		_current_grp setvariable [""CTI_TASK_LOC"",[0,0,0]];" \n
-                         "		deleteMarker (format [""%1_attackmarker"",_current_grp]);" \n
+                         "		deleteMarkerLocal (format [""%1_attackmarker"",_current_grp]);" \n
                          "		//_current_grp setvariable [""CTI_GROUP_LOC"",[0,0,0]];" \n
                          "		_current_tasking = ""none"";" \n
-                         "" \n
+                         "	" \n
                          "	};" \n
                          "" \n
                          "};" \n
@@ -1049,7 +1078,7 @@ class FSM
                          "		if (count _affordable_lgt_list > 0) then {" \n
                          "			[_mhq,[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] call subtract_funds;" \n
                          "			[_classname,_factory,_grp,[true,true,true,false,false],[_rand_sel select 2,_rand_sel select 4,_rand_sel select 3]] spawn CTI_CL_FNC_PurchaseUnit;" \n
-                         "			hint ""Built Infantry Support Vehicle"";" \n
+                         "			//hint ""Built Infantry Support Vehicle"";" \n
                          "		};" \n
                          "	};" \n
                          "};"/*%FSM</STATEINIT""">*/;
