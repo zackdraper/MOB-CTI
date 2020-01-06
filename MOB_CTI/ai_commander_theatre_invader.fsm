@@ -25,14 +25,18 @@ item20[] = {"Build__Light_Veh",2,250,-309.753448,1021.978821,-219.753448,1071.97
 item21[] = {"Heavy",4,218,-141.527771,928.971680,-51.527771,978.971680,5.000000,"Heavy"};
 item22[] = {"Build_Heavy",4,218,-22.283783,952.512146,67.716217,1002.511902,4.000000,"Build Heavy"};
 item23[] = {"Build__Heavy_Veh",2,250,-129.596741,1057.279663,-39.596741,1107.279785,0.000000,"Build " \n "Heavy Vehs"};
-item24[] = {"Attack_Towns",4,218,290.780792,845.676514,380.780670,895.676514,3.000000,"Attack Towns"};
-item25[] = {"Patrol_Point",4,4314,426.862305,847.291138,516.862366,897.291077,1.000000,"Patrol Point"};
-item26[] = {"Task__Complete",2,250,472.628418,629.201294,562.628418,679.201294,0.000000,"Task " \n "Complete"};
-item27[] = {"_",8,218,574.065918,845.143188,664.065918,895.143188,0.000000,""};
-item28[] = {"Reassign",4,218,846.335266,847.722534,936.335266,897.722534,9.000000,"Reassign"};
+item24[] = {"Attack_Towns",4,218,287.634186,892.739807,377.634064,942.739807,3.000000,"Attack Towns"};
+item25[] = {"Patrol_Point",4,218,488.339539,899.103394,578.339600,949.103333,1.000000,"Patrol Point"};
+item26[] = {"Task__Complete",2,250,488.321777,617.787964,578.321777,667.787964,0.000000,"Task " \n "Complete"};
+item27[] = {"_",8,218,632.635864,895.438049,722.635864,945.438049,0.000000,""};
+item28[] = {"Reassign",4,218,807.101746,896.372192,897.101746,946.372192,9.000000,"Reassign"};
 item29[] = {"Infantry_Transpo",4,218,94.169548,961.279053,184.169556,1011.279114,3.000000,"Infantry" \n "Transports"};
 item30[] = {"Build_Inf__Vehicle",2,250,41.282223,1076.831299,131.282242,1126.831299,0.000000,"Build Inf " \n "Vehicle\"};
 item31[] = {"Go_to_Com__Cente",4,218,291.669189,1324.630249,381.669189,1374.630249,9.000000,"Go to Com " \n "Center"};
+item32[] = {"Select_Town",2,250,287.479431,726.676208,377.479431,776.676208,0.000000,"Select Town"};
+item33[] = {"Attack_Confirmed",4,4314,289.297241,619.054199,379.297241,669.054138,1.000000,"Attack" \n "Confirmed"};
+item34[] = {"_",8,218,401.333069,725.799927,491.333069,775.799927,0.000000,""};
+item35[] = {"Patrol_Instead",2,250,400.693604,805.576172,490.693604,855.576172,0.000000,"Patrol Instead"};
 link0[] = {0,1};
 link1[] = {1,3};
 link2[] = {2,4};
@@ -67,7 +71,7 @@ link30[] = {20,15};
 link31[] = {21,10};
 link32[] = {22,23};
 link33[] = {23,15};
-link34[] = {24,26};
+link34[] = {24,32};
 link35[] = {25,26};
 link36[] = {26,13};
 link37[] = {26,28};
@@ -76,7 +80,12 @@ link39[] = {28,16};
 link40[] = {29,30};
 link41[] = {30,15};
 link42[] = {31,16};
-globals[] = {0.000000,0,0,0,0,640,480,1,84,6316128,1,-249.286118,1343.807861,1429.500000,-294.079712,818,885,1};
+link43[] = {32,33};
+link44[] = {32,34};
+link45[] = {33,26};
+link46[] = {34,35};
+link47[] = {35,25};
+globals[] = {0.000000,0,0,0,0,640,480,1,96,6316128,1,-310.729004,972.992371,1489.698120,100.832397,818,885,1};
 window[] = {2,-1,-1,-1,-1,939,25,1613,25,3,836};
 *//*%FSM</HEAD>*/
 class FSM
@@ -761,43 +770,10 @@ class FSM
                                 {
                                         itemno = 24;
                                         priority = 3.000000;
-                                        to="Task__Complete";
+                                        to="Select_Town";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"(count _enemy_locations > 0) && (_current_tasking == ""none"") && (alive _current_unit)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_distances = _enemy_locations apply {[(getpos (_x select 0)) distance (getpos leader _current_grp),(_x select 0)]};" \n
-                                         "_distances sort true;" \n
-                                         "_nearloc_squad = (_distances select 0) select 1;" \n
-                                         "" \n
-                                         "_distances = _enemy_locations apply {[(getpos (_x select 0)) distance (getpos _com),(_x select 0)]};" \n
-                                         "_distances sort true;" \n
-                                         "_nearloc_com = (_distances select 0) select 1;" \n
-                                         "" \n
-                                         "_nearloc = selectRandom [_nearloc_squad,_nearloc_com];" \n
-                                         "_logic = (getpos _nearloc) nearestObject ""Logic"";" \n
-                                         "_flag = synchronizedObjects _logic;" \n
-                                         "_flag = _flag select 0;" \n
-                                         "" \n
-                                         "_wp1 = _current_grp addWaypoint [getpos _flag, 0];" \n
-                                         "_wp1 setWaypointType ""MOVE"";" \n
-                                         "_wp1 setWaypointCompletionRadius 15;" \n
-                                         "_current_grp setCurrentWaypoint _wp1;" \n
-                                         "" \n
-                                         "_current_grp setvariable [""CTI_TASK_LOC"",_nearloc];" \n
-                                         "" \n
-                                         "if (False) then {" \n
-                                         "	_mark = createMarkerLocal [format [""%1_attackmarker"",_current_grp], getpos _flag];" \n
-                                         "	_mark setMarkerShapeLocal ""ICON"";" \n
-                                         "	_mark setMarkerTypeLocal ""hd_dot"";" \n
-                                         "	_mark setMarkerColorLocal ""ColorYellow"";" \n
-                                         "	_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
-                                         "};" \n
-                                         "" \n
-                                         "_current_grp setvariable [""CTI_TASK"",""attack_town""];" \n
-                                         "_current_tasking = ""attack_town"";" \n
-                                         "" \n
-                                         "player sidechat ""UNIT GIVEN TASK"";" \n
-                                         "" \n
-                                         ""/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "Patrol_Point">*/
@@ -1094,6 +1070,115 @@ class FSM
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Select_Town">*/
+                class Select_Town
+                {
+                        name = "Select_Town";
+                        itemno = 32;
+                        init = /*%FSM<STATEINIT""">*/"_distances = _enemy_locations apply {[(getpos (_x select 0)) distance (getpos leader _current_grp),(_x select 0)]};" \n
+                         "_distances sort true;" \n
+                         "_nearloc_squad = (_distances select 0) select 1;" \n
+                         "" \n
+                         "_distances = _enemy_locations apply {[(getpos (_x select 0)) distance (getpos _com),(_x select 0)]};" \n
+                         "_distances sort true;" \n
+                         "_nearloc_com = (_distances select 0) select 1;" \n
+                         "" \n
+                         "_nearloc = selectRandom [_nearloc_squad,_nearloc_com];" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Attack_Confirmed">*/
+                                class Attack_Confirmed
+                                {
+                                        itemno = 33;
+                                        priority = 1.000000;
+                                        to="Task__Complete";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((getPos _nearloc) distance2d (getpos leader _current_grp)) < 5000"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_logic = (getpos _nearloc) nearestObject ""Logic"";" \n
+                                         "_flag = synchronizedObjects _logic;" \n
+                                         "_flag = _flag select 0;" \n
+                                         "" \n
+                                         "_wp1 = _current_grp addWaypoint [getpos _flag, 0];" \n
+                                         "_wp1 setWaypointType ""MOVE"";" \n
+                                         "_wp1 setWaypointCompletionRadius 15;" \n
+                                         "_current_grp setCurrentWaypoint _wp1;" \n
+                                         "" \n
+                                         "_current_grp setvariable [""CTI_TASK_LOC"", getPos _nearloc];" \n
+                                         "" \n
+                                         "if (False) then {" \n
+                                         "	_mark = createMarkerLocal [format [""%1_attackmarker"",_current_grp], getpos _flag];" \n
+                                         "	_mark setMarkerShapeLocal ""ICON"";" \n
+                                         "	_mark setMarkerTypeLocal ""hd_dot"";" \n
+                                         "	_mark setMarkerColorLocal ""ColorYellow"";" \n
+                                         "	_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "};" \n
+                                         "" \n
+                                         "_current_grp setvariable [""CTI_TASK"",""attack_town""];" \n
+                                         "_current_tasking = ""attack_town"";" \n
+                                         "" \n
+                                         "player sidechat ""UNIT GIVEN TASK"";"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 34;
+                                        priority = 0.000000;
+                                        to="Patrol_Instead";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Patrol_Instead">*/
+                class Patrol_Instead
+                {
+                        name = "Patrol_Instead";
+                        itemno = 35;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Patrol_Point">*/
+                                class Patrol_Point
+                                {
+                                        itemno = 25;
+                                        priority = 1.000000;
+                                        to="Task__Complete";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_current_tasking == ""none"") && (alive _current_unit)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_rpos = [nil, [""water""]] call BIS_fnc_randomPos;	" \n
+                                         "player sidechat format [""%1 : patrol point"",_rpos];			" \n
+                                         "" \n
+                                         "_wp1 = _current_grp addWaypoint [_rpos, 15];" \n
+                                         "_wp1 setWaypointType ""MOVE"";" \n
+                                         "_current_grp setCurrentWaypoint _wp1;" \n
+                                         "" \n
+                                         "_current_grp setvariable [""CTI_TASK_LOC"",_rpos];" \n
+                                         "" \n
+                                         "if (False) then {" \n
+                                         "	_mark = createMarkerLocal [format [""%1"",_rpos], _rpos];" \n
+                                         "	_mark setMarkerShapeLocal ""ICON"";" \n
+                                         "	_mark setMarkerTypeLocal ""hd_dot"";" \n
+                                         "	_mark setMarkerColorLocal ""ColorYellow"";" \n
+                                         "	_mark setMarkerTextLocal format [""%1"",_current_grp];" \n
+                                         "};" \n
+                                         "" \n
+                                         "_current_grp setvariable [""CTI_TASK"",""patrol_point""];" \n
+                                         "_current_tasking = ""patrol_point"";" \n
+                                         "" \n
+                                         "player sidechat ""UNIT GIVEN TASK"";"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };

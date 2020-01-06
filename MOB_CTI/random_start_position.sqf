@@ -99,10 +99,10 @@ if (_second) then {
 
 	//Test Markers
 
-	_markerstr2 = createMarkerLocal ["markernametest2",_spawnpos2];
-	_markerstr2 setMarkerShapeLocal "ICON";
-	_markerstr2 setMarkerTypeLocal "mil_objective";
-	_markerstr2 setMarkerColorLocal "ColorBlue";
+	//_markerstr2 = createMarkerLocal ["markernametest2",_spawnpos2];
+	//_markerstr2 setMarkerShapeLocal "ICON";
+	//_markerstr2 setMarkerTypeLocal "mil_objective";
+	//_markerstr2 setMarkerColorLocal "ColorBlue";
 
 	_mname2 = switch (_side2) do {
 		case west: {"respawn_west"};

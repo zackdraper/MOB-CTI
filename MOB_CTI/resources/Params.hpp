@@ -39,8 +39,8 @@ class params
     class faction1_type
     {
         title="Class Type";
-        texts[]={"NATO","NATO (Pacific)","FIA","United States Army (Wood) [RHS+CUP]","United States Marine Corp (Wood) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]",};
-        values[]={0,1,2,3,4,5};
+        texts[]={"NATO","NATO (Pacific)","FIA","United States Army (Wood) [RHS+CUP]","United States Army (Des) [RHS+CUP]","United States Marine Corp (Wood) [RHS+CUP]","United States Marine Corp (Des) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]",};
+        values[]={0,1,2,3,4,5,6,7};
         default=0;
         isGlobal=1;
     };
@@ -130,8 +130,8 @@ class params
     class faction2_type
     {
         title="Class Type";
-        texts[]={"CSAT","CSAT (Pacific)","Russian Amred Forces (Wood) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]"};
-        values[]={0,1,2,3};
+        texts[]={"CSAT","CSAT (Pacific)","Russian Armed Forces (Wood) [RHS+CUP]","Russian VDV (Wood) [RHS+CUP]","Russian VDV (Des) [RHS+CUP]","Royal Army Corp of Sahrani (Des) [CUP]", "Sahrani Liberation Army (Wood) [CUP]", "Sahrani Liberation Army (Des) [CUP]"};
+        values[]={0,1,2,3,4,5,6,7};
         default=0;
         isGlobal=1;
     };
@@ -211,8 +211,8 @@ class params
     class resistance_type
     {
         title="Class Type";
-        texts[]={"AAF","Royal Army Corp of Sahrani (Des) [CUP]"};
-        values[]={0,1};
+        texts[]={"AAF","Royal Army Corp of Sahrani (Des) [CUP]","ChDKZ [RHS]"};
+        values[]={0,1,2};
         default=0;
         isGlobal=1;
     };

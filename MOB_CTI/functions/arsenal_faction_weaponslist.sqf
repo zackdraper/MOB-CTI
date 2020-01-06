@@ -68,6 +68,20 @@ _backpacks = _backpacks - [""];
 
 //{_nul = _backpacks pushBack _x} forEach _backpacks;
 
+_side = getNumber (configfile >> "CfgVehicles" >> (_staticclass select 0) >> "side");
+
+switch (_side) do {
+	case 1:{
+		_test = [_vehicle, ["B_UavTerminal"], true, false] call BIS_fnc_addVirtualItemCargo;
+	};
+	case 2:{
+		_test = [_vehicle, ["O_UavTerminal"], true, false] call BIS_fnc_addVirtualItemCargo;
+	};
+	case 3:{
+		_test = [_vehicle, ["I_UavTerminal"], true, false] call BIS_fnc_addVirtualItemCargo;
+	};
+};
+
 _test = [_vehicle, ["%ALL"], true, false] call BIS_fnc_addVirtualBackpackCargo;
 _test = [_vehicle, _magazines, true, false] call BIS_fnc_addVirtualMagazineCargo;
 _test = [_vehicle, _items, true, false] call BIS_fnc_addVirtualItemCargo;

@@ -20,6 +20,7 @@ _faction = (leader _grp) getVariable "CTI_PLAYER_FACTION";
 _class = _faction call define_force_classnames;
 
 _pos = getposATL _factory;
+_dir = getDir _factory;
 //hint format ["%1 : %2",_pos,_safepos];
 if (surfaceIsWater _pos) then {
 	_dir = getdir _factory;
@@ -95,6 +96,7 @@ while {true} do {
 			};
 
 			_veh = createVehicle [_classname, _safepos, [], 0, "NONE"];
+			_veh setDir (_dir - 90);
 
 			//player sidechat format ["%1",_crew];
 

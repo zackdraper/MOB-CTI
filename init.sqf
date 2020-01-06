@@ -153,9 +153,23 @@ if (isNil "_faction1_halo") then {_faction1_halo = 0};
 _faction2_halo = "faction2_halo" call BIS_fnc_getParamValue;
 if (isNil "_faction2_halo") then {_faction2_halo = 0};
 
-_bluforcetypes = ["nato_gen","nato_pacific","fia_gen","rhs_usarmy_wood","rhs_usmc_wood","cup_racs_desert"];
-_opforcetypes = ["csat_gen","csat_pacific","rhs_rus_wood","cup_racs_desert"];
-_indforcetypes = ["aaf_gen","cup_racs_desert"];
+_bluforcetypes = ["nato_gen",
+					"nato_pacific",
+					"fia_gen",
+					"rhs_usarmy_wood",
+					"rhs_usarmy_des",
+					"rhs_usmc_wood",
+					"rhs_usmc_des",
+					"cup_racs_desert"];
+_opforcetypes = ["csat_gen",
+					"csat_pacific",
+					"rhs_rus_wood",
+					"rhs_rus_vdv_wood",
+					"rhs_rus_vdv_des",
+					"cup_racs_desert",
+					"cup_sla_wood",
+					"cup_sla_desert"];
+_indforcetypes = ["aaf_gen","cup_racs_desert","rhs_chdkz"];
 
 _econtypes = ["occupation","externalammo_occupation","limited","unlimited"];
 
@@ -472,7 +486,7 @@ if (hasinterface) then {
 		_unit addaction ["<t color='#1C8A1F'>Purchase Menu</t>","MOB_CTI\player_action_purchasemenu.sqf",[],99,false,true,"","_target == _this"];
 
 		//Squad Manager
-		_unit addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\player_ui_squad_manager.sqf",[],99,false,true,"","_target == _this"];
+		_unit addaction ["<t color='#ebf442'>Squad Manager</t>","MOB_CTI\player_ui_squad_manager.sqf",[],99,false,true,"","vehicle _target == vehicle _this"];
 		
 		//Command Menu
 		_commander = _unit getVariable ["CTI_COMMANDER",false];
