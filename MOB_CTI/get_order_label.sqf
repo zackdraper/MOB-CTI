@@ -20,7 +20,7 @@
     (CTI_ORDER_TAKETOWNS) call CTI_CL_FNC_GetOrderLabel 
 	  -> Will return "Take Towns"
 */
-//
+
 private ["_order"];
 
 _order = _this;
