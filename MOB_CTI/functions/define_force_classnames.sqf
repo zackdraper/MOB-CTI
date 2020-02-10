@@ -558,6 +558,7 @@ _return = switch (_this) do {
 	
 	case "fia_gen":{
 		[
+		
 		["B_G_Soldier_SL_F",[100,0,1],"","sl"],
 		["b_g_soldier_unarmed_f",[250,0,1],"","crewman"],
 
@@ -617,6 +618,7 @@ _return = switch (_this) do {
 
 	case "rhs_rus_wood":{
 		[
+		
 		["rhs_msv_sergeant",[100,0,1],"","sl"],
 		["rhs_msv_armoredcrew",[250,0,1],"","crewman"],
 		["rhs_pilot_combat_heli",[250,0,1],"","pilot"],
@@ -1407,6 +1409,92 @@ _return = switch (_this) do {
 		
 		// Flag
 		["\po_main\data\fac\cfgfactionclasses_sla_ca.paa",[0,0,0],"","flag"]
+		];
+	};
+	
+		
+	case "rhs_cdf_autumn":{
+		[
+
+		["rhsgref_cdf_b_reg_squadleader",[100,0,1],"","sl"],
+		["rhsgref_cdf_b_reg_crew",[250,0,1],"","crewman"],
+		["rhsgref_cdf_b_reg_air_pilot",[250,0,1],"","pilot"],
+
+		["rhsgref_cdf_b_reg_rifleman",[75,0,1],"","men"],
+		["rhsgref_cdf_b_reg_grenadier",[100,0,3],"","men"],
+		["rhsgref_cdf_b_reg_rifleman_rpg75",[100,0,3],"","men"],
+		["rhsgref_cdf_b_reg_machinegunner",[125,0,5],"","men"],
+		["rhsgref_cdf_b_reg_grenadier_rpg",[250,0,10],"","men"],
+		["rhsgref_cdf_b_reg_specialist_aa",[250,0,10],"","men"],
+		["rhsgref_cdf_b_reg_marksman",[150,0,10],"","men"],
+		["rhsgref_cdf_b_reg_medic",[200,0,1],"","men"],
+		["rhsgref_cdf_b_reg_engineer",[200,0,2],"","men"],
+
+		// Light Vehicles
+		["rhsgref_cdf_b_reg_uaz",[50,1,0],"","light"],
+		["rhsgref_cdf_b_reg_uaz_dshkm",[75,1,10],"","light"],
+		["rhsgref_cdf_b_reg_uaz_ags",[75,1,10],"","light"],
+		["rhsgref_cdf_reg_uaz_spg9",[75,1,10],"","light"],
+		["rhsgref_cdf_b_reg_uaz_open",[25,1,0],"","light"],
+		["rhsgref_cdf_b_ural",[100,5,0],"","light"],
+		["rhsgref_cdf_b_ural_open",[100,5,0],"","light"],
+		["rhsgref_BRDM2",[150,5,5],"","light"],
+		["rhsgref_BRDM2_ATGM",[150,5,10],"","light"],
+		["rhsgref_cdf_b_btr60",[350,15,5],"","light"],
+		["rhsgref_cdf_b_btr70",[350,15,10],"","light"],
+		["rhsgref_cdf_b_bmd1",[750,15,15],"","light"],
+		["rhsgref_cdf_b_bmd2",[750,15,15],"","light"],
+		["rhsgref_cdf_b_reg_BM21",[2000,5,30],"","light"],
+
+		// Tanks
+		["rhsgref_cdf_b_bmp1",[1000,30,50],"","heavy"],
+		["rhsgref_cdf_b_bmp2",[1500,30,75],"","heavy"],
+		["rhsgref_cdf_b_zsu234",[2000,30,75],"","heavy","aa"],
+		["rhsgref_cdf_b_t72bb_tv",[4000,40,100],"","heavy"],
+		["rhsgref_cdf_b_t80b_tv",[6000,40,150],"","heavy"],
+		["rhsgref_cdf_b_2s1",[4000,30,150],"","heavy"],
+
+		// Support
+		["rhsgref_cdf_b_ural_repair",[300,5,0],"","repair"],
+		["rhsgref_cdf_b_gaz66_ammo",[300,5,0],"","ammo"],
+		["rhsgref_cdf_b_ural_fuel",[300,5,0],"","fuel"],
+		["rhsgref_cdf_b_gaz66_ap2",[300,5,0],"","medic"],
+
+		// Aircraft
+		["rhsgref_cdf_reg_Mi8amt",[2000,75,15],"","air","supply"],
+		["rhsgref_cdf_reg_Mi17sh",[2000,75,25],"","air"],
+		["rhsgref_cdf_b_Mi24D",[8000,100,30],"","air"],
+		["rhsgref_cdf_b_su25",[12000,200,30],"","air"],
+		["rhsgref_cdf_b_mig29s",[12000,200,30],"","air"],
+
+		// Naval
+		["B_Boat_Transport_01_F",[100,1,0],"","boat"],
+		["B_Boat_Armed_01_minigun_F",[250,5,20],"","boat"],
+
+		// Static
+		["rhsgref_cdf_b_DSHKM",[100,0,5],"","static"],
+		["rhsgref_cdf_b_DSHKM_Mini_TriPod",[100,0,5],"","static"],
+		["rhsgref_cdf_b_AGS30_TriPod",[100,0,5],"","static"],
+		["rhsgref_cdf_b_reg_M252",[500,0,50],"","static"],
+		["rhsgref_cdf_b_Igla_AA_pod",[300,0,5],"","static","aa"],
+		["rhsgref_cdf_b_SPG9",[300,0,5],"","static"],
+		["rhsgref_cdf_b_reg_d30",[2000,0,20],"","static"],
+
+		// Base Buildings
+		["RU_WarfareBBarracks",[1000,0,0],"","barracks"],
+		["RU_WarfareBLightFactory",[2000,0,0],"","lightfac"],
+		["RU_WarfareBHeavyFactory",[3000,0,0],"","heavyfac"],
+		["RU_WarfareBAircraftFactory",[4000,0,0],"","airfac"],
+		["RU_WarfareBVehicleServicePoint",[1000,0,0],"","service"],
+		["PowGen_Big",[1000,0,0],"","boatdock"],
+		["RU_WarfareBUAVTerminal",[3000,0,0],"","controlcen"],
+		["Land_JumpTarget_F",[500,0,0],"","supplypoint"],
+
+		["rhsgref_BRDM2_hq",[0,0,20],"","mhq"],
+		["Land_Cargo10_military_green_F",[0,0,0],"","mhq_air"],
+
+		// Flag
+		["\A3\Data_F\Flags\Flag_chernarus_CO.paa",[0,0,0],"","flag"]
 		];
 	};
 	

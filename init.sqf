@@ -168,8 +168,10 @@ _opforcetypes = ["csat_gen",
 					"rhs_rus_vdv_des",
 					"cup_racs_desert",
 					"cup_sla_wood",
-					"cup_sla_desert"];
-_indforcetypes = ["aaf_gen","cup_racs_desert","rhs_chdkz"];
+					"cup_sla_desert",
+					"rhs_cdf_autumn"];
+					
+_indforcetypes = ["aaf_gen","cup_racs_desert","rhs_chdkz","rhs_cdf_autumn"];
 
 _econtypes = ["occupation","externalammo_occupation","limited","unlimited"];
 
