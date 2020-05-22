@@ -15,13 +15,16 @@ private ["_crewclass","_aaclass"];
 _faction = _this select 0;
 _side = _this select 1;
 
-_num = 5;
 _numgrp = 3;
 _i = 0;
 _pos_last = [0,0,0];
 
 _size = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 _center = getArray (configfile >> "CfgWorlds" >> worldName >> "centerPosition");
+
+_num = floor(((_size/1000)^2)/42);
+
+//player sideChat format ["Number of AA sites: %1",_num];
 
 _class = _faction call define_force_classnames;
 
@@ -49,11 +52,11 @@ for [{_i=0}, {_i<(_num+1)}, {_i=_i+1}] do {
 		
 		for [{_j=0}, {_j<(_numgrp)}, {_j=_j+1}] do {
 		
-			_class = selectRandom _aaclass;
+			_classname = selectRandom _aaclass;
 
 			_safepos = [_pos, 0, 35, 5, 0, 10, 0] call BIS_fnc_findSafePos;
 
-			_veh = _class createVehicle _safepos;
+			_veh = _classname createVehicle _safepos;
 
 			_u = _grp createUnit [_crewclass, _safepos, [], 0, "NONE"];
 
@@ -68,5 +71,27 @@ for [{_i=0}, {_i<(_num+1)}, {_i=_i+1}] do {
 	};
 
 };
+
+_game_logic = entities "LocationArea_F";
+
+_pilotclass = [_class,0,"pilot"] call read_twod_array_col;
+_fighterclass = [_class,0,"fighter"] call read_twod_array_col;
+_airfacclass = [_class,0,"airfac"] call read_twod_array_col;
+
+player sideChat format ["%1 : %2 : %3", _pilotclass, _fighterclass, _class];
+
+_pilotclass = _pilotclass select 0; 
+_fighterclass = selectRandom _fighterclass;
+
+player sideChat format ["%1 : %2 ", _pilotclass, _fighterclass];
+
+{
+	_b = createVehicle [_airfacclass select 0, getpos _x, [], 0, "None"];
+	_b setdir getdir _x;
+	_b enableSimulationGlobal true;
+	_b allowdamage true;
+
+	[_b,4,_pilotclass,_fighterclass,_side] execVM "MOB_CTI\air_defence_tower.sqf";
+} forEach _game_logic;
 
 if(true)exitwith{};

@@ -71,7 +71,7 @@ _return = switch (_this) do {
 		["O_Heli_Attack_02_dynamicLoadout_F",[10000,150,200],"","air"],
 		["O_UAV_02_dynamicLoadout_F",[2000,20,200],"","air"],
 		["O_Plane_CAS_02_dynamicLoadout_F",[10000,150,200],"","air"],
-		["O_Plane_Fighter_02_F",[12000,150,200],"","air"],
+		["O_Plane_Fighter_02_F",[12000,150,200],"","air","fighter"],
 
 		// Naval
 		["O_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -159,7 +159,7 @@ _return = switch (_this) do {
 		["O_UAV_02_F",[2000,20,200],"","air"],
 		["O_UAV_02_CAS_F",[2000,20,100],"","air"],
 		["O_Plane_CAS_02_F",[10000,150,200],"","air"],
-		["O_Plane_Fighter_02_F",[12000,150,200],"","air"],
+		["O_Plane_Fighter_02_F",[12000,150,200],"","air","fighter"],
 
 		// Naval
 		["O_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -252,7 +252,7 @@ _return = switch (_this) do {
 		["B_UAV_02_dynamicLoadout_F",[2000,100,200],"","air"],
 		["B_UAV_05_F",[2000,100,100],"","air"],
 		["B_Plane_CAS_01_dynamicLoadout_F",[10000,250,200],"","air"],
-		["B_Plane_Fighter_01_F",[10000,250,200],"","air"],
+		["B_Plane_Fighter_01_F",[10000,250,200],"","air","fighter"],
 
 		// Naval
 		["B_G_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -347,7 +347,7 @@ _return = switch (_this) do {
 		["B_T_UAV_02_dynamicLoadout_F",[2000,100,200],"","air"],
 		["B_T_UAV_05_F",[2000,100,100],"","air"],
 		["B_Plane_CAS_01_dynamicLoadout_F",[10000,250,200],"","air"],
-		["B_Plane_Fighter_01_F",[10000,250,200],"","air"],
+		["B_Plane_Fighter_01_F",[10000,250,200],"","air","fighter"],
 
 		// Naval
 		["B_T_G_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -436,7 +436,7 @@ _return = switch (_this) do {
 		["O_T_Heli_Attack_02_dynamicLoadout_F",[10000,150,200],"","air"],
 		["O_T_UAV_02_dynamicLoadout_F",[2000,20,200],"","air"],
 		["O_T_Plane_CAS_02_dynamicLoadout_F",[10000,150,200],"","air"],
-		["O_T_Plane_Fighter_02_F",[12000,150,200],"","air"],
+		["O_T_Plane_Fighter_02_F",[12000,150,200],"","air","fighter"],
 
 		// Naval
 		["O_T_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -521,7 +521,7 @@ _return = switch (_this) do {
 		["I_UAV_02_F",[2000,20,200],"","air"],
 		["I_UAV_02_CAS_F",[2000,20,100],"","air"],
 		["I_Plane_Fighter_03_dynamicLoadout_F",[10000,150,200],"","air"],
-		["I_Plane_Fighter_04_F",[10000,150,200],"","air"],
+		["I_Plane_Fighter_04_F",[10000,150,200],"","air","fighter"],
 
 		// Naval
 		["I_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -598,7 +598,7 @@ _return = switch (_this) do {
 		["I_GMG_01_F",[100,0,25],"","static"],
 		["I_GMG_01_high_F",[100,0,25],"","static"],
 		["I_Mortar_01_F",[500,0,50],"","static"],
-		["I_static_AA_F",[300,0,25],"","static"],
+		["I_static_AA_F",[300,0,25],"","static","aa"],
 		["I_static_AT_F",[300,0,25],"","static"],
 
 		// Base Buildings
@@ -673,7 +673,7 @@ _return = switch (_this) do {
 		["RHS_Mi24P_vvsc",[8000,100,30],"","air"],
 		["RHS_Ka52_vvsc",[8000,100,30],"","air"],
 		["RHS_Su25SM_vvsc",[12000,200,30],"","air"],
-		["RHS_mig29_vvs",[12000,200,30],"","air"],
+		["RHS_mig29_vvs",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -763,7 +763,7 @@ _return = switch (_this) do {
 		["RHS_Mi24P_vdv",[8000,100,30],"","air"],
 		["RHS_Ka52_vvsc",[8000,100,30],"","air"],
 		["RHS_Su25SM_vvsc",[12000,200,30],"","air"],
-		["RHS_mig29_vvs",[12000,200,30],"","air"],
+		["RHS_mig29_vvs",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -853,7 +853,7 @@ _return = switch (_this) do {
 		["RHS_Mi24P_vdv",[8000,100,30],"","air"],
 		["RHS_Ka52_vvsc",[8000,100,30],"","air"],
 		["RHS_Su25SM_vvsc",[12000,200,30],"","air"],
-		["RHS_mig29_vvs",[12000,200,30],"","air"],
+		["RHS_mig29_vvs",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -865,7 +865,7 @@ _return = switch (_this) do {
 		["rhs_KORD_high_VDV",[100,0,5],"","static"],
 		["RHS_AGS30_TriPod_VDV",[100,0,5],"","static"],
 		["rhs_2b14_82mm_vmf",[500,0,50],"","static"],
-		["RHS_Igla_AA_pod_vdv",[300,0,5],"","static"],
+		["RHS_Igla_AA_pod_vdv",[300,0,5],"","static","aa"],
 		["rhs_Kornet_9M133_2_vdv",[300,0,5],"","static"],
 		["rhs_D30_vmf",[2000,0,20],"","static"],
 
@@ -958,6 +958,7 @@ _return = switch (_this) do {
 		["RHS_AH64D_wd_GS",[8000,100,30],"","air"],
 		["RHS_AH64D_wd_AA",[8000,100,30],"","air"],
 		["RHS_A10",[12000,200,30],"","air"],
+		["rhsusf_f22",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -1062,6 +1063,7 @@ _return = switch (_this) do {
 		["RHS_AH64D_GS",[8000,100,30],"","air"],
 		["RHS_AH64D_AA",[8000,100,30],"","air"],
 		["RHS_A10",[12000,200,30],"","air"],
+		["rhsusf_f22",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -1156,7 +1158,7 @@ _return = switch (_this) do {
 		["CUP_B_MV22_USMC",[5000,100,0],"","air"],
 		["RHS_AH1Z_wd",[8000,100,30],"","air"],
 		["CUP_B_AV8B_DYN_USMC",[8000,100,30],"","air"],
-		["CUP_B_F35B_USMC",[12000,200,30],"","air"],
+		["CUP_B_F35B_USMC",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F ",[100,1,0],"","boat"],
@@ -1245,7 +1247,7 @@ _return = switch (_this) do {
 		["CUP_B_MV22_USMC",[5000,100,0],"","air"],
 		["RHS_AH1Z_wd",[8000,150,30],"","air"],
 		["CUP_B_AV8B_DYN_USMC",[8000,200,30],"","air"],
-		["CUP_B_F35B_USMC",[12000,200,30],"","air"],
+		["CUP_B_F35B_USMC",[12000,200,30],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -1315,7 +1317,7 @@ _return = switch (_this) do {
 		["I_GMG_01_F",[100,0,25],"","static"],
 		["I_GMG_01_high_F",[100,0,25],"","static"],
 		["I_Mortar_01_F",[500,0,50],"","static"],
-		["I_static_AA_F",[300,0,25],"","static"],
+		["I_static_AA_F",[300,0,25],"","static","aa"],
 		["I_static_AT_F",[300,0,25],"","static"],
 
 		// Base Buildings
@@ -1371,7 +1373,7 @@ _return = switch (_this) do {
 		["LOP_SLA_BMP1D",[1500,30,75],"","heavy"],
 		["LOP_SLA_BMP2",[2000,30,75],"","heavy"],
 		["LOP_SLA_BMP2D",[2000,30,75],"","heavy"],
-		["LOP_SLA_ZSU234",[2000,30,75],"","heavy"],
+		["LOP_SLA_ZSU234",[2000,30,75],"","heavy","aa"],
 		["LOP_SLA_T72BA",[4000,40,100],"","heavy"],
 		["LOP_SLA_T72BB",[5000,40,150],"","heavy"],
 
@@ -1394,7 +1396,7 @@ _return = switch (_this) do {
 		["RHS_M2StaticMG_WD",[100,0,5],"","static"],
 		["RHS_MK19_Tripod_WD",[100,0,5],"","static"],
 		["RHS_M252_WD",[500,0,50],"","static"],
-		["RHS_Stinger_AA_pod",[300,0,5],"","static"],
+		["RHS_Stinger_AA_pod",[300,0,5],"","static","aa"],
 		["RHS_TOW_Tripod_WD",[300,0,5],"","static"],
 		["RHS_M119_WD",[2000,0,20],"","static"],
 
@@ -1465,7 +1467,7 @@ _return = switch (_this) do {
 		["rhsgref_cdf_reg_Mi17sh",[2000,75,25],"","air"],
 		["rhsgref_cdf_b_Mi24D",[8000,100,30],"","air"],
 		["rhsgref_cdf_b_su25",[12000,200,30],"","air"],
-		["rhsgref_cdf_b_mig29s",[12000,200,30],"","air"],
+		["rhsgref_cdf_b_mig29s",[12000,200,30],"","air","fighter"],
 
 		// Naval
 		["B_Boat_Transport_01_F",[100,1,0],"","boat"],
@@ -1544,7 +1546,7 @@ _return = switch (_this) do {
 		["CUP_O_Mi24_D_Dynamic_SLA",[8000,150,30],"","air"],
 		["CUP_O_Ka50_DL_SLA",[10000,150,30],"","air"],
 		["CUP_O_Su25_Dyn_SLA",[12000,150,30],"","air"],
-		["CUP_O_SU34_SLA",[12000,150,30],"","air"],
+		["CUP_O_SU34_SLA",[12000,150,30],"","air","fighter"],
 		["CUP_O_C47_SLA",[2000,75,0],"","air"],
 		
 		// Naval
@@ -1622,7 +1624,7 @@ _return = switch (_this) do {
 		["CUP_O_Mi24_D_Dynamic_SLA",[8000,150,30],"","air"],
 		["CUP_O_Ka50_DL_SLA",[10000,150,30],"","air"],
 		["CUP_O_Su25_Dyn_SLA",[12000,150,30],"","air"],
-		["CUP_O_SU34_SLA",[12000,150,30],"","air"],
+		["CUP_O_SU34_SLA",[12000,150,30],"","air","fighter"],
 		["CUP_O_C47_SLA",[2000,75,0],"","air"],
 		
 		// Naval
@@ -1693,6 +1695,7 @@ _return = switch (_this) do {
 		["CUP_I_SA330_Puma_HC1_RACS",[2000,75,15],"","air"],
 		["CUP_I_CH47F_RACS",[3000,100,15],"","air"],
 		["CUP_I_C130J_RACS",[2000,75,0],"","air"],
+		["I_Plane_Fighter_04_F",[10000,150,200],"","air","fighter"],
 		
 		// Naval
 		["B_Boat_Transport_01_F",[100,1,0],"","boat"],

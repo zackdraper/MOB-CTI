@@ -106,7 +106,7 @@ switch (_econ) do {
 			_mhq setvariable ["CTI_FUNDS",_newfunds,true];
 			_mhq setvariable ["CTI_FUEL_MAX",_newfuel,true];
 
-			sleep 15;
+			sleep 60;
 
 			_supply = _mhq getVariable ["CTI_EXTERNAL_AMMO",false];
 
@@ -120,7 +120,7 @@ switch (_econ) do {
 
 					_near_pos = [[0,0],[0,_size],[_size,0],[_size,_size],[_size/2,0],[_size/2,_size],[_size,_size/2],[0,_size/2]];
 
-					_near_pos apply {[(_x select 0)-cx,(_x select 1)-cy]};
+					_near_pos apply {[(_x select 0)-_cx,(_x select 1)-_cy]};
 
 					_near_pos = _near_pos apply {[_x distance2d _supply,_x]};
 					_near_pos sort true;
