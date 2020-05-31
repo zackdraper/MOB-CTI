@@ -33,7 +33,6 @@ _var = _this select 0;
 _center = _this select 1;
 _center_distance = _this select 2;
 
-
 CTI_VAR_StructureCanceled = false;
 CTI_VAR_StructureProhibit = false;
 CTI_P_StructureRotate = 0;

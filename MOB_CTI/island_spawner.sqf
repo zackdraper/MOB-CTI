@@ -70,8 +70,13 @@ for [{_i=0}, {_i< count _locations}, {_i=_i+1}] do {
 	_forcetype = selectRandom ["infantry","infantry","light","light","heavy"];
 
 	//decide based on town size
-	_list = _pos nearObjects ["House", 250];
+	_list = _pos nearObjects ["House", 400];
 	_town_cost = (count _list)*50;
+	
+	player sideChat format ["%1 : %2", _town_cost, name _location];
+	
+	_minimum_cost = 1500;
+	_town_cost = selectMax [_town_cost,_minimum_cost];
 	
 	//Location Marker
 	_markerstr = createMarker [_str,_flagPos];

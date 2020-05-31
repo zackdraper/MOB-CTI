@@ -66,14 +66,15 @@ switch (_action) do {
 			_selected = (player getVariable "CTI_DEFENCES") select _selected;
 
 			_mhq = player getVariable "CTI_PLAYER_MHQ";
-			_funds = _mhq getVariable "CTI_FUNDS";	
+			_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+			_funds = _mhq getVariable "CTI_FUNDS";
 
 			_costs = _selected select 2;
 			//hint format ["%1",_selected];
 			
 			if ((_funds select 0 > _selected select 2) and (_funds select 1 > _selected select 3)) then { //--- Check if we have enough funds to go in the construction mode.
 				CTI_VAR_StructurePlaced = false;
-				[_selected, _mhq, CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingDefense;
+				[_selected, _mhq_veh, CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingDefense;
 				CTI_KILL_CAMERA = False;
 				closeDialog 0;
 			} else {

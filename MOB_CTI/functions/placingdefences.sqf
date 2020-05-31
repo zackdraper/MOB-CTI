@@ -33,7 +33,6 @@ _var = _this select 0;
 _center = _this select 1;
 _center_distance = _this select 2;
 
-
 if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br /><t align='justify'>Is this your first time in the <t color='#74bbf2'>Construction Preview Mode</t>?<br /><br />
 You may chose to <t color='#9CF863'>Place</t> or <t color='#F86363'>Cancel</t> the defense from your action menu.<br /><br />
@@ -63,7 +62,17 @@ CTI_P_KeyDistance = 0;
 CTI_P_KeyDistance_Min = -10;
 CTI_P_KeyDistance_Max = 20;
 
+_mhq = player getVariable "CTI_PLAYER_MHQ";
+_mhq_veh = _mhq getVariable "CTI_MHQ_VEH";
+_side = side player;
 _faction = player getVariable "CTI_PLAYER_FACTION";
+
+_local = (_var select 1) createVehicleLocal getPos player;
+_local enableSimulation false;
+[_local, _mhq_veh] remoteExecCall ["disableCollisionWith", 0, _local];
+_direction_structure = 180 - (getdir player);
+_distance_structure = 15;
+_last_collision_update = -600;
 
 _dehKeyDown = (findDisplay 46) displayAddEventHandler ["KeyDown", "nullReturn = _this spawn CTI_UI_KeyHandler_BuildMenu_KeyDown"];
 _dehKeyUp = (findDisplay 46) displayAddEventHandler ["KeyUp", "nullReturn = _this spawn CTI_UI_KeyHandler_BuildMenu_KeyUp"];
@@ -73,15 +82,6 @@ _classname = _var select 1;
 _local = _classname createVehicleLocal getPos player;
 _direction_structure = 180 - (getdir player);
 _distance_structure = 5;
-
-_mhq = player getVariable "CTI_PLAYER_MHQ";
-_side = side player;
-
-// {_local disableCollisionWith _x} forEach (_center nearEntities (_center_distance+500));
-
-_last_collision_update = -600;
-_condition = {true};
-//{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select 5);
 
 _action = player addAction ["<t color='#9CF863'>Place Defense</t>", "MOB_CTI\functions\action_buildingplace.sqf"];
 _action2 = player addAction ["<t color='#F86363'>Cancel Defense</t>", "MOB_CTI\functions\action_buildingplace_cancel.sqf"];
@@ -96,7 +96,7 @@ while {!CTI_VAR_StructurePlaced && !CTI_VAR_StructureCanceled && alive player} d
 	if (!alive _center) exitWith {CTI_VAR_StructureCanceled = true};
 	
 	{
-		_local disableCollisionWith _x;
+		[_local, _x] remoteExecCall ["disableCollisionWith", 0, _local];
 	} forEach (_center nearObjects CTI_BASE_CONSTRUCTION_RANGE);
 
 	CTI_P_PreBuilding_SafePlace = if (!surfaceIsWater _pos && !(count(_pos nearObjects ["Building", 10] - [_local]) > 1) && !(count(_pos nearEntities [['Man','Car','Motorcycle','Tank','Air','Ship'], 10]) > 0) ) then {true} else {false};
