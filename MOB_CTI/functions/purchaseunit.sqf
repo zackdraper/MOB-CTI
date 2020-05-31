@@ -148,6 +148,12 @@ while {true} do {
 			if (_veh isKindOf "Air") then {
 				_add = _veh spawn GOM_fnc_addAircraftLoadoutToObject;
 			};
+			
+			if (_veh isKindOf "Air" and surfaceIsWater _pos) then {
+				_veh allowDamage False;
+				_veh spawn {sleep 15; _this allowDamage True};
+			};
+
 		};
 
 
